@@ -1,230 +1,116 @@
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>telemetry.krkn_telemetry module &#8212; Krkn Foundation Library</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
-    <link rel="stylesheet" type="text/css" href="_static/krkn-style.css?v=16aae331" />
-    
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>telemetry.krkn_telemetry module &mdash; Krkn Foundation Library</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/krkn-style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="tests package" href="tests.html" />
     <link rel="prev" title="telemetry package" href="telemetry.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="tests.html" title="tests package"
-             accesskey="N">next</a></li>
-        <li class="right" >
-          <a href="telemetry.html" title="telemetry package"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="modules.html">Krkn Foundation Library</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="telemetry.html" accesskey="U">telemetry package</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">telemetry.krkn_telemetry module</a></li> 
-      </ul>
-    </div>  
+</head>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="module-telemetry.krkn_telemetry">
-<span id="telemetry-krkn-telemetry-module"></span><h1>telemetry.krkn_telemetry module<a class="headerlink" href="#module-telemetry.krkn_telemetry" title="Permalink to this heading">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">telemetry.krkn_telemetry.</span></span><span class="sig-name descname"><span class="pre">KrknTelemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_kubernetes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknKubernetes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_kubernetes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknKubernetes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
 
-<dl class="py method">
-<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.generate_url_and_put_to_s3_worker">
-<span class="sig-name descname"><span class="pre">generate_url_and_put_to_s3_worker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thread_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uploaded_file_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_retries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.generate_url_and_put_to_s3_worker" title="Permalink to this definition">¶</a></dt>
-<dd><p>Worker function that creates an s3 link to put files and upload
-and uploads the file on the bucket.
-:param queue: queue that will be consumed. The queue
-elements must be tuples on which the first item must
-be the file sequence number, the second a local filename full-path
-that will be uploaded in the S3 bucket and the third will be a retry
-counter updated by the thread on upload exception and compared with
-max_retries.
-:param queue_size: total number of files
-:param request_id: uuid of the session that will represent the
-S3 folder on which the prometheus files will be stored
-:param api_url: API endpoint to generate the S3 temporary link
-:param username: API username
-:param password: API password
-:param thread_number: Thread number
-:param uploaded_file_list: uploaded file list shared between threads
-:param max_retries: maximum number of retries from config.yaml.
-If 0 will retry indefinitely.
-:return:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.get_bucket_url_for_filename">
-<span class="sig-name descname"><span class="pre">get_bucket_url_for_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.get_bucket_url_for_filename" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets from the telemetry API a one shot S3 link to upload
-prometheus data,
-:param api_url: telemetry base URL
-:param bucket_folder: folder on which the prometheus archives
-will be stored
-:param remote_filename: name of the file
-that will be stored in the bucket
-:param username: API username
-:param password: API password
-:return:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.get_ocp_prometheus_data">
-<span class="sig-name descname"><span class="pre">get_ocp_prometheus_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.get_ocp_prometheus_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Downloads the OCP prometheus metrics folder
-:param telemetry_config: krkn telemetry conf section
-will be stored
-:param request_id: uuid of the session that will represent the
-temporary archive files
-:return: the list of the archive number and filenames downloaded</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.kubecli">
-<span class="sig-name descname"><span class="pre">kubecli</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">KrknKubernetes</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.kubecli" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.put_file_to_url">
-<span class="sig-name descname"><span class="pre">put_file_to_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.put_file_to_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>Puts a local file on an url
-:param url: url where the file will be put
-:param local_filename: local file full-path
-:return:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.put_ocp_prometheus_data">
-<span class="sig-name descname"><span class="pre">put_ocp_prometheus_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archive_volumes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.put_ocp_prometheus_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Puts a list of files on telemetry S3 bucket, mulithread.
-:param telemetry_config: telemetry section of kraken config.yaml
-:param archive_volumes: a list of tuples containing the
-archive number, and the archive full path to be uploaded
-:param request_id: uuid of the session that will represent the
-S3 folder on which the prometheus files will be stored
-:return:</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.safe_logger">
-<span class="sig-name descname"><span class="pre">safe_logger</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">SafeLogger</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.safe_logger" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.send_telemetry">
-<span class="sig-name descname"><span class="pre">send_telemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uuid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chaos_telemetry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ChaosRunTelemetry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.send_telemetry" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>telemetry_config</strong> – krkn telemetry conf section</p></li>
-<li><p><strong>uuid</strong> – uuid used as folder in S3 bucket</p></li>
-<li><p><strong>chaos_telemetry</strong> – already populated ChaosRunTelemetry object</p></li>
+          
+          
+          <a href="modules.html" class="icon icon-home">
+            Krkn Foundation Library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="k8s.html">k8s package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">models package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="telemetry.html">telemetry package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="telemetry.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">telemetry.krkn_telemetry module</a></li>
 </ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
-</dd>
-</dl>
-</dd></dl>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="telemetry.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">tests package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">utils package</a></li>
+</ul>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.set_parameters_base64">
-<span class="sig-name descname"><span class="pre">set_parameters_base64</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scenario_telemetry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ScenarioTelemetry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.set_parameters_base64" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+        </div>
+      </div>
+    </nav>
 
-</dd></dl>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="modules.html">Krkn Foundation Library</a>
+      </nav>
 
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="modules.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="telemetry.html">telemetry package</a></li>
+      <li class="breadcrumb-item active">telemetry.krkn_telemetry module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="telemetry-krkn-telemetry-module">
+<h1>telemetry.krkn_telemetry module<a class="headerlink" href="#telemetry-krkn-telemetry-module" title="Permalink to this heading"></a></h1>
 </section>
 
 
-            <div class="clearer"></div>
+           </div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="modules.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">telemetry.krkn_telemetry module</a><ul>
-<li><a class="reference internal" href="#telemetry.krkn_telemetry.KrknTelemetry"><code class="docutils literal notranslate"><span class="pre">KrknTelemetry</span></code></a><ul>
-<li><a class="reference internal" href="#telemetry.krkn_telemetry.KrknTelemetry.__init__"><code class="docutils literal notranslate"><span class="pre">KrknTelemetry.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#telemetry.krkn_telemetry.KrknTelemetry.generate_url_and_put_to_s3_worker"><code class="docutils literal notranslate"><span class="pre">KrknTelemetry.generate_url_and_put_to_s3_worker()</span></code></a></li>
-<li><a class="reference internal" href="#telemetry.krkn_telemetry.KrknTelemetry.get_bucket_url_for_filename"><code class="docutils literal notranslate"><span class="pre">KrknTelemetry.get_bucket_url_for_filename()</span></code></a></li>
-<li><a class="reference internal" href="#telemetry.krkn_telemetry.KrknTelemetry.get_ocp_prometheus_data"><code class="docutils literal notranslate"><span class="pre">KrknTelemetry.get_ocp_prometheus_data()</span></code></a></li>
-<li><a class="reference internal" href="#telemetry.krkn_telemetry.KrknTelemetry.kubecli"><code class="docutils literal notranslate"><span class="pre">KrknTelemetry.kubecli</span></code></a></li>
-<li><a class="reference internal" href="#telemetry.krkn_telemetry.KrknTelemetry.put_file_to_url"><code class="docutils literal notranslate"><span class="pre">KrknTelemetry.put_file_to_url()</span></code></a></li>
-<li><a class="reference internal" href="#telemetry.krkn_telemetry.KrknTelemetry.put_ocp_prometheus_data"><code class="docutils literal notranslate"><span class="pre">KrknTelemetry.put_ocp_prometheus_data()</span></code></a></li>
-<li><a class="reference internal" href="#telemetry.krkn_telemetry.KrknTelemetry.safe_logger"><code class="docutils literal notranslate"><span class="pre">KrknTelemetry.safe_logger</span></code></a></li>
-<li><a class="reference internal" href="#telemetry.krkn_telemetry.KrknTelemetry.send_telemetry"><code class="docutils literal notranslate"><span class="pre">KrknTelemetry.send_telemetry()</span></code></a></li>
-<li><a class="reference internal" href="#telemetry.krkn_telemetry.KrknTelemetry.set_parameters_base64"><code class="docutils literal notranslate"><span class="pre">KrknTelemetry.set_parameters_base64()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="telemetry.html" class="btn btn-neutral float-left" title="telemetry package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tests.html" class="btn btn-neutral float-right" title="tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Red Hat Chaos Team.</p>
   </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="telemetry.html"
-                          title="previous chapter">telemetry package</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="tests.html"
-                          title="next chapter">tests package</a></p>
-  </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+
+   
+
+</footer>
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="tests.html" title="tests package"
-             >next</a></li>
-        <li class="right" >
-          <a href="telemetry.html" title="telemetry package"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="modules.html">Krkn Foundation Library</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="telemetry.html" >telemetry package</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">telemetry.krkn_telemetry module</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright Red Hat Chaos Team.
-    </div>
-  </body>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

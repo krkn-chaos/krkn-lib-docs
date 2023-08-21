@@ -1,874 +1,116 @@
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>k8s.krkn_kubernetes module &#8212; Krkn Foundation Library</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
-    <link rel="stylesheet" type="text/css" href="_static/krkn-style.css?v=16aae331" />
-    
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>k8s.krkn_kubernetes module &mdash; Krkn Foundation Library</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/krkn-style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="models package" href="models.html" />
     <link rel="prev" title="k8s package" href="k8s.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="models.html" title="models package"
-             accesskey="N">next</a></li>
-        <li class="right" >
-          <a href="k8s.html" title="k8s package"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="modules.html">Krkn Foundation Library</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="k8s.html" accesskey="U">k8s package</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">k8s.krkn_kubernetes module</a></li> 
-      </ul>
-    </div>  
+</head>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="module-k8s.krkn_kubernetes">
-<span id="k8s-krkn-kubernetes-module"></span><h1>k8s.krkn_kubernetes module<a class="headerlink" href="#module-k8s.krkn_kubernetes" title="Permalink to this heading">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">k8s.krkn_kubernetes.</span></span><span class="sig-name descname"><span class="pre">KrknKubernetes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kubeconfig_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kubeconfig_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kubeconfig_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kubeconfig_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>KrknKubernetes Constructor. Can be invoked with kubeconfig_path
-or, optionally, with a kubeconfig in string
-format using the keyword argument
-:param kubeconfig_path: kubeconfig path
-:param kubeconfig_string: (keyword argument)
-kubeconfig in string format</p>
-<p>Initialization with kubeconfig path:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">KrknKubernetes</span><span class="p">(</span><span class="n">log_writer</span><span class="p">,</span> <span class="s2">&quot;/home/test/.kube/config&quot;</span><span class="p">)</span>
-</pre></div>
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="modules.html" class="icon icon-home">
+            Krkn Foundation Library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
 </div>
-<p>Initialization with kubeconfig string:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">kubeconfig_string</span><span class="o">=</span><span class="s2">&quot;apiVersion: v1 .....&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">KrknKubernetes</span><span class="p">(</span><span class="n">log_writer</span><span class="p">,</span> <span class="n">kubeconfig_string</span><span class="o">=</span><span class="n">kubeconfig_string</span><span class="p">)</span>
-</pre></div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="k8s.html">k8s package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="k8s.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">k8s.krkn_kubernetes module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="k8s.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">models package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="telemetry.html">telemetry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">tests package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">utils package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="modules.html">Krkn Foundation Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="modules.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="k8s.html">k8s package</a></li>
+      <li class="breadcrumb-item active">k8s.krkn_kubernetes module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
 </div>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.api_client">
-<span class="sig-name descname"><span class="pre">api_client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ApiClient</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.api_client" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.apply_yaml">
-<span class="sig-name descname"><span class="pre">apply_yaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.apply_yaml" title="Permalink to this definition">¶</a></dt>
-<dd><p>Apply yaml config to create Kubernetes resources
-:param path:  path to the YAML file
-:param namespace: namespace to create
-the resource (optional default <cite>default</cite>)
-:return: the list of names of created objects</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.archive_and_get_path_from_pod">
-<span class="sig-name descname"><span class="pre">archive_and_get_path_from_pod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_archive_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archive_files_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">download_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/tmp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archive_part_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_threads</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.archive_and_get_path_from_pod" title="Permalink to this definition">¶</a></dt>
-<dd><p>archives and downloads a folder content
-from container in a base64 tarball.
-The function is designed to leverage multi-threading
-in order to maximize the download speed.
-a <cite>max_threads</cite> number of <cite>download_archive_part_from_pod</cite>
-calls will be made in parallel.
-:param pod_name: pod name from which the folder
-must be downloaded
-:param container_name: container name from which the
-folder must be downloaded
-:param namespace: namespace of the pod
-:param remote_archive_path: path in the container
-where the temporary archive
-will be stored (will be deleted once the download
-terminates, must be writable
-and must have enough space to temporarly store the archive)
-:param target_path: the path that will be archived
-and downloaded from the container
-:param archive_files_prefix: prefix string that will be added
-to the files
-:param download_path: the local path
-where the archive will be saved
-:param archive_part_size: the archive will splitted in multiple
-files of the specified <cite>archive_part_size</cite>
-:param max_threads: maximum number of threads that will be launched
-:param safe_logger: SafeLogger, if omitted a default SafeLogger will
-be instantiated that will simply use the logging package to print logs
-to stdout.
-:return: the list of the archive number and filenames downloaded</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.batch_cli">
-<span class="sig-name descname"><span class="pre">batch_cli</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">BatchV1Api</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.batch_cli" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.check_if_namespace_exists">
-<span class="sig-name descname"><span class="pre">check_if_namespace_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.check_if_namespace_exists" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if a namespace exists by parsing through
-:param name: namespace name
-:return: boolean value indicating whether
-the namespace exists or not</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.check_if_pod_exists">
-<span class="sig-name descname"><span class="pre">check_if_pod_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.check_if_pod_exists" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if a pod exists in the given namespace</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – pod name</p></li>
-<li><p><strong>namespace</strong> – namespace (optional default <cite>default</cite>)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.check_if_pvc_exists">
-<span class="sig-name descname"><span class="pre">check_if_pvc_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.check_if_pvc_exists" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if a PVC exists by parsing through the list of projects.
-:param name: PVC name
-:param namespace: namespace (optional default <cite>default</cite>)
-:return: boolean value indicating whether
-the Persistent Volume Claim exists or not</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.check_namespaces">
-<span class="sig-name descname"><span class="pre">check_namespaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.check_namespaces" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if all the watch_namespaces are valid
-:param namespaces: list of namespaces to check
-:param label_selector: filter by label_selector
-(optional default <cite>None</cite>)
-:return: a list of matching namespaces</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.cli">
-<span class="sig-name descname"><span class="pre">cli</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">CoreV1Api</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.cli" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.create_job">
-<span class="sig-name descname"><span class="pre">create_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">V1Job</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.create_job" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a job in a namespace
-:param body: an object representation of a valid job yaml manifest
-:param namespace: namespace (optional default <cite>default</cite>),
-<cite>Note:</cite> if namespace is specified in the body won’t
-overridden
-:return: V1Job API object</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.create_manifestwork">
-<span class="sig-name descname"><span class="pre">create_manifestwork</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.create_manifestwork" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create an open cluster management manifestwork in a namespace.
-ManifestWork is used to define a group of Kubernetes resources
-on the hub to be applied to the managed cluster.
-:param body: an object representation of
-a valid manifestwork yaml manifest
-:param namespace: namespace (optional default <cite>default</cite>)
-:return: a custom object representing the newly created manifestwork</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.create_pod">
-<span class="sig-name descname"><span class="pre">create_pod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">120</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.create_pod" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a pod in a namespace</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>body</strong> – an object representation of a valid pod yaml manifest</p></li>
-<li><p><strong>namespace</strong> – namespace where the pod is created</p></li>
-<li><p><strong>timeout</strong> – request timeout</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.custom_object_client">
-<span class="sig-name descname"><span class="pre">custom_object_client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">CustomObjectsApi</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.custom_object_client" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.delete_file_from_pod">
-<span class="sig-name descname"><span class="pre">delete_file_from_pod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.delete_file_from_pod" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes a file from a pod
-:param pod_name: pod name
-:param container_name: container name
-:param namespace: namespace of the pod
-:param filename: full-path of the file that
-will be removed from the pod
-:return:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.delete_job">
-<span class="sig-name descname"><span class="pre">delete_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">V1Status</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.delete_job" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete a job from a namespace</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – job name</p></li>
-<li><p><strong>namespace</strong> – namespace (optional default <cite>default</cite>)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>V1Status API object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.delete_manifestwork">
-<span class="sig-name descname"><span class="pre">delete_manifestwork</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.delete_manifestwork" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete a manifestwork from a namespace</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>namespace</strong> – namespace from where the manifestwork must be deleted</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>a custom object representing the deleted resource</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.delete_namespace">
-<span class="sig-name descname"><span class="pre">delete_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">V1Status</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.delete_namespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete a given namespace
-using k8s python client</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>namespace</strong> – namespace name</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>V1Status API object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.delete_pod">
-<span class="sig-name descname"><span class="pre">delete_pod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.delete_pod" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete a pod in a namespace</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – pod name</p></li>
-<li><p><strong>namespace</strong> – namespace (optional default <cite>default</cite>)</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.dyn_client">
-<span class="sig-name descname"><span class="pre">dyn_client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DynamicClient</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.dyn_client" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.exec_cmd_in_pod">
-<span class="sig-name descname"><span class="pre">exec_cmd_in_pod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_command</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_err</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.exec_cmd_in_pod" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute a base command and its parameters
-in a pod or a container
-:param command: command parameters list or full command string
-if the command must be piped to <cite>bash -c</cite>
-(in that case <cite>base_command</cite> parameter
-must is omitted`)
-:param pod_name: pod where the command must be executed
-:param namespace: namespace of the pod
-:param container: container where the command
-must be executed (optional default <cite>None</cite>)
-:param base_command: base command that must be executed
-along the parameters (optional, default <cite>bash -c</cite>)
-:return: the command stdout</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.find_kraken_node">
-<span class="sig-name descname"><span class="pre">find_kraken_node</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.find_kraken_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Find the node kraken is deployed on
-Set global kraken node to not delete</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>node where kraken is running (<cite>None</cite> if not found)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_all_kubernetes_object_count">
-<span class="sig-name descname"><span class="pre">get_all_kubernetes_object_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objects</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_all_kubernetes_object_count" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_all_pods">
-<span class="sig-name descname"><span class="pre">get_all_pods</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list[[&lt;class</span> <span class="pre">'str'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'str'&gt;]]</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_all_pods" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a list of tuples containing pod name [0] and namespace [1]
-:param label_selector: filter by label_selector
-(optional default <cite>None</cite>)
-:return: list of tuples pod,namespace</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_api_resources_by_group">
-<span class="sig-name descname"><span class="pre">get_api_resources_by_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_api_resources_by_group" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_archive_volume_from_pod_worker">
-<span class="sig-name descname"><span class="pre">get_archive_volume_from_pod_worker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_archive_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_archive_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_download_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_file_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">downloaded_file_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_remote_after_download</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thread_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_archive_volume_from_pod_worker" title="Permalink to this definition">¶</a></dt>
-<dd><p>Download worker for the create_download_multipart_archive
-method. The method will dequeue from the thread-safe queue
-parameter until the queue will be empty and will download
-the i-th tar volume popped from the queue itself.
-the file will be downloaded in base64 string format in order
-to avoid archive corruptions caused by the Kubernetes WebSocket API.
-:param pod_name: pod name from which the tar volume
-must be downloaded
-:param container_name: container name from which the
-tar volume be downloaded
-:param namespace: namespace of the pod
-:param remote_archive_path: remote path where the archive volume
-is stored
-:param remote_archive_prefix: prefix of the file used to
-create the archive.to this prefix will be appended sequential
-number of the archive assigned to
-the worker in a two digit format and the tar exception
-(ex for a prefix like prefix- the remote filename
-will become prefix-00.tar)
-:param local_download_path: local path where the tar volume
-will be download
-:param local_file_prefix: local prefix to apply to the
-local file downloaded.To the prefix will be appended the
-sequential number of the archive assigned to the worker
-and the extension tar.b64
-:param queue: the queue from which the sequential
-number wil be popped
-:param queue_size: total size of the queue
-:param downloaded_file_list: the list of
-archive number and local filename  downloaded
-file will be appended once the download terminates
-shared between the threads
-:param delete_remote_after_download: if set True once
-the download will terminate the remote file will be deleted.
-:param thread_number: the assigned thread number
-:param safe_logger: SafeLogger class, will allow thread-safe
-logging
-:return:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_cluster_infrastructure">
-<span class="sig-name descname"><span class="pre">get_cluster_infrastructure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_cluster_infrastructure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the cluster Cloud infrastructure name when available
-:return: the cluster infrastructure name or <cite>Unknown</cite> when unavailable</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_cluster_network_plugins">
-<span class="sig-name descname"><span class="pre">get_cluster_network_plugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_cluster_network_plugins" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the cluster Cloud network plugins list
-:return: the cluster infrastructure name or <cite>Unknown</cite> when unavailable</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_clusterversion_string">
-<span class="sig-name descname"><span class="pre">get_clusterversion_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_clusterversion_string" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return clusterversion status text on OpenShift, empty string
-on other distributions</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>clusterversion status</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_containers_in_pod">
-<span class="sig-name descname"><span class="pre">get_containers_in_pod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_containers_in_pod" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get container names of a pod</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pod_name</strong> – pod name</p></li>
-<li><p><strong>namespace</strong> – namespace (optional default <cite>default</cite>)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>a list of container names</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_host">
-<span class="sig-name descname"><span class="pre">get_host</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_host" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the Kubernetes server URL
-:return: k8s server URL</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_job_status">
-<span class="sig-name descname"><span class="pre">get_job_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">V1Job</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_job_status" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a job status</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – job name</p></li>
-<li><p><strong>namespace</strong> – namespace (optional default <cite>default</cite>)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>V1Job API object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_kubernetes_core_objects_count">
-<span class="sig-name descname"><span class="pre">get_kubernetes_core_objects_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objects</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_kubernetes_core_objects_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Counts all the occurrences of Kinds contained in
-the object parameter in the CoreV1 Api</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>api_version</strong> – api version</p></li>
-<li><p><strong>objects</strong> – list of the kinds that must be counted</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>a dictionary of Kinds and the number of objects counted</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_kubernetes_custom_objects_count">
-<span class="sig-name descname"><span class="pre">get_kubernetes_custom_objects_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objects</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_kubernetes_custom_objects_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Counts all the occurrences of Kinds contained in
-the object parameter in the CustomObject Api</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>objects</strong> – list of Kinds that must be counted</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>a dictionary of Kinds and number of objects counted</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_litmus_chaos_object">
-<span class="sig-name descname"><span class="pre">get_litmus_chaos_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">LitmusChaosObject</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_litmus_chaos_object" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>kind</strong> – the custom resource type</p></li>
-<li><p><strong>name</strong> – the object name</p></li>
-<li><p><strong>namespace</strong> – the namespace (optional default <cite>default</cite>)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>data class object of a subclass of LitmusChaosObject</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_namespace_status">
-<span class="sig-name descname"><span class="pre">get_namespace_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_namespace_status" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get status of a given namespace</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>namespace_name</strong> – namespace name</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>namespace status</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_node">
-<span class="sig-name descname"><span class="pre">get_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance_kill_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns active node(s)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>node_name</strong> – node name</p></li>
-<li><p><strong>label_selector</strong> – filter by label</p></li>
-<li><p><strong>instance_kill_count</strong> – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_node_resource_version">
-<span class="sig-name descname"><span class="pre">get_node_resource_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_node_resource_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the resource version for the specified node
-:param node: node name
-:return: resource version</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_nodes_infos">
-<span class="sig-name descname"><span class="pre">get_nodes_infos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">krkn_lib.models.telemetry.models.NodeInfo</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_nodes_infos" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of NodeInfo objects
-:return:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_pod_info">
-<span class="sig-name descname"><span class="pre">get_pod_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Pod</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_pod_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieve information about a specific pod
-:param name: pod name
-:param namespace: namespace (optional default <cite>default</cite>)
-:return: Data class object of type Pod with the output of the above
-kubectl command in the given format if the pod exists.
-Returns None if the pod doesn’t exist</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_pod_log">
-<span class="sig-name descname"><span class="pre">get_pod_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">HTTPResponse</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_pod_log" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read the logs from a pod</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – pod name</p></li>
-<li><p><strong>namespace</strong> – namespace (optional default <cite>default</cite>)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>pod logs</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_pvc_info">
-<span class="sig-name descname"><span class="pre">get_pvc_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PVC</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_pvc_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieve information about a Persistent Volume Claim in a
-given namespace
-:param name: name of the persistent volume claim
-:param namespace: namespace (optional default <cite>default</cite>)
-:return: A PVC data class containing the name, capacity, volume name,
-namespace and associated pod names
-of the PVC if the PVC exists
-Returns None if the PVC doesn’t exist</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.is_pod_running">
-<span class="sig-name descname"><span class="pre">is_pod_running</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.is_pod_running" title="Permalink to this definition">¶</a></dt>
-<dd><p>Checks if a pod and all its containers are running</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pod_name:str</strong> – the name of the pod to check</p></li>
-<li><p><strong>namespace:str</strong> – the namespace of the pod to check</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>True if is running or False if not</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.list_killable_managedclusters">
-<span class="sig-name descname"><span class="pre">list_killable_managedclusters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.list_killable_managedclusters" title="Permalink to this definition">¶</a></dt>
-<dd><p>List managed clusters attached to the hub that can be killed
-:param label_selector: filter by label selector
-(optional default <cite>None</cite>)
-:return: a list of managed clusters names</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.list_killable_nodes">
-<span class="sig-name descname"><span class="pre">list_killable_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.list_killable_nodes" title="Permalink to this definition">¶</a></dt>
-<dd><p>List nodes in the cluster that can be killed (OpenShift only)
-:param label_selector: filter by label
-selector (optional default <cite>None</cite>)
-:return: a list of node names that can be killed</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.list_namespaces">
-<span class="sig-name descname"><span class="pre">list_namespaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.list_namespaces" title="Permalink to this definition">¶</a></dt>
-<dd><p>List all namespaces
-:param label_selector: filter by label
-selector (optional default <cite>None</cite>)
-:return: list of namespaces names</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.list_nodes">
-<span class="sig-name descname"><span class="pre">list_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.list_nodes" title="Permalink to this definition">¶</a></dt>
-<dd><p>List nodes in the cluster
-:param label_selector: filter by label
-selector (optional default <cite>None</cite>)
-:return: a list of node names</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.list_pods">
-<span class="sig-name descname"><span class="pre">list_pods</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.list_pods" title="Permalink to this definition">¶</a></dt>
-<dd><p>List pods in the given namespace
-:param namespace: namespace to search for pods
-:param label_selector: filter by label selector
-(optional default <cite>None</cite>)
-:return: a list of pod names</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.list_ready_nodes">
-<span class="sig-name descname"><span class="pre">list_ready_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.list_ready_nodes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of ready nodes
-:param label_selector: filter by label
-selector (optional default <cite>None</cite>)
-:return: a list of node names</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.monitor_component">
-<span class="sig-name descname"><span class="pre">monitor_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">iteration:</span> <span class="pre">int,</span> <span class="pre">component_namespace:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'bool'&gt;,</span> <span class="pre">list[str]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.monitor_component" title="Permalink to this definition">¶</a></dt>
-<dd><p>Monitor component namespace</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>iteration</strong> – iteration number</p></li>
-<li><p><strong>component_namespace</strong> – namespace</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the status of the component namespace</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.monitor_namespace">
-<span class="sig-name descname"><span class="pre">monitor_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">namespace:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'bool'&gt;,</span> <span class="pre">list[str]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.monitor_namespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Monitor the status of the pods in the specified namespace
-and set the status to true or false
-:param namespace: namespace
-:return: the list of pods and the status
-(if one or more pods are not running False otherwise True)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.monitor_nodes">
-<span class="sig-name descname"><span class="pre">monitor_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">)</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'bool'&gt;,</span> <span class="pre">list[str]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.monitor_nodes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Monitor the status of the cluster nodes
-and set the status to true or false</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>cluster status and a list of node names</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.path_exists_in_pod">
-<span class="sig-name descname"><span class="pre">path_exists_in_pod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.path_exists_in_pod" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.read_pod">
-<span class="sig-name descname"><span class="pre">read_pod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">V1Pod</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.read_pod" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read a pod definition</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – pod name</p></li>
-<li><p><strong>namespace</strong> – namespace (optional default <cite>default</cite>)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>V1Pod definition of the pod</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.watch_managedcluster_status">
-<span class="sig-name descname"><span class="pre">watch_managedcluster_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">managedcluster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.watch_managedcluster_status" title="Permalink to this definition">¶</a></dt>
-<dd><p>Watch for a specific managedcluster status
-:param managedcluster: managedcluster name
-:param status: status of the resource
-:param timeout: timeout</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.watch_node_status">
-<span class="sig-name descname"><span class="pre">watch_node_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.watch_node_status" title="Permalink to this definition">¶</a></dt>
-<dd><p>Watch for a specific node status</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>node</strong> – node name</p></li>
-<li><p><strong>status</strong> – status of the resource</p></li>
-<li><p><strong>timeout</strong> – timeout</p></li>
-<li><p><strong>resource_version</strong> – version of the resource</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.watch_resource">
-<span class="sig-name descname"><span class="pre">watch_resource</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Watch</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.watch_resource" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="k8s-krkn-kubernetes-module">
+<h1>k8s.krkn_kubernetes module<a class="headerlink" href="#k8s-krkn-kubernetes-module" title="Permalink to this heading"></a></h1>
 </section>
 
 
-            <div class="clearer"></div>
+           </div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="modules.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">k8s.krkn_kubernetes module</a><ul>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes</span></code></a><ul>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.__init__"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.api_client"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.api_client</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.apply_yaml"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.apply_yaml()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.archive_and_get_path_from_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.archive_and_get_path_from_pod()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.batch_cli"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.batch_cli</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.check_if_namespace_exists"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.check_if_namespace_exists()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.check_if_pod_exists"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.check_if_pod_exists()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.check_if_pvc_exists"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.check_if_pvc_exists()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.check_namespaces"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.check_namespaces()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.cli"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.cli</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.create_job"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.create_job()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.create_manifestwork"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.create_manifestwork()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.create_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.create_pod()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.custom_object_client"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.custom_object_client</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.delete_file_from_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_file_from_pod()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.delete_job"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_job()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.delete_manifestwork"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_manifestwork()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.delete_namespace"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_namespace()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.delete_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_pod()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.dyn_client"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.dyn_client</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.exec_cmd_in_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.exec_cmd_in_pod()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.find_kraken_node"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.find_kraken_node()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_all_kubernetes_object_count"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_all_kubernetes_object_count()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_all_pods"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_all_pods()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_api_resources_by_group"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_api_resources_by_group()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_archive_volume_from_pod_worker"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_archive_volume_from_pod_worker()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_cluster_infrastructure"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_cluster_infrastructure()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_cluster_network_plugins"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_cluster_network_plugins()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_clusterversion_string"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_clusterversion_string()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_containers_in_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_containers_in_pod()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_host"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_host()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_job_status"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_job_status()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_kubernetes_core_objects_count"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_kubernetes_core_objects_count()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_kubernetes_custom_objects_count"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_kubernetes_custom_objects_count()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_litmus_chaos_object"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_litmus_chaos_object()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_namespace_status"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_namespace_status()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_node"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_node()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_node_resource_version"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_node_resource_version()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_nodes_infos"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_nodes_infos()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_pod_info"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_pod_info()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_pod_log"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_pod_log()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.get_pvc_info"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_pvc_info()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.is_pod_running"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.is_pod_running()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.list_killable_managedclusters"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.list_killable_managedclusters()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.list_killable_nodes"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.list_killable_nodes()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.list_namespaces"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.list_namespaces()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.list_nodes"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.list_nodes()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.list_pods"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.list_pods()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.list_ready_nodes"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.list_ready_nodes()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.monitor_component"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.monitor_component()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.monitor_namespace"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.monitor_namespace()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.monitor_nodes"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.monitor_nodes()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.path_exists_in_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.path_exists_in_pod()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.read_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.read_pod()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.watch_managedcluster_status"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.watch_managedcluster_status()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.watch_node_status"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.watch_node_status()</span></code></a></li>
-<li><a class="reference internal" href="#k8s.krkn_kubernetes.KrknKubernetes.watch_resource"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.watch_resource</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="k8s.html" class="btn btn-neutral float-left" title="k8s package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="models.html" class="btn btn-neutral float-right" title="models package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Red Hat Chaos Team.</p>
   </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="k8s.html"
-                          title="previous chapter">k8s package</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="models.html"
-                          title="next chapter">models package</a></p>
-  </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+
+   
+
+</footer>
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="models.html" title="models package"
-             >next</a></li>
-        <li class="right" >
-          <a href="k8s.html" title="k8s package"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="modules.html">Krkn Foundation Library</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="k8s.html" >k8s package</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">k8s.krkn_kubernetes module</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright Red Hat Chaos Team.
-    </div>
-  </body>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>
