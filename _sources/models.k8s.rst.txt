@@ -1,0 +1,18 @@
+models.k8s package
+==================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   models.k8s.models
+
+Module contents
+---------------
+
+.. automodule:: models.k8s
+   :members:
+   :undoc-members:
+   :show-inheritance:
