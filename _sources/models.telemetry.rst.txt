@@ -1,0 +1,18 @@
+models.telemetry package
+========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   models.telemetry.models
+
+Module contents
+---------------
+
+.. automodule:: models.telemetry
+   :members:
+   :undoc-members:
+   :show-inheritance:

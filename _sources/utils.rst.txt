@@ -1,0 +1,19 @@
+utils package
+=============
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   utils.functions
+   utils.safe_logger
+
+Module contents
+---------------
+
+.. automodule:: utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

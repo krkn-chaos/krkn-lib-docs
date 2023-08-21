@@ -1,0 +1,7 @@
+k8s.krkn\_kubernetes module
+===========================
+
+.. automodule:: k8s.krkn_kubernetes
+   :members:
+   :undoc-members:
+   :show-inheritance:

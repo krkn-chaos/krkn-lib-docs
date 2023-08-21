@@ -1,0 +1,18 @@
+telemetry package
+=================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   telemetry.krkn_telemetry
+
+Module contents
+---------------
+
+.. automodule:: telemetry
+   :members:
+   :undoc-members:
+   :show-inheritance:

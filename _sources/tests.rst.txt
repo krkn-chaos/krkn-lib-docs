@@ -1,0 +1,22 @@
+tests package
+=============
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   tests.base_test
+   tests.test_krkn_kubernetes
+   tests.test_krkn_telemetry
+   tests.test_krkn_telemetry_models
+   tests.test_utils
+
+Module contents
+---------------
+
+.. automodule:: tests
+   :members:
+   :undoc-members:
+   :show-inheritance:

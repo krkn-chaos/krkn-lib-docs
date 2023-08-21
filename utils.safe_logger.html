@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>utils.safe_logger module &#8212; Krkn Foundation Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
+    <link rel="stylesheet" type="text/css" href="_static/krkn-style.css?v=16aae331" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="utils.functions module" href="utils.functions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="utils.functions.html" title="utils.functions module"
+             accesskey="P">previous</a></li>
+        <li class="nav-item nav-item-0"><a href="modules.html">Krkn Foundation Library</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="utils.html" accesskey="U">utils package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">utils.safe_logger module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-utils.safe_logger">
+<span id="utils-safe-logger-module"></span><h1>utils.safe_logger module<a class="headerlink" href="#module-utils.safe_logger" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="utils.safe_logger.SafeLogger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">utils.safe_logger.</span></span><span class="sig-name descname"><span class="pre">SafeLogger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>SafeLogger provides a mechanism to thread-safely log
+if initialized with a filename and optionally with a write mode
+(default is w+) otherwise will work as a wrapper around the logging
+package.
+The double working mechanism is meant to not force file logging to
+the methods that depend on it.
+:param filename: the log file name, if <cite>None</cite> the class will behave as
+a simple logger
+:param write_mode: file write mode, default is <cite>w+</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.error">
+<span class="sig-name descname"><span class="pre">error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.info">
+<span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.log_file_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">log_file_name</span></span><a class="headerlink" href="#utils.safe_logger.SafeLogger.log_file_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.warning">
+<span class="sig-name descname"><span class="pre">warning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger.warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.write_worker">
+<span class="sig-name descname"><span class="pre">write_worker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger.write_worker" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="modules.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">utils.safe_logger module</a><ul>
+<li><a class="reference internal" href="#utils.safe_logger.SafeLogger"><code class="docutils literal notranslate"><span class="pre">SafeLogger</span></code></a><ul>
+<li><a class="reference internal" href="#utils.safe_logger.SafeLogger.__init__"><code class="docutils literal notranslate"><span class="pre">SafeLogger.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#utils.safe_logger.SafeLogger.close"><code class="docutils literal notranslate"><span class="pre">SafeLogger.close()</span></code></a></li>
+<li><a class="reference internal" href="#utils.safe_logger.SafeLogger.error"><code class="docutils literal notranslate"><span class="pre">SafeLogger.error()</span></code></a></li>
+<li><a class="reference internal" href="#utils.safe_logger.SafeLogger.info"><code class="docutils literal notranslate"><span class="pre">SafeLogger.info()</span></code></a></li>
+<li><a class="reference internal" href="#utils.safe_logger.SafeLogger.log_file_name"><code class="docutils literal notranslate"><span class="pre">SafeLogger.log_file_name</span></code></a></li>
+<li><a class="reference internal" href="#utils.safe_logger.SafeLogger.warning"><code class="docutils literal notranslate"><span class="pre">SafeLogger.warning()</span></code></a></li>
+<li><a class="reference internal" href="#utils.safe_logger.SafeLogger.write_worker"><code class="docutils literal notranslate"><span class="pre">SafeLogger.write_worker()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="utils.functions.html"
+                          title="previous chapter">utils.functions module</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="utils.functions.html" title="utils.functions module"
+             >previous</a></li>
+        <li class="nav-item nav-item-0"><a href="modules.html">Krkn Foundation Library</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="utils.html" >utils package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">utils.safe_logger module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Red Hat Chaos Team.
+    </div>
+  </body>
+</html>
