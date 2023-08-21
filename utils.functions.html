@@ -49,11 +49,16 @@
 <li class="toctree-l1"><a class="reference internal" href="tests.html">tests package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="utils.html">utils package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="utils.html#submodules">Submodules</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">utils.functions module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">utils.functions module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#utils.functions.decode_base64_file"><code class="docutils literal notranslate"><span class="pre">decode_base64_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.functions.deep_set_attribute"><code class="docutils literal notranslate"><span class="pre">deep_set_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.functions.log_exception"><code class="docutils literal notranslate"><span class="pre">log_exception()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="utils.safe_logger.html">utils.safe_logger module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html#module-utils">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -82,8 +87,48 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="utils-functions-module">
-<h1>utils.functions module<a class="headerlink" href="#utils-functions-module" title="Permalink to this heading"></a></h1>
+  <section id="module-utils.functions">
+<span id="utils-functions-module"></span><h1>utils.functions module<a class="headerlink" href="#module-utils.functions" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.functions.decode_base64_file">
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">decode_base64_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.functions.decode_base64_file" title="Permalink to this definition"></a></dt>
+<dd><p>Decodes a base64 file while it’s read (no memory allocation).
+Suitable for big file conversion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source_filename</strong> – source base64 encoded file</p></li>
+<li><p><strong>destination_filename</strong> – destination decoded file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.functions.deep_set_attribute">
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">deep_set_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#utils.functions.deep_set_attribute" title="Permalink to this definition"></a></dt>
+<dd><p>Recursively sets the attribute value in all the occurrences of the
+object.
+:param attribute: the attribute name in the object
+:param value: the value that will be set in the attribute if present
+:param obj: the object that will be traversed and modified</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.functions.log_exception">
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">log_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scenario</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.functions.log_exception" title="Permalink to this definition"></a></dt>
+<dd><p>Logs an exception printing the file and the line
+number from where the method is called</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>scenario</strong> – if set will include the scenario name in the log</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
 
