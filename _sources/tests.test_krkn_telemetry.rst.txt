@@ -1,7 +1,0 @@
-tests.test\_krkn\_telemetry module
-==================================
-
-.. automodule:: tests.test_krkn_telemetry
-   :members:
-   :undoc-members:
-   :show-inheritance:

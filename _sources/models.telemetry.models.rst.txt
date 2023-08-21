@@ -1,7 +1,0 @@
-models.telemetry.models module
-==============================
-
-.. automodule:: models.telemetry.models
-   :members:
-   :undoc-members:
-   :show-inheritance:

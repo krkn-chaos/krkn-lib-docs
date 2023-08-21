@@ -1,7 +1,0 @@
-utils.safe\_logger module
-=========================
-
-.. automodule:: utils.safe_logger
-   :members:
-   :undoc-members:
-   :show-inheritance:

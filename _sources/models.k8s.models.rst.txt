@@ -1,7 +1,0 @@
-models.k8s.models module
-========================
-
-.. automodule:: models.k8s.models
-   :members:
-   :undoc-members:
-   :show-inheritance:

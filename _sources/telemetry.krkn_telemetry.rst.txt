@@ -1,7 +1,0 @@
-telemetry.krkn\_telemetry module
-================================
-
-.. automodule:: telemetry.krkn_telemetry
-   :members:
-   :undoc-members:
-   :show-inheritance:
