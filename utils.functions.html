@@ -46,7 +46,6 @@
 <li class="toctree-l1"><a class="reference internal" href="k8s.html">k8s package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="models.html">models package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="telemetry.html">telemetry package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tests.html">tests package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="utils.html">utils package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="utils.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">utils.functions module</a><ul>
@@ -112,9 +111,17 @@ Suitable for big file conversion.</p>
 <span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">deep_set_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#utils.functions.deep_set_attribute" title="Permalink to this definition"></a></dt>
 <dd><p>Recursively sets the attribute value in all the occurrences of the
 object.
-:param attribute: the attribute name in the object
-:param value: the value that will be set in the attribute if present
-:param obj: the object that will be traversed and modified</p>
+An example usage is to anonimyze a yaml object setting all the
+occurrences of the property <cite>kubeconfig</cite> with a dummy value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attribute</strong> – the attribute name in the object</p></li>
+<li><p><strong>value</strong> – the value that will be set in the attribute if present</p></li>
+<li><p><strong>obj</strong> – the object that will be traversed and modified</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">

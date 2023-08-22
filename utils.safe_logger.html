@@ -45,7 +45,6 @@
 <li class="toctree-l1"><a class="reference internal" href="k8s.html">k8s package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="models.html">models package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="telemetry.html">telemetry package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tests.html">tests package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="utils.html">utils package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="utils.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="utils.functions.html">utils.functions module</a></li>
@@ -98,26 +97,50 @@ if initialized with a filename and optionally with a write mode
 (default is w+) otherwise will work as a wrapper around the logging
 package.
 The double working mechanism is meant to not force file logging to
-the methods that depend on it.
-:param filename: the log file name, if <cite>None</cite> the class will behave as
-a simple logger
-:param write_mode: file write mode, default is <cite>w+</cite></p>
+the methods that depend on it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – the log file name, if <cite>None</cite> the class will behave as
+a simple logger</p></li>
+<li><p><strong>write_mode</strong> – file write mode, default is <cite>w+</cite></p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.close">
 <span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger.close" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Waits all the messages to be consumed, kills the thread
+and closes the file writer</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.error">
 <span class="sig-name descname"><span class="pre">error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger.error" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Safely logs an Error in the logfile if the object has been
+instantiated with a filename, otherwise logs an error using
+the standard log mechanism</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – the log message</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.info">
 <span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger.info" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Safely logs an Info in the logfile if the object has been
+instantiated with a filename, otherwise logs an Info using
+the standard log mechanism</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – the log message</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.log_file_name">
@@ -127,12 +150,21 @@ a simple logger
 <dl class="py method">
 <dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.warning">
 <span class="sig-name descname"><span class="pre">warning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger.warning" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Safely logs a Warning in the logfile if the object has been
+instantiated with a filename, otherwise logs a Warning using
+the standard log mechanism</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – the log message</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="utils.safe_logger.SafeLogger.write_worker">
 <span class="sig-name descname"><span class="pre">write_worker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utils.safe_logger.SafeLogger.write_worker" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Consumer thread to log on a file</p>
+</dd></dl>
 
 </dd></dl>
 
