@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.1.1
+                v1.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -55,6 +55,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">utils.functions module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.decode_base64_file"><code class="docutils literal notranslate"><span class="pre">decode_base64_file()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.deep_set_attribute"><code class="docutils literal notranslate"><span class="pre">deep_set_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.functions.get_scenario_items"><code class="docutils literal notranslate"><span class="pre">get_scenario_items()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.log_exception"><code class="docutils literal notranslate"><span class="pre">log_exception()</span></code></a></li>
 </ul>
 </li>
@@ -104,9 +105,6 @@ Suitable for big file conversion.</p>
 <li><p><strong>destination_filename</strong> – destination decoded file</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
-</dd>
 </dl>
 </dd></dl>
 
@@ -115,7 +113,7 @@ Suitable for big file conversion.</p>
 <span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">deep_set_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#utils.functions.deep_set_attribute" title="Permalink to this definition"></a></dt>
 <dd><p>Recursively sets the attribute value in all the occurrences of the
 object.
-An example usage is to anonimyze a yaml object setting all the
+An example usage is to anonymize a yaml object setting all the
 occurrences of the property <cite>kubeconfig</cite> with a dummy value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -124,6 +122,27 @@ occurrences of the property <cite>kubeconfig</cite> with a dummy value.</p>
 <li><p><strong>value</strong> – the value that will be set in the attribute if present</p></li>
 <li><p><strong>obj</strong> – the object that will be traversed and modified</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.functions.get_scenario_items">
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">get_scenario_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cont</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#utils.functions.get_scenario_items" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the value of item from scenario yaml.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cont</strong> – content of scenario yaml file</p></li>
+<li><p><strong>item</strong> – the name of the item in scenario yaml</p></li>
+<li><p><strong>default</strong> – the default value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>item value - if not specified the default value is returned</p>
 </dd>
 </dl>
 </dd></dl>

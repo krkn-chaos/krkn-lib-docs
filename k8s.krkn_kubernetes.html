@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.1.1
+                v1.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -170,7 +170,7 @@ and downloaded from the container</p></li>
 to the files</p></li>
 <li><p><strong>download_path</strong> – the local path
 where the archive will be saved</p></li>
-<li><p><strong>archive_part_size</strong> – the archive will splitted in multiple
+<li><p><strong>archive_part_size</strong> – the archive will be split into multiple
 files of the specified <cite>archive_part_size</cite></p></li>
 <li><p><strong>max_threads</strong> – maximum number of threads that will be launched</p></li>
 <li><p><strong>safe_logger</strong> – SafeLogger, if omitted a default SafeLogger will
@@ -216,7 +216,7 @@ the namespace exists or not</p>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>boolean value indicating whether the pod exists or not</p>
 </dd>
 </dl>
 </dd></dl>
@@ -334,9 +334,6 @@ a valid manifestwork yaml manifest</p></li>
 <li><p><strong>filename</strong> – full-path of the file that
 will be removed from the pod</p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
 </dd>
 </dl>
 </dd></dl>
@@ -492,7 +489,7 @@ is stored</p></li>
 create the archive.to this prefix will be appended sequential
 number of the archive assigned to
 the worker in a two digit format and the tar exception
-(ex for a prefix like prefix- the remote filename
+(ex for a prefix like prefix - the remote filename
 will become prefix-00.tar)</p></li>
 <li><p><strong>local_download_path</strong> – local path where the tar volume
 will be download</p></li>
@@ -513,9 +510,6 @@ the download will terminate the remote file will be deleted.</p></li>
 <li><p><strong>safe_logger</strong> – SafeLogger class, will allow thread-safe
 logging</p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
 </dd>
 </dl>
 </dd></dl>
@@ -667,7 +661,7 @@ the object parameter in the CustomObject Api</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_node">
 <span class="sig-name descname"><span class="pre">get_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance_kill_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_node" title="Permalink to this definition"></a></dt>
-<dd><p>Returns active node(s)</p>
+<dd><p>Gets active node(s)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -677,7 +671,7 @@ the object parameter in the CustomObject Api</p>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>active node(s)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -939,7 +933,7 @@ and set the status to true or false</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.watch_managedcluster_status">
-<span class="sig-name descname"><span class="pre">watch_managedcluster_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">managedcluster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.watch_managedcluster_status" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">watch_managedcluster_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">managedcluster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.watch_managedcluster_status" title="Permalink to this definition"></a></dt>
 <dd><p>Watch for a specific managedcluster status</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -948,6 +942,9 @@ and set the status to true or false</p>
 <li><p><strong>status</strong> – status of the resource</p></li>
 <li><p><strong>timeout</strong> – timeout</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>boolean value indicating if the timeout occurred</p>
 </dd>
 </dl>
 </dd></dl>
