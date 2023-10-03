@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.2.0
+                1.2.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -97,6 +97,24 @@
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_kubernetes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknKubernetes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.collect_cluster_metadata">
+<span class="sig-name descname"><span class="pre">collect_cluster_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chaos_telemetry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ChaosRunTelemetry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.collect_cluster_metadata" title="Permalink to this definition"></a></dt>
+<dd><p>Collects useful cluster metadata:
+- cloud infrastructure
+- network plugins
+- number of objects deployed
+- node system infos
+to enrich the ChaosRunTelemetry object that will be sent to the
+telemetry service:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>chaos_telemetry</strong> – the chaos telemetry to be enriched by
+the cluster metadata</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.generate_url_and_put_to_s3_worker">

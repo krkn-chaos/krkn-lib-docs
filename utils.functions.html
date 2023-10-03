@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.2.0
+                1.2.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -55,7 +55,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">utils.functions module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.decode_base64_file"><code class="docutils literal notranslate"><span class="pre">decode_base64_file()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.deep_set_attribute"><code class="docutils literal notranslate"><span class="pre">deep_set_attribute()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#utils.functions.get_scenario_items"><code class="docutils literal notranslate"><span class="pre">get_scenario_items()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.functions.get_yaml_item_value"><code class="docutils literal notranslate"><span class="pre">get_yaml_item_value()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.log_exception"><code class="docutils literal notranslate"><span class="pre">log_exception()</span></code></a></li>
 </ul>
 </li>
@@ -130,15 +130,15 @@ occurrences of the property <cite>kubeconfig</cite> with a dummy value.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="utils.functions.get_scenario_items">
-<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">get_scenario_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cont</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#utils.functions.get_scenario_items" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the value of item from scenario yaml.</p>
+<dt class="sig sig-object py" id="utils.functions.get_yaml_item_value">
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">get_yaml_item_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cont</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#utils.functions.get_yaml_item_value" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the value of item from yaml.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cont</strong> – content of scenario yaml file</p></li>
-<li><p><strong>item</strong> – the name of the item in scenario yaml</p></li>
-<li><p><strong>default</strong> – the default value</p></li>
+<li><p><strong>cont</strong> – dict of all items from yaml file</p></li>
+<li><p><strong>item</strong> – name of the item in scenario yaml</p></li>
+<li><p><strong>default</strong> – default value</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
