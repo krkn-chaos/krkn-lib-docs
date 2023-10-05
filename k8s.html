@@ -12,11 +12,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=e49d06fc"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="k8s.krkn_kubernetes module" href="k8s.krkn_kubernetes.html" />
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.2.1
+                v1.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -84,9 +84,9 @@
            <div itemprop="articleBody">
              
   <section id="k8s-package">
-<h1>k8s package<a class="headerlink" href="#k8s-package" title="Permalink to this heading"></a></h1>
+<h1>k8s package<a class="headerlink" href="#k8s-package" title="Link to this heading"></a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="k8s.krkn_kubernetes.html">k8s.krkn_kubernetes module</a><ul>
@@ -94,6 +94,7 @@
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.__init__"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.__init__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.api_client"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.api_client</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.apply_yaml"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.apply_yaml()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.apps_api"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.apps_api</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.archive_and_get_path_from_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.archive_and_get_path_from_pod()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.batch_cli"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.batch_cli</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.check_if_namespace_exists"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.check_if_namespace_exists()</span></code></a></li>
@@ -101,28 +102,42 @@
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.check_if_pvc_exists"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.check_if_pvc_exists()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.check_namespaces"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.check_namespaces()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.cli"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.cli</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.collect_filter_archive_ocp_logs"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.collect_filter_archive_ocp_logs()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.create_job"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.create_job()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.create_manifestwork"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.create_manifestwork()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.create_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.create_pod()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.custom_object_client"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.custom_object_client</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.delete_daemonset"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_daemonset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.delete_deployment"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_deployment()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.delete_file_from_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_file_from_pod()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.delete_job"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_job()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.delete_manifestwork"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_manifestwork()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.delete_namespace"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_namespace()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.delete_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_pod()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.delete_replicaset"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_replicaset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.delete_services"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_services()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.delete_statefulset"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.delete_statefulset()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.dyn_client"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.dyn_client</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.exec_cmd_in_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.exec_cmd_in_pod()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.filter_must_gather_ocp_log_folder"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.filter_must_gather_ocp_log_folder()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.find_kraken_node"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.find_kraken_node()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_all_kubernetes_object_count"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_all_kubernetes_object_count()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_all_pods"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_all_pods()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_all_replicasets"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_all_replicasets()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_all_services"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_all_services()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_all_statefulset"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_all_statefulset()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_api_resources_by_group"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_api_resources_by_group()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_archive_volume_from_pod_worker"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_archive_volume_from_pod_worker()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_cluster_infrastructure"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_cluster_infrastructure()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_cluster_network_plugins"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_cluster_network_plugins()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_clusterversion_string"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_clusterversion_string()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_containers_in_pod"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_containers_in_pod()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_daemonset"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_daemonset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_deployment_ns"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_deployment_ns()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_deployment_ready"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_deployment_ready()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_host"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_host()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_job_status"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_job_status()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_kubeconfig_path"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_kubeconfig_path()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_kubernetes_core_objects_count"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_kubernetes_core_objects_count()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_kubernetes_custom_objects_count"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_kubernetes_custom_objects_count()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s.krkn_kubernetes.html#k8s.krkn_kubernetes.KrknKubernetes.get_litmus_chaos_object"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_litmus_chaos_object()</span></code></a></li>
@@ -156,7 +171,7 @@
 </div>
 </section>
 <section id="module-k8s">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-k8s" title="Permalink to this heading"></a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-k8s" title="Link to this heading"></a></h2>
 </section>
 </section>
 

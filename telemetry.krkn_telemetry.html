@@ -12,11 +12,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=e49d06fc"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="utils package" href="utils.html" />
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.2.1
+                v1.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -88,19 +88,19 @@
            <div itemprop="articleBody">
              
   <section id="module-telemetry.krkn_telemetry">
-<span id="telemetry-krkn-telemetry-module"></span><h1>telemetry.krkn_telemetry module<a class="headerlink" href="#module-telemetry.krkn_telemetry" title="Permalink to this heading"></a></h1>
+<span id="telemetry-krkn-telemetry-module"></span><h1>telemetry.krkn_telemetry module<a class="headerlink" href="#module-telemetry.krkn_telemetry" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">telemetry.krkn_telemetry.</span></span><span class="sig-name descname"><span class="pre">KrknTelemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_kubernetes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknKubernetes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">telemetry.krkn_telemetry.</span></span><span class="sig-name descname"><span class="pre">KrknTelemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_kubernetes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknKubernetes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_kubernetes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknKubernetes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_kubernetes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknKubernetes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.collect_cluster_metadata">
-<span class="sig-name descname"><span class="pre">collect_cluster_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chaos_telemetry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ChaosRunTelemetry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.collect_cluster_metadata" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">collect_cluster_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chaos_telemetry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ChaosRunTelemetry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.collect_cluster_metadata" title="Link to this definition"></a></dt>
 <dd><p>Collects useful cluster metadata:
 - cloud infrastructure
 - network plugins
@@ -118,7 +118,7 @@ the cluster metadata</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.generate_url_and_put_to_s3_worker">
-<span class="sig-name descname"><span class="pre">generate_url_and_put_to_s3_worker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thread_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uploaded_file_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_retries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.generate_url_and_put_to_s3_worker" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">generate_url_and_put_to_s3_worker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thread_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uploaded_file_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_retries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_file_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_file_extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.generate_url_and_put_to_s3_worker" title="Link to this definition"></a></dt>
 <dd><p>Worker function that creates an s3 link to put files and upload
 the file directly on the bucket.</p>
 <dl class="field-list simple">
@@ -140,14 +140,22 @@ S3 folder on which the prometheus files will be stored</p></li>
 <li><p><strong>uploaded_file_list</strong> – uploaded file list shared between threads</p></li>
 <li><p><strong>max_retries</strong> – maximum number of retries from config.yaml.
 If 0 will retry indefinitely.</p></li>
+<li><p><strong>remote_file_prefix</strong> – the prefix that will given to the file
+in the S3 bucket along with the progressive number
+(if is a multiple file archive)</p></li>
+<li><p><strong>remote_file_extension</strong> – the extension of the remote
+file on the S3 bucket</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.get_bucket_url_for_filename">
-<span class="sig-name descname"><span class="pre">get_bucket_url_for_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.get_bucket_url_for_filename" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_bucket_url_for_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.get_bucket_url_for_filename" title="Link to this definition"></a></dt>
 <dd><p>Gets from the telemetry API a one shot S3 link to upload
 prometheus data</p>
 <dl class="field-list simple">
@@ -163,14 +171,14 @@ that will be stored in the bucket</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>the url where the file will be uploaded</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.get_ocp_prometheus_data">
-<span class="sig-name descname"><span class="pre">get_ocp_prometheus_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.get_ocp_prometheus_data" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_ocp_prometheus_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.get_ocp_prometheus_data" title="Link to this definition"></a></dt>
 <dd><p>Downloads the OCP prometheus metrics folder</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -189,20 +197,41 @@ temporary archive files</p></li>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.kubecli">
-<span class="sig-name descname"><span class="pre">kubecli</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">KrknKubernetes</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.kubecli" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">kubecli</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">KrknKubernetes</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.kubecli" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.put_file_to_url">
-<span class="sig-name descname"><span class="pre">put_file_to_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.put_file_to_url" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">put_file_to_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.put_file_to_url" title="Link to this definition"></a></dt>
 <dd><p>Puts a local file on an url
 :param url: url where the file will be put
 :param local_filename: local file full-path</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.put_ocp_logs">
+<span class="sig-name descname"><span class="pre">put_ocp_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.put_ocp_logs" title="Link to this definition"></a></dt>
+<dd><p>Collects, filters, archive and put on the telemetry S3 Buckets
+Openshift logs. Built on top of the <cite>oc adm must-gather</cite> command
+and custom filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request_id</strong> – uuid of the session that will represent the
+S3 folder on which the filtered log files archive will be stored</p></li>
+<li><p><strong>telemetry_config</strong> – telemetry section of kraken config.yaml</p></li>
+<li><p><strong>start_timestamp</strong> – timestamp of the first relevant entry, if None
+will start filter starting from the earliest</p></li>
+<li><p><strong>end_timestamp</strong> – timestamp of the last relevant entry, if None
+will end filtering until the latest</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.put_ocp_prometheus_data">
-<span class="sig-name descname"><span class="pre">put_ocp_prometheus_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archive_volumes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.put_ocp_prometheus_data" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">put_ocp_prometheus_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archive_volumes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.put_ocp_prometheus_data" title="Link to this definition"></a></dt>
 <dd><p>Puts a list of files on telemetry S3 bucket, mulithread.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -219,12 +248,12 @@ S3 folder on which the prometheus files will be stored</p></li>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.safe_logger">
-<span class="sig-name descname"><span class="pre">safe_logger</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">SafeLogger</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.safe_logger" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">safe_logger</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">SafeLogger</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.safe_logger" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.send_telemetry">
-<span class="sig-name descname"><span class="pre">send_telemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uuid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chaos_telemetry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ChaosRunTelemetry</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.send_telemetry" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">send_telemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uuid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chaos_telemetry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ChaosRunTelemetry</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.send_telemetry" title="Link to this definition"></a></dt>
 <dd><p>Sends Telemetry Data to the Telemetry Web Service</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -242,7 +271,7 @@ S3 folder on which the prometheus files will be stored</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.krkn_telemetry.KrknTelemetry.set_parameters_base64">
-<span class="sig-name descname"><span class="pre">set_parameters_base64</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scenario_telemetry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ScenarioTelemetry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.set_parameters_base64" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_parameters_base64</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scenario_telemetry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ScenarioTelemetry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.krkn_telemetry.KrknTelemetry.set_parameters_base64" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

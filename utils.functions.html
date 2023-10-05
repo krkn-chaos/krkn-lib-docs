@@ -12,11 +12,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=e49d06fc"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="utils.safe_logger module" href="utils.safe_logger.html" />
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.2.1
+                v1.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -55,6 +55,9 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">utils.functions module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.decode_base64_file"><code class="docutils literal notranslate"><span class="pre">decode_base64_file()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.deep_set_attribute"><code class="docutils literal notranslate"><span class="pre">deep_set_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.functions.filter_log_file_worker"><code class="docutils literal notranslate"><span class="pre">filter_log_file_worker()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.functions.filter_log_line"><code class="docutils literal notranslate"><span class="pre">filter_log_line()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.functions.find_executable_in_path"><code class="docutils literal notranslate"><span class="pre">find_executable_in_path()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.get_yaml_item_value"><code class="docutils literal notranslate"><span class="pre">get_yaml_item_value()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.log_exception"><code class="docutils literal notranslate"><span class="pre">log_exception()</span></code></a></li>
 </ul>
@@ -92,10 +95,10 @@
            <div itemprop="articleBody">
              
   <section id="module-utils.functions">
-<span id="utils-functions-module"></span><h1>utils.functions module<a class="headerlink" href="#module-utils.functions" title="Permalink to this heading"></a></h1>
+<span id="utils-functions-module"></span><h1>utils.functions module<a class="headerlink" href="#module-utils.functions" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="utils.functions.decode_base64_file">
-<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">decode_base64_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.functions.decode_base64_file" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">decode_base64_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.functions.decode_base64_file" title="Link to this definition"></a></dt>
 <dd><p>Decodes a base64 file while it’s read (no memory allocation).
 Suitable for big file conversion.</p>
 <dl class="field-list simple">
@@ -110,7 +113,7 @@ Suitable for big file conversion.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="utils.functions.deep_set_attribute">
-<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">deep_set_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#utils.functions.deep_set_attribute" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">deep_set_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#utils.functions.deep_set_attribute" title="Link to this definition"></a></dt>
 <dd><p>Recursively sets the attribute value in all the occurrences of the
 object.
 An example usage is to anonymize a yaml object setting all the
@@ -130,8 +133,75 @@ occurrences of the property <cite>kubeconfig</cite> with a dummy value.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="utils.functions.filter_log_file_worker">
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">filter_log_file_worker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_filter_patterns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Queue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.functions.filter_log_file_worker" title="Link to this definition"></a></dt>
+<dd><p>Log file filter worker. Filters a file scanning
+each line (naive approach, no algorithms impletemented for
+this first version) and extracting time infos
+matching it with the provided regular expression and time range.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_timestamp</strong> – timestamp of the first relevant entry, if None
+will start filter starting from the earliest</p></li>
+<li><p><strong>end_timestamp</strong> – timestamp of the last relevant entry, if None
+will end filtering until the latest</p></li>
+<li><p><strong>src_folder</strong> – used to remove from the final filtered
+log name the base directory that is not relevant</p></li>
+<li><p><strong>dst_folder</strong> – output folder where the filtered file will be placed</p></li>
+<li><p><strong>local_timezone</strong> – timezone of the client</p></li>
+<li><p><strong>remote_timezone</strong> – timezone of the system from
+which the logs have been extracted</p></li>
+<li><p><strong>log_filter_patterns</strong> – a list of regex that will match and
+extract the time info that will be parsed by dateutil.parser
+(it supports several formats by default but not every date format).
+Each pattern <em>must contain</em> only 1 group that represent the time
+string that must be extracted and parsed</p></li>
+<li><p><strong>queue</strong> – a queue containing <cite>pathlib.Path</cite> objects
+representing the log file to be parsed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.functions.filter_log_line">
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">filter_log_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_filter_patterns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="p"><span class="pre">[</span></span><span class="pre">re.Pattern</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#utils.functions.filter_log_line" title="Link to this definition"></a></dt>
+<dd><p>Filters a log line extracting time informations using a set of compiled
+regular expressions containing excatly one group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_timestamp</strong> – timestamp representing the minimum date after that
+the log becomes relevant, if None no bottom limit applied</p></li>
+<li><p><strong>end_timestamp</strong> – timestamp representing the maximum date before that
+the log is still relevant, if None no top limit applied</p></li>
+<li><p><strong>remote_timezone</strong> – timezone of the system from where the log has been
+extracted</p></li>
+<li><p><strong>local_timezone</strong> – timezone of the client that is parsing the log</p></li>
+<li><p><strong>log_filter_patterns</strong> – a list of regex that will match
+and extract the time info that will be
+parsed by dateutil.parser (it supports several formats
+by default but not every date format).
+Each pattern <em>must contain</em> only 1 group that represent
+the time string that must be extracted
+and parsed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the log line if matches the criteria above otherwise None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.functions.find_executable_in_path">
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">find_executable_in_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">executable_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#utils.functions.find_executable_in_path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="utils.functions.get_yaml_item_value">
-<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">get_yaml_item_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cont</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#utils.functions.get_yaml_item_value" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">get_yaml_item_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cont</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#utils.functions.get_yaml_item_value" title="Link to this definition"></a></dt>
 <dd><p>Sets the value of item from yaml.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -149,7 +219,7 @@ occurrences of the property <cite>kubeconfig</cite> with a dummy value.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="utils.functions.log_exception">
-<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">log_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scenario</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.functions.log_exception" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">log_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scenario</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.functions.log_exception" title="Link to this definition"></a></dt>
 <dd><p>Logs an exception printing the file and the line
 number from where the method is called</p>
 <dl class="field-list simple">
