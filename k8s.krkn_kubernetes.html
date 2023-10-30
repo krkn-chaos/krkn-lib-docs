@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=771d088f"></script>
+        <script src="_static/documentation_options.js?v=6ac6f732"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.3.2
+                v1.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -59,7 +59,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="models.html">models package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="telemetry.html">telemetry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocp.html">ocp package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">utils package</a></li>
 </ul>
 
@@ -712,40 +712,6 @@ logging</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_cluster_infrastructure">
-<span class="sig-name descname"><span class="pre">get_cluster_infrastructure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_cluster_infrastructure" title="Link to this definition"></a></dt>
-<dd><p>Get the cluster Cloud infrastructure name when available</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>the cluster infrastructure name or <cite>Unknown</cite> when unavailable</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_cluster_network_plugins">
-<span class="sig-name descname"><span class="pre">get_cluster_network_plugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_cluster_network_plugins" title="Link to this definition"></a></dt>
-<dd><p>Get the cluster Cloud network plugins list</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>the cluster infrastructure name or <cite>Unknown</cite> when unavailable</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_clusterversion_string">
-<span class="sig-name descname"><span class="pre">get_clusterversion_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_clusterversion_string" title="Link to this definition"></a></dt>
-<dd><p>Return clusterversion status text on OpenShift, empty string
-on other distributions</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>clusterversion status</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_containers_in_pod">
 <span class="sig-name descname"><span class="pre">get_containers_in_pod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_containers_in_pod" title="Link to this definition"></a></dt>
 <dd><p>Get container names of a pod</p>
@@ -1043,7 +1009,7 @@ Returns None if the PVC doesn’t exist</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.list_killable_nodes">
 <span class="sig-name descname"><span class="pre">list_killable_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.list_killable_nodes" title="Link to this definition"></a></dt>
-<dd><p>List nodes in the cluster that can be killed (OpenShift only)</p>
+<dd><p>List nodes in the cluster that can be killed</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>label_selector</strong> – filter by label

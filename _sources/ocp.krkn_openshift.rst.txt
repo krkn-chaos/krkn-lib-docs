@@ -1,0 +1,7 @@
+ocp.krkn\_openshift module
+==========================
+
+.. automodule:: ocp.krkn_openshift
+   :members:
+   :undoc-members:
+   :show-inheritance:

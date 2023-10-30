@@ -6,6 +6,6 @@ Krkn Foundation Library
 
    k8s
    models
-   telemetry
+   ocp
    tests
    utils
