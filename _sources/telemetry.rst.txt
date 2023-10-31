@@ -1,13 +1,14 @@
 telemetry package
 =================
 
-Submodules
-----------
+Subpackages
+-----------
 
 .. toctree::
    :maxdepth: 4
 
-   telemetry.krkn_telemetry
+   telemetry.k8s
+   telemetry.ocp
 
 Module contents
 ---------------

@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=6ac6f732"></script>
+        <script src="_static/documentation_options.js?v=cebe732b"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.4.0
+                v1.4.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -60,6 +60,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="models.html">models package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ocp.html">ocp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="telemetry.html">telemetry package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">utils package</a></li>
 </ul>
 
@@ -268,35 +269,23 @@ the Persistent Volume Claim exists or not</p>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.collect_filter_archive_ocp_logs">
-<span class="sig-name descname"><span class="pre">collect_filter_archive_ocp_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kubeconfig_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_filter_patterns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oc_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.collect_filter_archive_ocp_logs" title="Link to this definition"></a></dt>
-<dd><p>Collects, filters and finally creates a tar.gz archive containing
-the filtered logs matching the criteria passed as parameters.
-The logs are used leveraging the oc CLI with must-gather option
-(<cite>oc adm must-gather</cite>)</p>
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.collect_cluster_events">
+<span class="sig-name descname"><span class="pre">collect_cluster_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UTC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.collect_cluster_events" title="Link to this definition"></a></dt>
+<dd><p>Collects cluster events querying <cite>/api/v1/events</cite>
+filtered in a given time interval and writes them in
+a temporary file in json format.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>src_dir</strong> – the folder containing the files to be filtered</p></li>
-<li><p><strong>dst_dir</strong> – the folder where the filtered logs will be written</p></li>
-<li><p><strong>kubeconfig_path</strong> – path of the kubeconfig file used by the <cite>oc</cite>
-CLI to gather the log files from the cluster</p></li>
-<li><p><strong>start_timestamp</strong> – timestamp of the first relevant entry, if None
-will start from the beginning</p></li>
-<li><p><strong>end_timestamp</strong> – timestamp of the last relevant entry, if None
-will be collected until the latest</p></li>
-<li><p><strong>threads</strong> – the number of threads that will do the job</p></li>
-<li><p><strong>log_filter_patterns</strong> – a list of regex that will match and
-extract the time info that will be parsed by dateutil.parser
-(it supports several formats by default but not every date format)</p></li>
-<li><p><strong>safe_logger</strong> – thread safe logger used to log
-the output on a file stream</p></li>
-<li><p><strong>oc_path</strong> – the path of the <cite>oc</cite> CLI, if None will
-be searched in the PATH</p></li>
+<li><p><strong>start_timestamp</strong> – timestamp of the minimum date
+after that the event is relevant</p></li>
+<li><p><strong>end_timestamp</strong> – timestamp of the maximum date
+before that the event is relevant</p></li>
+<li><p><strong>local_timezone</strong> – timezone of the local system</p></li>
+<li><p><strong>cluster_timezone</strong> – timezone of the remote cluster</p></li>
+<li><p><strong>limit</strong> – limit of the number of events to be fetched
+from the cluster</p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the path of the archive containing the filtered logs</p>
 </dd>
 </dl>
 </dd></dl>
@@ -534,52 +523,6 @@ along the parameters (optional, default <cite>bash -c</cite>)</p></li>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the command stdout</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.filter_must_gather_ocp_log_folder">
-<span class="sig-name descname"><span class="pre">filter_must_gather_ocp_log_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_files_extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_filter_patterns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.filter_must_gather_ocp_log_folder" title="Link to this definition"></a></dt>
-<dd><p>Filters a folder containing logs collected by the
-<cite>oc adm must-gather</cite> command
-(usually logs) with a given extension.
-The time info is extracted matching each line against
-the patterns passed as parameters and within the time
-range between <cite>start_timestamp</cite>
-and <cite>end_timestamp</cite>. if start and end timestamp
-are None the bottom and top time limit
-will be removed respectively. The filtering is multithreaded.
-The timezone of the client and the cluster will
-be applied to the filter and the records.
-If a file does not contain relevant rows in the
-time range won’t be written in the
-dst_dir
-The output of the filter will be the original file name
-with all the folder structure (base
-folder not included) added as a prefix and
-separated by a dot, eg.
-src_dir: /tmp/folder
-dst_dir: /tmp/filtered
-log_file: /tmp/folder/namespaces/openshift-monitoring/pods/prometheus-k8s-0/logs/current.log # NOQA
-output: /tmp/filtered/namespaces.openshift-monitoring.pods.prometheus-k8s-0.logs.current.log # NOQA</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>src_dir</strong> – the folder containing the files to be filtered</p></li>
-<li><p><strong>dst_dir</strong> – the folder where the filtered logs will be written</p></li>
-<li><p><strong>start_timestamp</strong> – timestamp of the first relevant entry, if None
-will start from the beginning</p></li>
-<li><p><strong>end_timestamp</strong> – timestamp of the last relevant entry, if None
-will be collected until the latest</p></li>
-<li><p><strong>log_files_extension</strong> – the extension of the files that will be filtered
-using wildcards (* will consider all the files, log_file_name.log will consider only this file)</p></li>
-<li><p><strong>threads</strong> – the number of threads that will do the job</p></li>
-<li><p><strong>log_filter_patterns</strong> – a list of regex that will match and extract the time info that will be
-parsed by dateutil.parser (it supports several formats by default but not every date format).
-Each pattern <em>must contain</em> only 1 group that represent the time string that must be extracted
-and parsed</p></li>
-</ul>
 </dd>
 </dl>
 </dd></dl>

@@ -1,0 +1,7 @@
+telemetry.k8s.krkn\_telemetry\_kubernetes module
+================================================
+
+.. automodule:: telemetry.k8s.krkn_telemetry_kubernetes
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,18 @@
+telemetry.k8s package
+=====================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   telemetry.k8s.krkn_telemetry_kubernetes
+
+Module contents
+---------------
+
+.. automodule:: telemetry.k8s
+   :members:
+   :undoc-members:
+   :show-inheritance:
