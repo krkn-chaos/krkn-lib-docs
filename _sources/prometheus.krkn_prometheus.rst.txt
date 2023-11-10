@@ -1,0 +1,7 @@
+prometheus.krkn\_prometheus module
+==================================
+
+.. automodule:: prometheus.krkn_prometheus
+   :members:
+   :undoc-members:
+   :show-inheritance:
