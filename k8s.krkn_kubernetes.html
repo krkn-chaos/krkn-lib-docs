@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=32cf698c"></script>
+        <script src="_static/documentation_options.js?v=0537e3e6"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.4.5
+                v1.4.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -547,6 +547,35 @@ along the parameters (optional, default <cite>bash -c</cite>)</p></li>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the command stdout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.exec_command_on_node">
+<span class="sig-name descname"><span class="pre">exec_command_on_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">node_name:</span> <span class="pre">str,</span> <span class="pre">command:</span> <span class="pre">[&lt;class</span> <span class="pre">'str'&gt;],</span> <span class="pre">exec_pod_name:</span> <span class="pre">str,</span> <span class="pre">exec_pod_namespace:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'default',</span> <span class="pre">exec_pod_container:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.exec_command_on_node" title="Link to this definition"></a></dt>
+<dd><p>Creates a privileged pod on a specific node and
+executes a command on it to affect the node itself.
+The pod mounts also the dbus socket /run/dbus/system_bus_socket
+to exec kernel related commands like timedatectl.
+To see the pod spec check the template on
+src/krkn_lib/k8s/templates/</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_name</strong> – the name of the node where the command will be
+executed</p></li>
+<li><p><strong>command</strong> – the command and the options to be executed
+as a list of strings eg. [“ls”, “-al”]</p></li>
+<li><p><strong>exec_pod_name</strong> – the name of the pod that will be created</p></li>
+<li><p><strong>exec_pod_namespace</strong> – the namespace where the pod will be created
+(default “default”)</p></li>
+<li><p><strong>exec_pod_container</strong> – the container of the pod on which
+the pod will be executed (default None)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the command output</p>
 </dd>
 </dl>
 </dd></dl>

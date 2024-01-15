@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=32cf698c"></script>
+        <script src="_static/documentation_options.js?v=0537e3e6"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.4.5
+                v1.4.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -62,6 +62,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.filter_log_file_worker"><code class="docutils literal notranslate"><span class="pre">filter_log_file_worker()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.filter_log_line"><code class="docutils literal notranslate"><span class="pre">filter_log_line()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.find_executable_in_path"><code class="docutils literal notranslate"><span class="pre">find_executable_in_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.functions.get_random_string"><code class="docutils literal notranslate"><span class="pre">get_random_string()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.get_yaml_item_value"><code class="docutils literal notranslate"><span class="pre">get_yaml_item_value()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.log_exception"><code class="docutils literal notranslate"><span class="pre">log_exception()</span></code></a></li>
 </ul>
@@ -245,6 +246,20 @@ and parsed</p></li>
 <dt class="sig sig-object py" id="utils.functions.find_executable_in_path">
 <span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">find_executable_in_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">executable_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#utils.functions.find_executable_in_path" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.functions.get_random_string">
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">get_random_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.functions.get_random_string" title="Link to this definition"></a></dt>
+<dd><p>Returns a random lowercase string of lenght <cite>length</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>length</strong> – the lenght of the string</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the random string</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="utils.functions.get_yaml_item_value">
