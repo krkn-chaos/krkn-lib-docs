@@ -1,0 +1,7 @@
+telemetry.elastic module
+========================
+
+.. automodule:: telemetry.elastic
+   :members:
+   :undoc-members:
+   :show-inheritance:
