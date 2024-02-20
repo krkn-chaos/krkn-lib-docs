@@ -14,13 +14,13 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=44cc011d"></script>
+        <script src="_static/documentation_options.js?v=e0b48504"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="models.telemetry.models module" href="models.telemetry.models.html" />
-    <link rel="prev" title="models.k8s.models module" href="models.k8s.models.html" /> 
+    <link rel="prev" title="models.krkn.models module" href="models.krkn.models.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.4.12
+                v1.4.13
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -51,6 +51,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="models.html">models package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="models.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="models.k8s.html">models.k8s package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.krkn.html">models.krkn package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">models.telemetry package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-models.telemetry">Module contents</a></li>
@@ -103,11 +104,12 @@
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.cloud_infrastructure"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.cloud_infrastructure</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.kubernetes_objects_count"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.kubernetes_objects_count</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.network_plugins"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.network_plugins</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.node_count"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.node_count</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.node_infos"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.node_infos</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.node_summary_infos"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.node_summary_infos</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.run_uuid"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.run_uuid</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.scenarios"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.scenarios</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.to_json"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.total_node_count"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.total_node_count</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.worker_count"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.worker_count</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.NodeInfo"><code class="docutils literal notranslate"><span class="pre">NodeInfo</span></code></a><ul>
@@ -153,7 +155,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="models.k8s.models.html" class="btn btn-neutral float-left" title="models.k8s.models module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="models.krkn.models.html" class="btn btn-neutral float-left" title="models.krkn.models module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="models.telemetry.models.html" class="btn btn-neutral float-right" title="models.telemetry.models module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

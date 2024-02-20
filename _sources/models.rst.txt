@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 4
 
    models.k8s
+   models.krkn
    models.telemetry
 
 Module contents

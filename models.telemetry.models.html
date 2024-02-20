@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=44cc011d"></script>
+        <script src="_static/documentation_options.js?v=e0b48504"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v1.4.12
+                v1.4.13
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -51,6 +51,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="models.html">models package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="models.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="models.k8s.html">models.k8s package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.krkn.html">models.krkn package</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="models.telemetry.html">models.telemetry package</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="models.telemetry.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="models.telemetry.html#module-models.telemetry">Module contents</a></li>
@@ -124,15 +125,12 @@ in the cluster during the chaos run</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.node_count">
-<span class="sig-name descname"><span class="pre">node_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.node_count" title="Link to this definition"></a></dt>
-<dd><p>Number of nodes in the target cluster</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.node_infos">
-<span class="sig-name descname"><span class="pre">node_infos</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.telemetry.models.NodeInfo" title="models.telemetry.models.NodeInfo"><span class="pre">NodeInfo</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.node_infos" title="Link to this definition"></a></dt>
-<dd><p>List of node Infos collected from the target cluster</p>
+<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.node_summary_infos">
+<span class="sig-name descname"><span class="pre">node_summary_infos</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.telemetry.models.NodeInfo" title="models.telemetry.models.NodeInfo"><span class="pre">NodeInfo</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.node_summary_infos" title="Link to this definition"></a></dt>
+<dd><p>Summary of node Infos collected from the target cluster.
+It will report all the master and infra nodes and only one
+of the workers that usually are configured to have the same
+resources.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -151,6 +149,18 @@ in the cluster during the chaos run</p>
 <dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.to_json">
 <span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.to_json" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.total_node_count">
+<span class="sig-name descname"><span class="pre">total_node_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.total_node_count" title="Link to this definition"></a></dt>
+<dd><p>Number of all kind of nodes in the target cluster</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.worker_count">
+<span class="sig-name descname"><span class="pre">worker_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.worker_count" title="Link to this definition"></a></dt>
+<dd><p>Number of workers in the node list</p>
+</dd></dl>
 
 </dd></dl>
 
