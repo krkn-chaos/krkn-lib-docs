@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=dbd6d5c5"></script>
+        <script src="_static/documentation_options.js?v=7fae51dc"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v2.1.0
+                v2.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -334,6 +334,25 @@ a valid manifestwork yaml manifest</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.create_net_policy">
+<span class="sig-name descname"><span class="pre">create_net_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.create_net_policy" title="Link to this definition"></a></dt>
+<dd><p>Create a network policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> – json body of network policy to create</p></li>
+<li><p><strong>namespace</strong> – namespace to find daemonsets in</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.create_obj">
+<span class="sig-name descname"><span class="pre">create_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_body:</span> <span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/json/__init__.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.create_obj" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.create_pod">
 <span class="sig-name descname"><span class="pre">create_pod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">120</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.create_pod" title="Link to this definition"></a></dt>
 <dd><p>Create a pod in a namespace</p>
@@ -460,6 +479,20 @@ using k8s python client</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>V1Status API object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.delete_net_policy">
+<span class="sig-name descname"><span class="pre">delete_net_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.delete_net_policy" title="Link to this definition"></a></dt>
+<dd><p>Delete a network policy given a certain name and namespace</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – name of network policy</p></li>
+<li><p><strong>namespace</strong> – namespace network policy is in</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -883,6 +916,20 @@ the object parameter in the CustomObject Api</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>namespace status</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_namespaced_net_policy">
+<span class="sig-name descname"><span class="pre">get_namespaced_net_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_namespaced_net_policy" title="Link to this definition"></a></dt>
+<dd><p>Return a list of network policy names</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>namespace</strong> – find only statefulset in given namespace</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of network policy names</p>
 </dd>
 </dl>
 </dd></dl>
