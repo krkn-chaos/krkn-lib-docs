@@ -1,0 +1,7 @@
+k8s.pods\_monitor\_pool module
+==============================
+
+.. automodule:: k8s.pods_monitor_pool
+   :members:
+   :undoc-members:
+   :show-inheritance:

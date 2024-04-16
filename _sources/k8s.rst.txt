@@ -8,6 +8,7 @@ Submodules
    :maxdepth: 4
 
    k8s.krkn_kubernetes
+   k8s.pods_monitor_pool
 
 Module contents
 ---------------
