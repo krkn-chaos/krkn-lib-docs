@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=4856dbb6"></script>
+        <script src="_static/documentation_options.js?v=7fae51dc"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v2.1.2
+                v2.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -95,36 +95,6 @@
              
   <section id="module-models.k8s.models">
 <span id="models-k8s-models-module"></span><h1>models.k8s.models module<a class="headerlink" href="#module-models.k8s.models" title="Link to this heading"></a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="models.k8s.models.AffectedPod">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">AffectedPod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recovery_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.k8s.models.AffectedPod" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A pod affected by a chaos scenario</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="models.k8s.models.AffectedPod.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recovery_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.k8s.models.AffectedPod.__init__" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.AffectedPod.namespace">
-<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.AffectedPod.namespace" title="Link to this definition"></a></dt>
-<dd><p>Namespace of the pod</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.AffectedPod.pod_name">
-<span class="sig-name descname"><span class="pre">pod_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.AffectedPod.pod_name" title="Link to this definition"></a></dt>
-<dd><p>Name of the pod</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.AffectedPod.recovery_time">
-<span class="sig-name descname"><span class="pre">recovery_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#models.k8s.models.AffectedPod.recovery_time" title="Link to this definition"></a></dt>
-<dd><p>Time needed to return in “Ready” state</p>
-</dd></dl>
-
-</dd></dl>
-
 <dl class="py exception">
 <dt class="sig sig-object py" id="models.k8s.models.ApiRequestException">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">ApiRequestException</span></span><a class="headerlink" href="#models.k8s.models.ApiRequestException" title="Link to this definition"></a></dt>
@@ -362,68 +332,6 @@ information regarding a pod</p>
 <span class="sig-name descname"><span class="pre">volumes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.k8s.models.Volume" title="models.k8s.models.Volume"><span class="pre">Volume</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#models.k8s.models.Pod.volumes" title="Link to this definition"></a></dt>
 <dd><p>Volumes mounted in the Pod</p>
 </dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="models.k8s.models.PodsMonitorThread">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">PodsMonitorThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">executor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ThreadPoolExecutor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Future</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.k8s.models.PodsMonitorThread" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="models.k8s.models.PodsMonitorThread.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">executor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ThreadPoolExecutor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Future</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.k8s.models.PodsMonitorThread.__init__" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.PodsMonitorThread.executor">
-<span class="sig-name descname"><span class="pre">executor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ThreadPoolExecutor</span></em><a class="headerlink" href="#models.k8s.models.PodsMonitorThread.executor" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.PodsMonitorThread.future">
-<span class="sig-name descname"><span class="pre">future</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Future</span></em><a class="headerlink" href="#models.k8s.models.PodsMonitorThread.future" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="models.k8s.models.PodsMonitorThread.join">
-<span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">120</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#models.k8s.models.PodsStatus" title="models.k8s.models.PodsStatus"><span class="pre">PodsStatus</span></a></span></span><a class="headerlink" href="#models.k8s.models.PodsMonitorThread.join" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="models.k8s.models.PodsStatus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">PodsStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_object</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.k8s.models.PodsStatus" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Return value of wait_for_pods_to_become_ready_by_label and
-wait_for_pods_to_become_ready_by_name_pattern containing the list
-of the pods that did recover (pod_name, namespace,
-time needed to become ready) and the list of pods that did
-not recover from the chaos</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="models.k8s.models.PodsStatus.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_object</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.k8s.models.PodsStatus.__init__" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.PodsStatus.error">
-<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#models.k8s.models.PodsStatus.error" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="models.k8s.models.PodsStatus.merge">
-<span class="sig-name descname"><span class="pre">merge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pods_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#models.k8s.models.PodsStatus" title="models.k8s.models.PodsStatus"><span class="pre">PodsStatus</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.k8s.models.PodsStatus.merge" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.PodsStatus.recovered">
-<span class="sig-name descname"><span class="pre">recovered</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.k8s.models.AffectedPod" title="models.k8s.models.AffectedPod"><span class="pre">AffectedPod</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#models.k8s.models.PodsStatus.recovered" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.PodsStatus.unrecovered">
-<span class="sig-name descname"><span class="pre">unrecovered</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.k8s.models.AffectedPod" title="models.k8s.models.AffectedPod"><span class="pre">AffectedPod</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#models.k8s.models.PodsStatus.unrecovered" title="Link to this definition"></a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
