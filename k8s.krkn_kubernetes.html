@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=4856dbb6"></script>
+        <script src="_static/documentation_options.js?v=ec2e5faf"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v2.1.2
+                v2.1.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -550,6 +550,36 @@ using k8s python client</p>
 <li><p><strong>name</strong> – name of statefulset</p></li>
 <li><p><strong>namespace</strong> – namespace statefulset is in</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.deploy_service_hijacking">
+<span class="sig-name descname"><span class="pre">deploy_service_hijacking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'flask'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stats_route</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/stats'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ServiceHijacking</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.deploy_service_hijacking" title="Link to this definition"></a></dt>
+<dd><p>Deploys a pod running the service-hijacking webservice
+along with the test plan deployed in krkn stored in a
+ConfigMap and bound as a file to the container</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namespace</strong> – The namespace where the Pod and the
+ConfigMap will be deployed</p></li>
+<li><p><strong>plan</strong> – the dictionary converted test plan to be
+executed in the service</p></li>
+<li><p><strong>image</strong> – the image container image of the service</p></li>
+<li><p><strong>port_number</strong> – the port where the pod will be listening
+default 5000</p></li>
+<li><p><strong>port_name</strong> – the port name if the Service is pointing to
+a string name instead of a port number</p></li>
+<li><p><strong>stats_route</strong> – overrides the defautl route where the stats
+action will be mapped, change it only if you have a /stats
+route in your test_plan</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a structure containing all the infos of the
+Pod and the ConfigMap deployment</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1400,6 +1430,27 @@ a chaos scenario is performed.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.replace_service_selector">
+<span class="sig-name descname"><span class="pre">replace_service_selector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_selectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.replace_service_selector" title="Link to this definition"></a></dt>
+<dd><p>Replaces a service selector with one or more new selectors
+Patching the target service</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>new_selectors</strong> – a list of selectors in the format “key=value”</p></li>
+<li><p><strong>service_name</strong> – the service name that needs to be patched</p></li>
+<li><p><strong>namespace</strong> – the namespace of the service</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the original service spec
+(useful to restore it after the scenario)
+returns None if self.api_client hasn’t been initialized</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.request_chunk_size">
 <span class="sig-name descname"><span class="pre">request_chunk_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">250</span></em><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.request_chunk_size" title="Link to this definition"></a></dt>
@@ -1461,6 +1512,27 @@ to wait before considering the pod “not recovered” after the Chaos</p></li>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a list of pod_name and namespace tuples</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.service_exists">
+<span class="sig-name descname"><span class="pre">service_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.service_exists" title="Link to this definition"></a></dt>
+<dd><p>Checks wheter a kubernetes Service exist or not
+:param service_name: the name of the service to check
+:param namespace: the namespace where the service should exist
+:return: True if the service exists, False if not</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.undeploy_service_hijacking">
+<span class="sig-name descname"><span class="pre">undeploy_service_hijacking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_infos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ServiceHijacking</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.undeploy_service_hijacking" title="Link to this definition"></a></dt>
+<dd><p>Undeploys the resource created for the ServiceHijacking Scenario</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>service_infos</strong> – the structure returned by the
+deploy_service_hijacking method</p>
 </dd>
 </dl>
 </dd></dl>

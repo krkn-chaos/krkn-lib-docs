@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=4856dbb6"></script>
+        <script src="_static/documentation_options.js?v=ec2e5faf"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v2.1.2
+                v2.1.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -222,6 +222,43 @@ and parsed</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the cluster infrastructure name or <cite>Unknown</cite> when unavailable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ocp.krkn_openshift.KrknOpenshift.get_cluster_type">
+<span class="sig-name descname"><span class="pre">get_cluster_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#ocp.krkn_openshift.KrknOpenshift.get_cluster_type" title="Link to this definition"></a></dt>
+<dd><p>Get the cluster Cloud infrastructure type when available
+status:</p>
+<blockquote>
+<div><dl>
+<dt>platformStatus:</dt><dd><p>aws:
+region: us-west-2
+resourceTags:
+- key: prowci</p>
+<blockquote>
+<div><p>value: ci-rosa-**</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>key: red-hat-clustertype</dt><dd><p>value: rosa</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>key: red-hat-managed</dt><dd><p>value: “true”</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>type: AWS</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the cluster type (ex. rosa) or <cite>self-managed</cite> when unavailable</p>
 </dd>
 </dl>
 </dd></dl>
