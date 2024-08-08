@@ -1,0 +1,7 @@
+elastic.krkn\_elastic module
+============================
+
+.. automodule:: elastic.krkn_elastic
+   :members:
+   :undoc-members:
+   :show-inheritance:

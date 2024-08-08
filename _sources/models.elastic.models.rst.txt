@@ -1,0 +1,7 @@
+models.elastic.models module
+============================
+
+.. automodule:: models.elastic.models
+   :members:
+   :undoc-members:
+   :show-inheritance:

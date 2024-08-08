@@ -1,19 +1,18 @@
-telemetry package
-=================
+elastic package
+===============
 
-Subpackages
------------
+Submodules
+----------
 
 .. toctree::
    :maxdepth: 4
 
-   telemetry.k8s
-   telemetry.ocp
+   elastic.krkn_elastic
 
 Module contents
 ---------------
 
-.. automodule:: telemetry
+.. automodule:: elastic
    :members:
    :undoc-members:
    :show-inheritance:

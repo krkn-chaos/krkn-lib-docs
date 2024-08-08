@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=105f4508"></script>
+        <script src="_static/documentation_options.js?v=f845e6ca"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v2.1.7
+                v2.1.8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -47,6 +47,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="elastic.html">elastic package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="k8s.html">k8s package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="models.html">models package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ocp.html">ocp package</a></li>
@@ -62,6 +63,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.filter_log_file_worker"><code class="docutils literal notranslate"><span class="pre">filter_log_file_worker()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.filter_log_line"><code class="docutils literal notranslate"><span class="pre">filter_log_line()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.find_executable_in_path"><code class="docutils literal notranslate"><span class="pre">find_executable_in_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.functions.get_junit_test_case"><code class="docutils literal notranslate"><span class="pre">get_junit_test_case()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.get_random_string"><code class="docutils literal notranslate"><span class="pre">get_random_string()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.get_yaml_item_value"><code class="docutils literal notranslate"><span class="pre">get_yaml_item_value()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.is_host_reachable"><code class="docutils literal notranslate"><span class="pre">is_host_reachable()</span></code></a></li>
@@ -247,6 +249,34 @@ and parsed</p></li>
 <dt class="sig sig-object py" id="utils.functions.find_executable_in_path">
 <span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">find_executable_in_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">executable_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#utils.functions.find_executable_in_path" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.functions.get_junit_test_case">
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">get_junit_test_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_suite_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_case_description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_stdout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#utils.functions.get_junit_test_case" title="Link to this definition"></a></dt>
+<dd><p>Creates an XML compatible with sippy to track regressions
+on OCP tests.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>success</strong> – if true will print a success test case,
+otherwise a failure test case</p></li>
+<li><p><strong>time</strong> – sets the duration in seconds of the testsuite</p></li>
+<li><p><strong>test_suite_name</strong> – sets the name of the test suite</p></li>
+<li><p><strong>test_case_description</strong> – sets the description of
+the testcase, it has to contain tags that map the test case
+to the monitored component on sippy like [sig-etcd]
+or others</p></li>
+<li><p><strong>test_stdout</strong> – if a test failes the stdout of the krkn-run
+is attached to the testcase element in the XML</p></li>
+<li><p><strong>test_version</strong> – sets an optional property to the testsuite
+containing the version on the test</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the XML string to be written in the junit xml file</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="utils.functions.get_random_string">

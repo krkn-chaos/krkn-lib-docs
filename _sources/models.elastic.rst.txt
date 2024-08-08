@@ -1,0 +1,18 @@
+models.elastic package
+======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   models.elastic.models
+
+Module contents
+---------------
+
+.. automodule:: models.elastic
+   :members:
+   :undoc-members:
+   :show-inheritance:
