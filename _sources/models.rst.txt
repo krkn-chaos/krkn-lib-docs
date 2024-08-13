@@ -7,7 +7,6 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   models.elastic
    models.k8s
    models.krkn
    models.telemetry

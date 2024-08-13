@@ -4,7 +4,6 @@ Krkn Foundation Library
 .. toctree::
    :maxdepth: 4
 
-   elastic
    k8s
    models
    ocp

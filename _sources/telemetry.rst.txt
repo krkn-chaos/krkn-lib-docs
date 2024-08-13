@@ -10,6 +10,14 @@ Subpackages
    telemetry.k8s
    telemetry.ocp
 
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   telemetry.elastic
+
 Module contents
 ---------------
 
