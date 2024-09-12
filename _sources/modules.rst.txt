@@ -12,3 +12,4 @@ Krkn Foundation Library
    telemetry
    tests
    utils
+   version

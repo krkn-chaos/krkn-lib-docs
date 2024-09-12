@@ -14,8 +14,8 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=5773a0da"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/documentation_options.js?v=26a6ea83"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v3.0.0
+                v3.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -58,6 +58,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">utils.functions module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.check_date_in_localized_interval"><code class="docutils literal notranslate"><span class="pre">check_date_in_localized_interval()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.decode_base64_file"><code class="docutils literal notranslate"><span class="pre">decode_base64_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.functions.deep_get_attribute"><code class="docutils literal notranslate"><span class="pre">deep_get_attribute()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.deep_set_attribute"><code class="docutils literal notranslate"><span class="pre">deep_set_attribute()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.filter_dictionary"><code class="docutils literal notranslate"><span class="pre">filter_dictionary()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.functions.filter_log_file_worker"><code class="docutils literal notranslate"><span class="pre">filter_log_file_worker()</span></code></a></li>
@@ -76,6 +77,7 @@
 <li class="toctree-l2"><a class="reference internal" href="utils.html#module-utils">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version package</a></li>
 </ul>
 
         </div>
@@ -135,6 +137,27 @@ Suitable for big file conversion.</p>
 <li><p><strong>source_filename</strong> – source base64 encoded file</p></li>
 <li><p><strong>destination_filename</strong> – destination decoded file</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.functions.deep_get_attribute">
+<span class="sig-prename descclassname"><span class="pre">utils.functions.</span></span><span class="sig-name descname"><span class="pre">deep_get_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#utils.functions.deep_get_attribute" title="Link to this definition"></a></dt>
+<dd><p>Recursively finds the attribute value in all the occurrences of the
+object and returns the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attribute</strong> – the attribute to search in the object</p></li>
+<li><p><strong>obj</strong> – the object that will be traversed and modified</p></li>
+<li><p><strong>values</strong> – the list of values found each step that will
+be recursively passed to the function itself each time.
+can be left empty.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a list of values found</p>
 </dd>
 </dl>
 </dd></dl>

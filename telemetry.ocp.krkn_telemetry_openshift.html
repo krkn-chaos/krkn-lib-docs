@@ -14,8 +14,8 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=5773a0da"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/documentation_options.js?v=26a6ea83"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v3.0.0
+                v3.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -66,6 +66,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">utils package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version package</a></li>
 </ul>
 
         </div>
@@ -97,11 +98,11 @@
 <span id="telemetry-ocp-krkn-telemetry-openshift-module"></span><h1>telemetry.ocp.krkn_telemetry_openshift module<a class="headerlink" href="#module-telemetry.ocp.krkn_telemetry_openshift" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="telemetry.ocp.krkn_telemetry_openshift.KrknTelemetryOpenshift">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">telemetry.ocp.krkn_telemetry_openshift.</span></span><span class="sig-name descname"><span class="pre">KrknTelemetryOpenshift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_openshift</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknOpenshift</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.ocp.krkn_telemetry_openshift.KrknTelemetryOpenshift" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">telemetry.ocp.krkn_telemetry_openshift.</span></span><span class="sig-name descname"><span class="pre">KrknTelemetryOpenshift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_openshift</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknOpenshift</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krkn_telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.ocp.krkn_telemetry_openshift.KrknTelemetryOpenshift" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">KrknTelemetryKubernetes</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.ocp.krkn_telemetry_openshift.KrknTelemetryOpenshift.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_openshift</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknOpenshift</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.ocp.krkn_telemetry_openshift.KrknTelemetryOpenshift.__init__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_openshift</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknOpenshift</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krkn_telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.ocp.krkn_telemetry_openshift.KrknTelemetryOpenshift.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -148,7 +149,7 @@ temporary archive files</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.ocp.krkn_telemetry_openshift.KrknTelemetryOpenshift.put_ocp_logs">
-<span class="sig-name descname"><span class="pre">put_ocp_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.ocp.krkn_telemetry_openshift.KrknTelemetryOpenshift.put_ocp_logs" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">put_ocp_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.ocp.krkn_telemetry_openshift.KrknTelemetryOpenshift.put_ocp_logs" title="Link to this definition"></a></dt>
 <dd><p>Collects, filters, archive and put on the telemetry S3 Buckets
 Openshift logs. Built on top of the <cite>oc adm must-gather</cite> command
 and custom filtering.</p>
@@ -162,6 +163,8 @@ S3 folder on which the filtered log files archive will be stored</p></li>
 will start filter starting from the earliest</p></li>
 <li><p><strong>end_timestamp</strong> – timestamp of the last relevant entry, if None
 will end filtering until the latest</p></li>
+<li><p><strong>namespace</strong> – if set the logs will be collected
+only for the provided namespace</p></li>
 </ul>
 </dd>
 </dl>

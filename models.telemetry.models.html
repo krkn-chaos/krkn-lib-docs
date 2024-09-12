@@ -14,8 +14,8 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=5773a0da"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/documentation_options.js?v=26a6ea83"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v3.0.0
+                v3.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -68,6 +68,7 @@
 <li class="toctree-l1"><a class="reference internal" href="prometheus.html">prometheus package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="telemetry.html">telemetry package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">utils package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version package</a></li>
 </ul>
 
         </div>
@@ -122,6 +123,12 @@
 <dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.cloud_type">
 <span class="sig-name descname"><span class="pre">cloud_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'self-managed'</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.cloud_type" title="Link to this definition"></a></dt>
 <dd><p>Cloud Type (if available) of the target cluster: self-managed, rosa, etc</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.cluster_version">
+<span class="sig-name descname"><span class="pre">cluster_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Unknown'</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.cluster_version" title="Link to this definition"></a></dt>
+<dd><p>K8s or OCP version</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -181,10 +188,81 @@ resources.</p>
 <dd><p>Number of all kind of nodes in the target cluster</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">ClusterEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k8s_json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.telemetry.models.ClusterEvent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Summary of cluster event more relevant fields</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k8s_json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.telemetry.models.ClusterEvent.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 <dl class="py attribute">
-<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.version">
-<span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Unknown'</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.version" title="Link to this definition"></a></dt>
-<dd><p>K8s or OCP version</p>
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.creation">
+<span class="sig-name descname"><span class="pre">creation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ClusterEvent.creation" title="Link to this definition"></a></dt>
+<dd><p>Event creation date time</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.involved_object_kind">
+<span class="sig-name descname"><span class="pre">involved_object_kind</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ClusterEvent.involved_object_kind" title="Link to this definition"></a></dt>
+<dd><p>Kind of the object that triggered the event</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.involved_object_name">
+<span class="sig-name descname"><span class="pre">involved_object_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ClusterEvent.involved_object_name" title="Link to this definition"></a></dt>
+<dd><p>Name of the object that triggered the event</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.involved_object_namespace">
+<span class="sig-name descname"><span class="pre">involved_object_namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ClusterEvent.involved_object_namespace" title="Link to this definition"></a></dt>
+<dd><p>Namespace of the object that triggered the event</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ClusterEvent.message" title="Link to this definition"></a></dt>
+<dd><p>Message associated to the event</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ClusterEvent.name" title="Link to this definition"></a></dt>
+<dd><p>Event name assigned by the cluster</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ClusterEvent.namespace" title="Link to this definition"></a></dt>
+<dd><p>Event namespace</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.reason">
+<span class="sig-name descname"><span class="pre">reason</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ClusterEvent.reason" title="Link to this definition"></a></dt>
+<dd><p>Reason of the event trigger</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.source_component">
+<span class="sig-name descname"><span class="pre">source_component</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ClusterEvent.source_component" title="Link to this definition"></a></dt>
+<dd><p>Cluster component that triggered the event</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#models.telemetry.models.ClusterEvent.to_json" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.type">
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ClusterEvent.type" title="Link to this definition"></a></dt>
+<dd><p>Event severity</p>
 </dd></dl>
 
 </dd></dl>
@@ -230,8 +308,8 @@ resources.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="models.telemetry.models.NodeInfo.node_type">
-<span class="sig-name descname"><span class="pre">node_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#models.telemetry.models.NodeInfo.node_type" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="models.telemetry.models.NodeInfo.nodes_type">
+<span class="sig-name descname"><span class="pre">nodes_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#models.telemetry.models.NodeInfo.nodes_type" title="Link to this definition"></a></dt>
 <dd><p>Node Type (worker/infra/master etc.)</p>
 </dd></dl>
 
@@ -294,7 +372,14 @@ has been created/modified</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="models.telemetry.models.ScenarioTelemetry.affected_pods">
 <span class="sig-name descname"><span class="pre">affected_pods</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PodsStatus</span></em><a class="headerlink" href="#models.telemetry.models.ScenarioTelemetry.affected_pods" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Pods affected by the chaos scenario</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ScenarioTelemetry.cluster_events">
+<span class="sig-name descname"><span class="pre">cluster_events</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.telemetry.models.ClusterEvent" title="models.telemetry.models.ClusterEvent"><span class="pre">ClusterEvent</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#models.telemetry.models.ScenarioTelemetry.cluster_events" title="Link to this definition"></a></dt>
+<dd><p>Cluster events collected during the chaos run</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="models.telemetry.models.ScenarioTelemetry.end_timestamp">
@@ -311,7 +396,7 @@ has been created/modified</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="models.telemetry.models.ScenarioTelemetry.parameters">
 <span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">any</span></em><a class="headerlink" href="#models.telemetry.models.ScenarioTelemetry.parameters" title="Link to this definition"></a></dt>
-<dd><p>Pods affected by the chaos scenario</p>
+<dd><p>scenario parameters</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -326,11 +411,28 @@ has been created/modified</p>
 <dd><p>Scenario filename</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="models.telemetry.models.ScenarioTelemetry.set_cluster_events">
+<span class="sig-name descname"><span class="pre">set_cluster_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.telemetry.models.ClusterEvent" title="models.telemetry.models.ClusterEvent"><span class="pre">ClusterEvent</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.telemetry.models.ScenarioTelemetry.set_cluster_events" title="Link to this definition"></a></dt>
+<dd><p>Sets the cluster events filtering them by the accepted
+reasons</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>events</strong> – a list of ClusterEvents</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="models.telemetry.models.ScenarioTelemetry.start_timestamp">
 <span class="sig-name descname"><span class="pre">start_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#models.telemetry.models.ScenarioTelemetry.start_timestamp" title="Link to this definition"></a></dt>
 <dd><p>Timestamp when the Krkn run started</p>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.telemetry.models.ScenarioTelemetry.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#models.telemetry.models.ScenarioTelemetry.to_json" title="Link to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

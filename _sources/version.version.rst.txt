@@ -1,0 +1,7 @@
+version.version module
+======================
+
+.. automodule:: version.version
+   :members:
+   :undoc-members:
+   :show-inheritance:

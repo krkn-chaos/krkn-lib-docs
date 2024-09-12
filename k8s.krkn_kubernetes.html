@@ -14,8 +14,8 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=5773a0da"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/documentation_options.js?v=26a6ea83"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v3.0.0
+                v3.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -65,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="prometheus.html">prometheus package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="telemetry.html">telemetry package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">utils package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version package</a></li>
 </ul>
 
         </div>
@@ -275,8 +276,8 @@ the Persistent Volume Claim exists or not</p>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.collect_cluster_events">
-<span class="sig-name descname"><span class="pre">collect_cluster_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UTC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.collect_cluster_events" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.collect_and_parse_cluster_events">
+<span class="sig-name descname"><span class="pre">collect_and_parse_cluster_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UTC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">ClusterEvent</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.collect_and_parse_cluster_events" title="Link to this definition"></a></dt>
 <dd><p>Collects cluster events querying <cite>/api/v1/events</cite>
 filtered in a given time interval and writes them in
 a temporary file in json format.</p>
@@ -291,6 +292,35 @@ before that the event is relevant</p></li>
 <li><p><strong>cluster_timezone</strong> – timezone of the remote cluster</p></li>
 <li><p><strong>limit</strong> – limit of the number of events to be fetched
 from the cluster</p></li>
+<li><p><strong>namespace</strong> – Namespace from which the events must be
+collected, if None all-namespaces will be selected</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Returns a list of parsed ClusterEvents</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.collect_cluster_events">
+<span class="sig-name descname"><span class="pre">collect_cluster_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UTC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.collect_cluster_events" title="Link to this definition"></a></dt>
+<dd><p>Collects cluster events querying <cite>/api/v1/events</cite>
+filtered in a given time interval and writes them in
+a temporary file in json format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_timestamp</strong> – timestamp of the minimum date
+after that the event is relevant</p></li>
+<li><p><strong>end_timestamp</strong> – timestamp of the maximum date
+before that the event is relevant</p></li>
+<li><p><strong>local_timezone</strong> – timezone of the local system</p></li>
+<li><p><strong>cluster_timezone</strong> – timezone of the remote cluster</p></li>
+<li><p><strong>limit</strong> – limit of the number of events to be fetched
+from the cluster</p></li>
+<li><p><strong>namespace</strong> – Namespace from which the events must be
+collected, if None all-namespaces will be selected</p></li>
 </ul>
 </dd>
 </dl>
@@ -997,7 +1027,7 @@ the object parameter in the CustomObject Api</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>node_name</strong> – node name</p></li>
 <li><p><strong>label_selector</strong> – filter by label</p></li>
-<li><p><strong>instance_kill_count</strong> – </p></li>
+<li><p><strong>instance_kill_count</strong></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1107,6 +1137,13 @@ Returns None if the PVC doesn’t exist</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.is_kubernetes">
+<span class="sig-name descname"><span class="pre">is_kubernetes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.is_kubernetes" title="Link to this definition"></a></dt>
+<dd><p>Checks if it’s a kubernetes cluster
+:return: true if it’s kubernetes false if not</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.is_pod_running">
 <span class="sig-name descname"><span class="pre">is_pod_running</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.is_pod_running" title="Link to this definition"></a></dt>
 <dd><p>Checks if a pod and all its containers are running</p>
@@ -1214,6 +1251,21 @@ selector (optional default <cite>None</cite>)</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>list of namespaces names</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.list_namespaces_by_regex">
+<span class="sig-name descname"><span class="pre">list_namespaces_by_regex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.list_namespaces_by_regex" title="Link to this definition"></a></dt>
+<dd><p>Lists all the namespaces matching a regex</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>regex</strong> – The regular expression against which the
+namespaces will be compared</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a list of namespaces matching the regex</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1435,6 +1487,11 @@ a chaos scenario is performed.</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.parse_events_from_file">
+<span class="sig-name descname"><span class="pre">parse_events_from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">ClusterEvent</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.parse_events_from_file" title="Link to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.path_exists_in_pod">
