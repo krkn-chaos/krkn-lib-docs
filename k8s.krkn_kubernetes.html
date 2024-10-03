@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=b526e4f0"></script>
+        <script src="_static/documentation_options.js?v=c8b016cb"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v3.1.2
+                v4.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -300,33 +300,6 @@ collected, if None all-namespaces will be selected</p></li>
 <dd class="field-even"><p>Returns a list of parsed ClusterEvents</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.collect_cluster_events">
-<span class="sig-name descname"><span class="pre">collect_cluster_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UTC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.collect_cluster_events" title="Link to this definition"></a></dt>
-<dd><p>Collects cluster events querying <cite>/api/v1/events</cite>
-filtered in a given time interval and writes them in
-a temporary file in json format.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>start_timestamp</strong> – timestamp of the minimum date
-after that the event is relevant</p></li>
-<li><p><strong>end_timestamp</strong> – timestamp of the maximum date
-before that the event is relevant</p></li>
-<li><p><strong>local_timezone</strong> – timezone of the local system</p></li>
-<li><p><strong>cluster_timezone</strong> – timezone of the remote cluster</p></li>
-<li><p><strong>limit</strong> – limit of the number of events to be fetched
-from the cluster</p></li>
-<li><p><strong>namespace</strong> – Namespace from which the events must be
-collected, if None all-namespaces will be selected</p></li>
-</ul>
-</dd>
-</dl>
-<div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 3.1.0: </span>This will be removed in 3.2.0. replaced by <cite>collect_and_parse_cluster_events</cite></p>
-</div>
 </dd></dl>
 
 <dl class="py method">
@@ -973,27 +946,6 @@ the object parameter in the CustomObject Api</p>
 <dd class="field-even"><p>a dictionary of Kinds and number of objects counted</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="k8s.krkn_kubernetes.KrknKubernetes.get_litmus_chaos_object">
-<span class="sig-name descname"><span class="pre">get_litmus_chaos_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">LitmusChaosObject</span></span></span><a class="headerlink" href="#k8s.krkn_kubernetes.KrknKubernetes.get_litmus_chaos_object" title="Link to this definition"></a></dt>
-<dd><p>Retrieves Litmus Chaos CRDs</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>kind</strong> – the custom resource type</p></li>
-<li><p><strong>name</strong> – the object name</p></li>
-<li><p><strong>namespace</strong> – the namespace (optional default <cite>default</cite>)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>data class object of a subclass of LitmusChaosObject</p>
-</dd>
-</dl>
-<div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 3.1.0: </span>This will be removed in 3.2.0. litmus support dropped from krkn</p>
-</div>
 </dd></dl>
 
 <dl class="py method">

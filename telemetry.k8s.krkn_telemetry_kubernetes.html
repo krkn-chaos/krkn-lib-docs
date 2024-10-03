@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=b526e4f0"></script>
+        <script src="_static/documentation_options.js?v=c8b016cb"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v3.1.2
+                v4.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -98,11 +98,11 @@
 <span id="telemetry-k8s-krkn-telemetry-kubernetes-module"></span><h1>telemetry.k8s.krkn_telemetry_kubernetes module<a class="headerlink" href="#module-telemetry.k8s.krkn_telemetry_kubernetes" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">telemetry.k8s.krkn_telemetry_kubernetes.</span></span><span class="sig-name descname"><span class="pre">KrknTelemetryKubernetes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_kubernetes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknKubernetes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krkn_telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">telemetry.k8s.krkn_telemetry_kubernetes.</span></span><span class="sig-name descname"><span class="pre">KrknTelemetryKubernetes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_kubernetes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknKubernetes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krkn_telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telemetry_request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_kubernetes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknKubernetes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krkn_telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.__init__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">safe_logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SafeLogger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lib_kubernetes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">KrknKubernetes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krkn_telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telemetry_request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -193,6 +193,17 @@ that will be stored in the bucket</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.get_lib_kubernetes">
+<span class="sig-name descname"><span class="pre">get_lib_kubernetes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">KrknKubernetes</span></span></span><a class="headerlink" href="#telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.get_lib_kubernetes" title="Link to this definition"></a></dt>
+<dd><p>Returns the instance of KrknKubernetes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a KrknKubernetes instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.get_prometheus_pod_data">
 <span class="sig-name descname"><span class="pre">get_prometheus_pod_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prometheus_pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prometheus_container_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prometheus_namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_archive_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/prometheus'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.get_prometheus_pod_data" title="Link to this definition"></a></dt>
 <dd><p>Downloads the prometheus metrics folder from a prometheus pod</p>
@@ -219,37 +230,27 @@ are stored, if not specified will default to <cite>/prometheus</cite></p></li>
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.krkn_telemetry_config">
-<span class="sig-name descname"><span class="pre">krkn_telemetry_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.krkn_telemetry_config" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.kubecli">
-<span class="sig-name descname"><span class="pre">kubecli</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">KrknKubernetes</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.kubecli" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.put_cluster_events">
-<span class="sig-name descname"><span class="pre">put_cluster_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telemetry_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_timezone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UTC'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.put_cluster_events" title="Link to this definition"></a></dt>
-<dd><p>Collects and puts cluster events on telemetry S3 bucket</p>
+<dt class="sig sig-object py" id="telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.get_telemetry_config">
+<span class="sig-name descname"><span class="pre">get_telemetry_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.get_telemetry_config" title="Link to this definition"></a></dt>
+<dd><p>Returns the telemetry config section from config.yaml</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>request_id</strong> – uuid of the session that will represent the
-S3 folder on which the prometheus files will be stored</p></li>
-<li><p><strong>telemetry_config</strong> – telemetry section of kraken config.yaml</p></li>
-<li><p><strong>start_timestamp</strong> – timestamp of the minimum date
-after that the event is relevant</p></li>
-<li><p><strong>end_timestamp</strong> – timestamp of the maximum date
-before that the event is relevant</p></li>
-<li><p><strong>cluster_timezone</strong> – timezone of the remote cluster</p></li>
-</ul>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the telemetry config section</p>
 </dd>
 </dl>
-<div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 3.1.0: </span>This will be removed in 3.2.0. Cluster events has been added to the telemetry json,so won’t be uploaded as separated file</p>
-</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.get_telemetry_request_id">
+<span class="sig-name descname"><span class="pre">get_telemetry_request_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes.get_telemetry_request_id" title="Link to this definition"></a></dt>
+<dd><p>Gets the telemetry request id that represents the path
+on S3 where the telemetry data is uploaded</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the krkn telemetry id</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

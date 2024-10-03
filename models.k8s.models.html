@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=b526e4f0"></script>
+        <script src="_static/documentation_options.js?v=c8b016cb"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v3.1.2
+                v4.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -150,46 +150,6 @@ Methods</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="models.k8s.models.ChaosEngine">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">ChaosEngine</span></span><a class="headerlink" href="#models.k8s.models.ChaosEngine" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#models.k8s.models.LitmusChaosObject" title="models.k8s.models.LitmusChaosObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">LitmusChaosObject</span></code></a></p>
-<p>Data class to hold information
-regarding a ChaosEngine object</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.ChaosEngine.engineStatus">
-<span class="sig-name descname"><span class="pre">engineStatus</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.ChaosEngine.engineStatus" title="Link to this definition"></a></dt>
-<dd><p>Litmus Chaos engine status</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.ChaosEngine.expStatus">
-<span class="sig-name descname"><span class="pre">expStatus</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.ChaosEngine.expStatus" title="Link to this definition"></a></dt>
-<dd><p>Litmus Chaos Engine experiment status</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="models.k8s.models.ChaosResult">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">ChaosResult</span></span><a class="headerlink" href="#models.k8s.models.ChaosResult" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#models.k8s.models.LitmusChaosObject" title="models.k8s.models.LitmusChaosObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">LitmusChaosObject</span></code></a></p>
-<p>Data class to hold information
-regarding a ChaosResult object</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.ChaosResult.failStep">
-<span class="sig-name descname"><span class="pre">failStep</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.ChaosResult.failStep" title="Link to this definition"></a></dt>
-<dd><p>Flag to show the failure step of the ChaosExperiment</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.ChaosResult.verdict">
-<span class="sig-name descname"><span class="pre">verdict</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.ChaosResult.verdict" title="Link to this definition"></a></dt>
-<dd><p>Verdict of the chaos experiment</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="models.k8s.models.Container">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">Container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volumeMounts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.k8s.models.VolumeMount" title="models.k8s.models.VolumeMount"><span class="pre">VolumeMount</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ready</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.k8s.models.Container" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
@@ -221,58 +181,6 @@ regarding a ChaosResult object</p>
 <dt class="sig sig-object py" id="models.k8s.models.Container.volumeMounts">
 <span class="sig-name descname"><span class="pre">volumeMounts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.k8s.models.VolumeMount" title="models.k8s.models.VolumeMount"><span class="pre">VolumeMount</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#models.k8s.models.Container.volumeMounts" title="Link to this definition"></a></dt>
 <dd><p>List of volumes mounted in the Container</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="models.k8s.models.LitmusChaosObject">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">LitmusChaosObject</span></span><a class="headerlink" href="#models.k8s.models.LitmusChaosObject" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Data class to hold information regarding
-a custom object of litmus project</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="models.k8s.models.LitmusChaosObject.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#models.k8s.models.LitmusChaosObject.__init__" title="Link to this definition"></a></dt>
-<dd><div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 3.1.0: </span>This will be removed in 3.2.0. litmus support removed from krkn</p>
-</div>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.LitmusChaosObject.group">
-<span class="sig-name descname"><span class="pre">group</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.LitmusChaosObject.group" title="Link to this definition"></a></dt>
-<dd><p>Api Group</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.LitmusChaosObject.kind">
-<span class="sig-name descname"><span class="pre">kind</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.LitmusChaosObject.kind" title="Link to this definition"></a></dt>
-<dd><p>Litmus Object Kind</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.LitmusChaosObject.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.LitmusChaosObject.name" title="Link to this definition"></a></dt>
-<dd><p>Object name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.LitmusChaosObject.namespace">
-<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.LitmusChaosObject.namespace" title="Link to this definition"></a></dt>
-<dd><p>Namespace where the object is deployed</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.LitmusChaosObject.plural">
-<span class="sig-name descname"><span class="pre">plural</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.LitmusChaosObject.plural" title="Link to this definition"></a></dt>
-<dd><p>CRD plural</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="models.k8s.models.LitmusChaosObject.version">
-<span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.k8s.models.LitmusChaosObject.version" title="Link to this definition"></a></dt>
-<dd><p>Version</p>
 </dd></dl>
 
 </dd></dl>
