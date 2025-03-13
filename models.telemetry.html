@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=eb2325c4"></script>
+        <script src="_static/documentation_options.js?v=35c0298d"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v4.0.8
+                v5.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -107,7 +107,10 @@
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.cloud_infrastructure"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.cloud_infrastructure</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.cloud_type"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.cloud_type</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.cluster_version"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.cluster_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.health_checks"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.health_checks</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.job_status"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.job_status</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.kubernetes_objects_count"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.kubernetes_objects_count</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.major_version"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.major_version</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.network_plugins"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.network_plugins</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.node_summary_infos"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.node_summary_infos</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.node_taints"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.node_taints</span></code></a></li>
@@ -131,6 +134,16 @@
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ClusterEvent.source_component"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.source_component</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ClusterEvent.to_json"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.to_json()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ClusterEvent.type"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.HealthCheck"><code class="docutils literal notranslate"><span class="pre">HealthCheck</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.HealthCheck.__init__"><code class="docutils literal notranslate"><span class="pre">HealthCheck.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.HealthCheck.duration"><code class="docutils literal notranslate"><span class="pre">HealthCheck.duration</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.HealthCheck.end_timestamp"><code class="docutils literal notranslate"><span class="pre">HealthCheck.end_timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.HealthCheck.start_timestamp"><code class="docutils literal notranslate"><span class="pre">HealthCheck.start_timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.HealthCheck.status"><code class="docutils literal notranslate"><span class="pre">HealthCheck.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.HealthCheck.status_code"><code class="docutils literal notranslate"><span class="pre">HealthCheck.status_code</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.HealthCheck.url"><code class="docutils literal notranslate"><span class="pre">HealthCheck.url</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.NodeInfo"><code class="docutils literal notranslate"><span class="pre">NodeInfo</span></code></a><ul>
@@ -162,6 +175,7 @@
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ScenarioTelemetry.parameters"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.parameters</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ScenarioTelemetry.parameters_base64"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.parameters_base64</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ScenarioTelemetry.scenario"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.scenario</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ScenarioTelemetry.scenario_type"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.scenario_type</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ScenarioTelemetry.set_cluster_events"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.set_cluster_events()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ScenarioTelemetry.start_timestamp"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.start_timestamp</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ScenarioTelemetry.to_json"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.to_json()</span></code></a></li>

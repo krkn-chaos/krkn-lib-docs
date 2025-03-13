@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=eb2325c4"></script>
+        <script src="_static/documentation_options.js?v=35c0298d"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v4.0.8
+                v5.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -127,10 +127,28 @@
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.health_checks">
+<span class="sig-name descname"><span class="pre">health_checks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.telemetry.models.HealthCheck" title="models.telemetry.models.HealthCheck"><span class="pre">HealthCheck</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.health_checks" title="Link to this definition"></a></dt>
+<dd><p>Health checks of application endpoint</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.job_status">
+<span class="sig-name descname"><span class="pre">job_status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.job_status" title="Link to this definition"></a></dt>
+<dd><p>Overall job status, will take all scenario’s exit status</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.kubernetes_objects_count">
 <span class="sig-name descname"><span class="pre">kubernetes_objects_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.kubernetes_objects_count" title="Link to this definition"></a></dt>
 <dd><p>Dictionary containing the number of objects deployed
 in the cluster during the chaos run</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.major_version">
+<span class="sig-name descname"><span class="pre">major_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.major_version" title="Link to this definition"></a></dt>
+<dd><p>Major cluster version to group similar results</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -258,6 +276,54 @@ resources.</p>
 <dt class="sig sig-object py" id="models.telemetry.models.ClusterEvent.type">
 <span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ClusterEvent.type" title="Link to this definition"></a></dt>
 <dd><p>Event severity</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.telemetry.models.HealthCheck">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">HealthCheck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.telemetry.models.HealthCheck" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Health checks Response for application endpoints</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="models.telemetry.models.HealthCheck.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.telemetry.models.HealthCheck.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.HealthCheck.duration">
+<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#models.telemetry.models.HealthCheck.duration" title="Link to this definition"></a></dt>
+<dd><p>Denotes the time between start time and end time</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.HealthCheck.end_timestamp">
+<span class="sig-name descname"><span class="pre">end_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.HealthCheck.end_timestamp" title="Link to this definition"></a></dt>
+<dd><p>end time stamp of health check</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.HealthCheck.start_timestamp">
+<span class="sig-name descname"><span class="pre">start_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.HealthCheck.start_timestamp" title="Link to this definition"></a></dt>
+<dd><p>start time stamp of health check</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.HealthCheck.status">
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#models.telemetry.models.HealthCheck.status" title="Link to this definition"></a></dt>
+<dd><p>Status of application</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.HealthCheck.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.HealthCheck.status_code" title="Link to this definition"></a></dt>
+<dd><p>Status code of application</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.HealthCheck.url">
+<span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.HealthCheck.url" title="Link to this definition"></a></dt>
+<dd><p>URL of application endpoint</p>
 </dd></dl>
 
 </dd></dl>
@@ -410,6 +476,12 @@ has been created/modified</p>
 <dt class="sig sig-object py" id="models.telemetry.models.ScenarioTelemetry.scenario">
 <span class="sig-name descname"><span class="pre">scenario</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ScenarioTelemetry.scenario" title="Link to this definition"></a></dt>
 <dd><p>Scenario filename</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ScenarioTelemetry.scenario_type">
+<span class="sig-name descname"><span class="pre">scenario_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.ScenarioTelemetry.scenario_type" title="Link to this definition"></a></dt>
+<dd><p>Scenario type</p>
 </dd></dl>
 
 <dl class="py method">

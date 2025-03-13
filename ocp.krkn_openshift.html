@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=eb2325c4"></script>
+        <script src="_static/documentation_options.js?v=35c0298d"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v4.0.8
+                v5.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -95,21 +95,17 @@
 <span id="ocp-krkn-openshift-module"></span><h1>ocp.krkn_openshift module<a class="headerlink" href="#module-ocp.krkn_openshift" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ocp.krkn_openshift.KrknOpenshift">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ocp.krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">KrknOpenshift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kubeconfig_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kubeconfig_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ocp.krkn_openshift.KrknOpenshift" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ocp.krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">KrknOpenshift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kubeconfig_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ocp.krkn_openshift.KrknOpenshift" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">KrknKubernetes</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ocp.krkn_openshift.KrknOpenshift.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kubeconfig_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kubeconfig_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ocp.krkn_openshift.KrknOpenshift.__init__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kubeconfig_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ocp.krkn_openshift.KrknOpenshift.__init__" title="Link to this definition"></a></dt>
 <dd><p>KrknKubernetes Constructor. Can be invoked with kubeconfig_path
 or, optionally, with a kubeconfig in string
 format using the keyword argument</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>kubeconfig_path</strong> – kubeconfig path</p></li>
-<li><p><strong>kubeconfig_string</strong> – (keyword argument)
-kubeconfig in string format</p></li>
-</ul>
+<dd class="field-odd"><p><strong>kubeconfig_path</strong> – kubeconfig path</p>
 </dd>
 <dt class="field-even">Param<span class="colon">:</span></dt>
 <dd class="field-even"><p>request_chunk_size: int of chunk size to limit requests to</p>
@@ -117,11 +113,6 @@ kubeconfig in string format</p></li>
 </dl>
 <p>Initialization with kubeconfig path:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">KrknKubernetes</span><span class="p">(</span><span class="n">log_writer</span><span class="p">,</span> <span class="s2">&quot;/home/test/.kube/config&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Initialization with kubeconfig string:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">kubeconfig_string</span><span class="o">=</span><span class="s2">&quot;apiVersion: v1 .....&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">KrknKubernetes</span><span class="p">(</span><span class="n">log_writer</span><span class="p">,</span> <span class="n">kubeconfig_string</span><span class="o">=</span><span class="n">kubeconfig_string</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
