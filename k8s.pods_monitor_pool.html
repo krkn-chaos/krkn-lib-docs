@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=a64027fe"></script>
+        <script src="_static/documentation_options.js?v=441563d4"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v5.0.2
+                v5.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -138,7 +138,7 @@ pushed into the pool.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="k8s.pods_monitor_pool.PodsMonitorPool.select_and_monitor_by_label">
-<span class="sig-name descname"><span class="pre">select_and_monitor_by_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.pods_monitor_pool.PodsMonitorPool.select_and_monitor_by_label" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">select_and_monitor_by_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.pods_monitor_pool.PodsMonitorPool.select_and_monitor_by_label" title="Link to this definition"></a></dt>
 <dd><p>Pushes into the pool a monitoring thread for all the pods identified
 by a label selector and collects infos about the
 pods recovery after a kill scenario while the scenario is running.</p>
@@ -161,7 +161,7 @@ valorized with an exception.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="k8s.pods_monitor_pool.PodsMonitorPool.select_and_monitor_by_name_pattern_and_namespace_pattern">
-<span class="sig-name descname"><span class="pre">select_and_monitor_by_name_pattern_and_namespace_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name_pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace_pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.pods_monitor_pool.PodsMonitorPool.select_and_monitor_by_name_pattern_and_namespace_pattern" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">select_and_monitor_by_name_pattern_and_namespace_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name_pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace_pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.pods_monitor_pool.PodsMonitorPool.select_and_monitor_by_name_pattern_and_namespace_pattern" title="Link to this definition"></a></dt>
 <dd><p>Pushes into the pool a monitoring thread for all the pods identified
 by a pod name regex pattern
 and a namespace regex pattern, that collects infos about the
@@ -177,6 +177,7 @@ pod name pattern used to filter the pods to be monitored
 pattern used to filter the pods to be monitored
 (must be the same used in
 <cite>select_pods_by_name_pattern_and_namespace_pattern</cite>)</p></li>
+<li><p><strong>field_selector</strong> – Pod field selector</p></li>
 <li><p><strong>max_timeout</strong> – the expected time the pods should take to
 recover. If the killed pods are replaced in this time frame,
 but they didn’t reach the Ready State, they will be marked as
@@ -190,7 +191,7 @@ valorized with an exception.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="k8s.pods_monitor_pool.PodsMonitorPool.select_and_monitor_by_namespace_pattern_and_label">
-<span class="sig-name descname"><span class="pre">select_and_monitor_by_namespace_pattern_and_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.pods_monitor_pool.PodsMonitorPool.select_and_monitor_by_namespace_pattern_and_label" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">select_and_monitor_by_namespace_pattern_and_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#k8s.pods_monitor_pool.PodsMonitorPool.select_and_monitor_by_namespace_pattern_and_label" title="Link to this definition"></a></dt>
 <dd><p>Pushes into the pool a monitoring thread for all the pods identified
 by a namespace regex pattern
 and a pod label selector, that collects infos about the
