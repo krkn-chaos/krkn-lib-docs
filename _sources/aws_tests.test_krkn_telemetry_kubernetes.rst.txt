@@ -1,0 +1,7 @@
+aws\_tests.test\_krkn\_telemetry\_kubernetes module
+===================================================
+
+.. automodule:: aws_tests.test_krkn_telemetry_kubernetes
+   :members:
+   :undoc-members:
+   :show-inheritance:

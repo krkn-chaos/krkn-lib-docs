@@ -1,0 +1,7 @@
+aws\_tests.test\_krkn\_telemetry\_openshift module
+==================================================
+
+.. automodule:: aws_tests.test_krkn_telemetry_openshift
+   :members:
+   :undoc-members:
+   :show-inheritance:

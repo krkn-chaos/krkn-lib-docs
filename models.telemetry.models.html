@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=441563d4"></script>
+        <script src="_static/documentation_options.js?v=e06de7cd"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v5.1.0
+                v5.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -47,6 +47,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="aws_tests.html">aws_tests package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="elastic.html">elastic package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="k8s.html">k8s package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="models.html">models package</a><ul class="current">
@@ -107,6 +108,12 @@
 <dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.build_url">
+<span class="sig-name descname"><span class="pre">build_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'manual'</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.build_url" title="Link to this definition"></a></dt>
+<dd><p>Build url if run in CI</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.cloud_infrastructure">
@@ -199,6 +206,12 @@ resources.</p>
 <dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.total_node_count">
 <span class="sig-name descname"><span class="pre">total_node_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.total_node_count" title="Link to this definition"></a></dt>
 <dd><p>Number of all kind of nodes in the target cluster</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.ChaosRunTelemetry.virt_checks">
+<span class="sig-name descname"><span class="pre">virt_checks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.telemetry.models.VirtCheck" title="models.telemetry.models.VirtCheck"><span class="pre">VirtCheck</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#models.telemetry.models.ChaosRunTelemetry.virt_checks" title="Link to this definition"></a></dt>
+<dd><p>Virt checks of VMIs</p>
 </dd></dl>
 
 </dd></dl>
@@ -541,6 +554,66 @@ reasons</p>
 <dt class="sig sig-object py" id="models.telemetry.models.Taint.value">
 <span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#models.telemetry.models.Taint.value" title="Link to this definition"></a></dt>
 <dd><p>Taint Value</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.telemetry.models.VirtCheck">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">VirtCheck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.telemetry.models.VirtCheck" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Virt checks Response for VMI endpoints</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="models.telemetry.models.VirtCheck.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.telemetry.models.VirtCheck.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.VirtCheck.duration">
+<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#models.telemetry.models.VirtCheck.duration" title="Link to this definition"></a></dt>
+<dd><p>Denotes the time between start time and end time</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.VirtCheck.end_timestamp">
+<span class="sig-name descname"><span class="pre">end_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.VirtCheck.end_timestamp" title="Link to this definition"></a></dt>
+<dd><p>end time stamp of virt check</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.VirtCheck.ip_address">
+<span class="sig-name descname"><span class="pre">ip_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.VirtCheck.ip_address" title="Link to this definition"></a></dt>
+<dd><p>Vm ip address</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.VirtCheck.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.VirtCheck.namespace" title="Link to this definition"></a></dt>
+<dd><p>Namespace</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.VirtCheck.node_name">
+<span class="sig-name descname"><span class="pre">node_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.VirtCheck.node_name" title="Link to this definition"></a></dt>
+<dd><p>Node Name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.VirtCheck.start_timestamp">
+<span class="sig-name descname"><span class="pre">start_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.VirtCheck.start_timestamp" title="Link to this definition"></a></dt>
+<dd><p>start time stamp of virt check</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.VirtCheck.status">
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#models.telemetry.models.VirtCheck.status" title="Link to this definition"></a></dt>
+<dd><p>Status of VMI ssh connection</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.telemetry.models.VirtCheck.vm_name">
+<span class="sig-name descname"><span class="pre">vm_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#models.telemetry.models.VirtCheck.vm_name" title="Link to this definition"></a></dt>
+<dd><p>Vm name</p>
 </dd></dl>
 
 </dd></dl>

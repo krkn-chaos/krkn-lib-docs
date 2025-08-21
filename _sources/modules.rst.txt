@@ -4,6 +4,7 @@ Krkn Foundation Library
 .. toctree::
    :maxdepth: 4
 
+   aws_tests
    elastic
    k8s
    models

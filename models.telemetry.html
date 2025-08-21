@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=441563d4"></script>
+        <script src="_static/documentation_options.js?v=e06de7cd"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v5.1.0
+                v5.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -47,6 +47,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="aws_tests.html">aws_tests package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="elastic.html">elastic package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="k8s.html">k8s package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="models.html">models package</a><ul class="current">
@@ -104,6 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="models.telemetry.models.html">models.telemetry.models module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.__init__"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.build_url"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.build_url</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.cloud_infrastructure"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.cloud_infrastructure</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.cloud_type"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.cloud_type</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.cluster_version"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.cluster_version</span></code></a></li>
@@ -119,6 +121,7 @@
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.timestamp"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.timestamp</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.to_json"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.to_json()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.total_node_count"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.total_node_count</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ChaosRunTelemetry.virt_checks"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.virt_checks</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.ClusterEvent"><code class="docutils literal notranslate"><span class="pre">ClusterEvent</span></code></a><ul>
@@ -187,6 +190,18 @@
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.Taint.key"><code class="docutils literal notranslate"><span class="pre">Taint.key</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.Taint.node_name"><code class="docutils literal notranslate"><span class="pre">Taint.node_name</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.Taint.value"><code class="docutils literal notranslate"><span class="pre">Taint.value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.VirtCheck"><code class="docutils literal notranslate"><span class="pre">VirtCheck</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.VirtCheck.__init__"><code class="docutils literal notranslate"><span class="pre">VirtCheck.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.VirtCheck.duration"><code class="docutils literal notranslate"><span class="pre">VirtCheck.duration</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.VirtCheck.end_timestamp"><code class="docutils literal notranslate"><span class="pre">VirtCheck.end_timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.VirtCheck.ip_address"><code class="docutils literal notranslate"><span class="pre">VirtCheck.ip_address</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.VirtCheck.namespace"><code class="docutils literal notranslate"><span class="pre">VirtCheck.namespace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.VirtCheck.node_name"><code class="docutils literal notranslate"><span class="pre">VirtCheck.node_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.VirtCheck.start_timestamp"><code class="docutils literal notranslate"><span class="pre">VirtCheck.start_timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.VirtCheck.status"><code class="docutils literal notranslate"><span class="pre">VirtCheck.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.telemetry.models.html#models.telemetry.models.VirtCheck.vm_name"><code class="docutils literal notranslate"><span class="pre">VirtCheck.vm_name</span></code></a></li>
 </ul>
 </li>
 </ul>
