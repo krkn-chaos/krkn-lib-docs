@@ -1,0 +1,18 @@
+krkn\_lib.prometheus package
+============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.prometheus.krkn_prometheus
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.prometheus
+   :members:
+   :undoc-members:
+   :show-inheritance:

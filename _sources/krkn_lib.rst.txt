@@ -1,0 +1,27 @@
+krkn\_lib package
+=================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.aws_tests
+   krkn_lib.elastic
+   krkn_lib.k8s
+   krkn_lib.models
+   krkn_lib.ocp
+   krkn_lib.prometheus
+   krkn_lib.telemetry
+   krkn_lib.tests
+   krkn_lib.utils
+   krkn_lib.version
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib
+   :members:
+   :undoc-members:
+   :show-inheritance:

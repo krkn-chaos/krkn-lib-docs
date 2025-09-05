@@ -1,0 +1,18 @@
+krkn\_lib.models.k8s package
+============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.models.k8s.models
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.models.k8s
+   :members:
+   :undoc-members:
+   :show-inheritance:

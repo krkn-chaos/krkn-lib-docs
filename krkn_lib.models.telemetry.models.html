@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>krkn_lib.models.telemetry.models module &mdash; Krkn Foundation Library</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/krkn-style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=1c1cfd6a"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="krkn_lib.ocp package" href="krkn_lib.ocp.html" />
+    <link rel="prev" title="krkn_lib.models.telemetry package" href="krkn_lib.models.telemetry.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="modules.html">
+            
+              <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v5.1.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="krkn_lib.html">krkn_lib package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="krkn_lib.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.aws_tests.html">krkn_lib.aws_tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.elastic.html">krkn_lib.elastic package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.html">krkn_lib.k8s package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="krkn_lib.models.html">krkn_lib.models package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="krkn_lib.models.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="krkn_lib.models.html#module-krkn_lib.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.ocp.html">krkn_lib.ocp package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.prometheus.html">krkn_lib.prometheus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.telemetry.html">krkn_lib.telemetry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.html">krkn_lib.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.utils.html">krkn_lib.utils package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.version.html">krkn_lib.version package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.html#module-krkn_lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="modules.html">Krkn Foundation Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="modules.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.html">krkn_lib package</a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.models.html">krkn_lib.models package</a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.models.telemetry.html">krkn_lib.models.telemetry package</a></li>
+      <li class="breadcrumb-item active">krkn_lib.models.telemetry.models module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-krkn_lib.models.telemetry.models">
+<span id="krkn-lib-models-telemetry-models-module"></span><h1>krkn_lib.models.telemetry.models module<a class="headerlink" href="#module-krkn_lib.models.telemetry.models" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">ChaosRunTelemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Root object for the Telemetry Collection</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.build_url">
+<span class="sig-name descname"><span class="pre">build_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'manual'</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.build_url" title="Link to this definition"></a></dt>
+<dd><p>Build url if run in CI</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.cloud_infrastructure">
+<span class="sig-name descname"><span class="pre">cloud_infrastructure</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Unknown'</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.cloud_infrastructure" title="Link to this definition"></a></dt>
+<dd><p>Cloud infrastructure (if available) of the target cluster</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.cloud_type">
+<span class="sig-name descname"><span class="pre">cloud_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'self-managed'</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.cloud_type" title="Link to this definition"></a></dt>
+<dd><p>Cloud Type (if available) of the target cluster: self-managed, rosa, etc</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.cluster_version">
+<span class="sig-name descname"><span class="pre">cluster_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Unknown'</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.cluster_version" title="Link to this definition"></a></dt>
+<dd><p>K8s or OCP version</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.health_checks">
+<span class="sig-name descname"><span class="pre">health_checks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.HealthCheck" title="krkn_lib.models.telemetry.models.HealthCheck"><span class="pre">HealthCheck</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.health_checks" title="Link to this definition"></a></dt>
+<dd><p>Health checks of application endpoint</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.job_status">
+<span class="sig-name descname"><span class="pre">job_status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.job_status" title="Link to this definition"></a></dt>
+<dd><p>Overall job status, will take all scenario’s exit status</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.kubernetes_objects_count">
+<span class="sig-name descname"><span class="pre">kubernetes_objects_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.kubernetes_objects_count" title="Link to this definition"></a></dt>
+<dd><p>Dictionary containing the number of objects deployed
+in the cluster during the chaos run</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.major_version">
+<span class="sig-name descname"><span class="pre">major_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.major_version" title="Link to this definition"></a></dt>
+<dd><p>Major cluster version to group similar results</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.network_plugins">
+<span class="sig-name descname"><span class="pre">network_plugins</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.network_plugins" title="Link to this definition"></a></dt>
+<dd><p>Network plugins deployed in the target cluster</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.node_summary_infos">
+<span class="sig-name descname"><span class="pre">node_summary_infos</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.NodeInfo" title="krkn_lib.models.telemetry.models.NodeInfo"><span class="pre">NodeInfo</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.node_summary_infos" title="Link to this definition"></a></dt>
+<dd><p>Summary of node Infos collected from the target cluster.
+It will report all the master and infra nodes and only one
+of the workers that usually are configured to have the same
+resources.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.node_taints">
+<span class="sig-name descname"><span class="pre">node_taints</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.Taint" title="krkn_lib.models.telemetry.models.Taint"><span class="pre">Taint</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.node_taints" title="Link to this definition"></a></dt>
+<dd><p>The list of node taints detected</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.run_uuid">
+<span class="sig-name descname"><span class="pre">run_uuid</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.run_uuid" title="Link to this definition"></a></dt>
+<dd><p>Run uuid generated by Krkn for the Run</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.scenarios">
+<span class="sig-name descname"><span class="pre">scenarios</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry" title="krkn_lib.models.telemetry.models.ScenarioTelemetry"><span class="pre">ScenarioTelemetry</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.scenarios" title="Link to this definition"></a></dt>
+<dd><p>List of the scenarios performed during the chaos run</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.timestamp">
+<span class="sig-name descname"><span class="pre">timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.timestamp" title="Link to this definition"></a></dt>
+<dd><p>Current time stamp of run</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.to_json" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.total_node_count">
+<span class="sig-name descname"><span class="pre">total_node_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.total_node_count" title="Link to this definition"></a></dt>
+<dd><p>Number of all kind of nodes in the target cluster</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.virt_checks">
+<span class="sig-name descname"><span class="pre">virt_checks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.VirtCheck" title="krkn_lib.models.telemetry.models.VirtCheck"><span class="pre">VirtCheck</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.virt_checks" title="Link to this definition"></a></dt>
+<dd><p>Virt checks of VMIs</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">ClusterEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k8s_json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k8s_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Summary of cluster event more relevant fields</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k8s_json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k8s_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.creation">
+<span class="sig-name descname"><span class="pre">creation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.creation" title="Link to this definition"></a></dt>
+<dd><p>Event creation date time</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.involved_object_kind">
+<span class="sig-name descname"><span class="pre">involved_object_kind</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.involved_object_kind" title="Link to this definition"></a></dt>
+<dd><p>Kind of the object that triggered the event</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.involved_object_name">
+<span class="sig-name descname"><span class="pre">involved_object_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.involved_object_name" title="Link to this definition"></a></dt>
+<dd><p>Name of the object that triggered the event</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.involved_object_namespace">
+<span class="sig-name descname"><span class="pre">involved_object_namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.involved_object_namespace" title="Link to this definition"></a></dt>
+<dd><p>Namespace of the object that triggered the event</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.message" title="Link to this definition"></a></dt>
+<dd><p>Message associated to the event</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.name" title="Link to this definition"></a></dt>
+<dd><p>Event name assigned by the cluster</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.namespace" title="Link to this definition"></a></dt>
+<dd><p>Event namespace</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.reason">
+<span class="sig-name descname"><span class="pre">reason</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.reason" title="Link to this definition"></a></dt>
+<dd><p>Reason of the event trigger</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.source_component">
+<span class="sig-name descname"><span class="pre">source_component</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.source_component" title="Link to this definition"></a></dt>
+<dd><p>Cluster component that triggered the event</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.to_json" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ClusterEvent.type">
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ClusterEvent.type" title="Link to this definition"></a></dt>
+<dd><p>Event severity</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.HealthCheck">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">HealthCheck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.HealthCheck" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Health checks Response for application endpoints</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.HealthCheck.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.HealthCheck.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.HealthCheck.duration">
+<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.HealthCheck.duration" title="Link to this definition"></a></dt>
+<dd><p>Denotes the time between start time and end time</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.HealthCheck.end_timestamp">
+<span class="sig-name descname"><span class="pre">end_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.HealthCheck.end_timestamp" title="Link to this definition"></a></dt>
+<dd><p>end time stamp of health check</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.HealthCheck.start_timestamp">
+<span class="sig-name descname"><span class="pre">start_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.HealthCheck.start_timestamp" title="Link to this definition"></a></dt>
+<dd><p>start time stamp of health check</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.HealthCheck.status">
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.HealthCheck.status" title="Link to this definition"></a></dt>
+<dd><p>Status of application</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.HealthCheck.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.HealthCheck.status_code" title="Link to this definition"></a></dt>
+<dd><p>Status code of application</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.HealthCheck.url">
+<span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.HealthCheck.url" title="Link to this definition"></a></dt>
+<dd><p>URL of application endpoint</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.NodeInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">NodeInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.NodeInfo" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Cluster node telemetry infos</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.NodeInfo.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.NodeInfo.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.NodeInfo.architecture">
+<span class="sig-name descname"><span class="pre">architecture</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.NodeInfo.architecture" title="Link to this definition"></a></dt>
+<dd><p>CPU Architecture</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.NodeInfo.count">
+<span class="sig-name descname"><span class="pre">count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.NodeInfo.count" title="Link to this definition"></a></dt>
+<dd><p>number of nodes of this kind</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.NodeInfo.instance_type">
+<span class="sig-name descname"><span class="pre">instance_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.NodeInfo.instance_type" title="Link to this definition"></a></dt>
+<dd><p>Cloud instance type (if available)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.NodeInfo.kernel_version">
+<span class="sig-name descname"><span class="pre">kernel_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.NodeInfo.kernel_version" title="Link to this definition"></a></dt>
+<dd><p>Node kernel version</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.NodeInfo.kubelet_version">
+<span class="sig-name descname"><span class="pre">kubelet_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.NodeInfo.kubelet_version" title="Link to this definition"></a></dt>
+<dd><p>Kubelet Version</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.NodeInfo.nodes_type">
+<span class="sig-name descname"><span class="pre">nodes_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.NodeInfo.nodes_type" title="Link to this definition"></a></dt>
+<dd><p>Node Type (worker/infra/master etc.)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.NodeInfo.os_version">
+<span class="sig-name descname"><span class="pre">os_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.NodeInfo.os_version" title="Link to this definition"></a></dt>
+<dd><p>Operating system version</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.S3BucketObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">S3BucketObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.S3BucketObject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class that represents an S3 bucket object provided
+by the telemetry webservice</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.S3BucketObject.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.models.telemetry.models.S3BucketObject.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.S3BucketObject.modified">
+<span class="sig-name descname"><span class="pre">modified</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.S3BucketObject.modified" title="Link to this definition"></a></dt>
+<dd><p>if it’s a file represents the date when the file
+has been created/modified</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.S3BucketObject.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.S3BucketObject.path" title="Link to this definition"></a></dt>
+<dd><p>the path or the filename wit</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.S3BucketObject.size">
+<span class="sig-name descname"><span class="pre">size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.S3BucketObject.size" title="Link to this definition"></a></dt>
+<dd><p>if it’s a file represents the file size</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.S3BucketObject.type">
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.S3BucketObject.type" title="Link to this definition"></a></dt>
+<dd><p>can be “folder” or “file”</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">ScenarioTelemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_object</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Scenario Telemetry collection</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_object</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.affected_nodes">
+<span class="sig-name descname"><span class="pre">affected_nodes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="krkn_lib.models.k8s.models.html#krkn_lib.models.k8s.models.AffectedNode" title="krkn_lib.models.k8s.models.AffectedNode"><span class="pre">AffectedNode</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.affected_nodes" title="Link to this definition"></a></dt>
+<dd><p>Nodes affected by the chaos scenario</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.affected_pods">
+<span class="sig-name descname"><span class="pre">affected_pods</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="krkn_lib.models.k8s.models.html#krkn_lib.models.k8s.models.PodsStatus" title="krkn_lib.models.k8s.models.PodsStatus"><span class="pre">PodsStatus</span></a></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.affected_pods" title="Link to this definition"></a></dt>
+<dd><p>Pods affected by the chaos scenario</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.cluster_events">
+<span class="sig-name descname"><span class="pre">cluster_events</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.ClusterEvent" title="krkn_lib.models.telemetry.models.ClusterEvent"><span class="pre">ClusterEvent</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.cluster_events" title="Link to this definition"></a></dt>
+<dd><p>Cluster events collected during the chaos run</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.end_timestamp">
+<span class="sig-name descname"><span class="pre">end_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.end_timestamp" title="Link to this definition"></a></dt>
+<dd><p>Timestamp when the Krkn run ended</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.exit_status">
+<span class="sig-name descname"><span class="pre">exit_status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.exit_status" title="Link to this definition"></a></dt>
+<dd><p>Exit Status of the Scenario Run</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">any</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.parameters" title="Link to this definition"></a></dt>
+<dd><p>scenario parameters</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.parameters_base64">
+<span class="sig-name descname"><span class="pre">parameters_base64</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.parameters_base64" title="Link to this definition"></a></dt>
+<dd><p>Scenario configuration file base64 encoded</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.scenario">
+<span class="sig-name descname"><span class="pre">scenario</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.scenario" title="Link to this definition"></a></dt>
+<dd><p>Scenario filename</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.scenario_type">
+<span class="sig-name descname"><span class="pre">scenario_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.scenario_type" title="Link to this definition"></a></dt>
+<dd><p>Scenario type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.set_cluster_events">
+<span class="sig-name descname"><span class="pre">set_cluster_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.ClusterEvent" title="krkn_lib.models.telemetry.models.ClusterEvent"><span class="pre">ClusterEvent</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.set_cluster_events" title="Link to this definition"></a></dt>
+<dd><p>Sets the cluster events filtering them by the accepted
+reasons</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>events</strong> – a list of ClusterEvents</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.start_timestamp">
+<span class="sig-name descname"><span class="pre">start_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.start_timestamp" title="Link to this definition"></a></dt>
+<dd><p>Timestamp when the Krkn run started</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ScenarioTelemetry.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry.to_json" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.Taint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">Taint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.Taint" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Cluster Node Taint details</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.Taint.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.Taint.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.Taint.effect">
+<span class="sig-name descname"><span class="pre">effect</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.Taint.effect" title="Link to this definition"></a></dt>
+<dd><p>effect of the taint in the node</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.Taint.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.Taint.key" title="Link to this definition"></a></dt>
+<dd><p>Taint key</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.Taint.node_name">
+<span class="sig-name descname"><span class="pre">node_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.Taint.node_name" title="Link to this definition"></a></dt>
+<dd><p>node name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.Taint.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.Taint.value" title="Link to this definition"></a></dt>
+<dd><p>Taint Value</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">VirtCheck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Virt checks Response for VMI endpoints</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.duration">
+<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.duration" title="Link to this definition"></a></dt>
+<dd><p>Denotes the time between start time and end time</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.end_timestamp">
+<span class="sig-name descname"><span class="pre">end_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.end_timestamp" title="Link to this definition"></a></dt>
+<dd><p>end time stamp of virt check</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.ip_address">
+<span class="sig-name descname"><span class="pre">ip_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.ip_address" title="Link to this definition"></a></dt>
+<dd><p>Vm ip address</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.namespace" title="Link to this definition"></a></dt>
+<dd><p>Namespace</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.node_name">
+<span class="sig-name descname"><span class="pre">node_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.node_name" title="Link to this definition"></a></dt>
+<dd><p>Node Name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.start_timestamp">
+<span class="sig-name descname"><span class="pre">start_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.start_timestamp" title="Link to this definition"></a></dt>
+<dd><p>start time stamp of virt check</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.status">
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.status" title="Link to this definition"></a></dt>
+<dd><p>Status of VMI ssh connection</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.vm_name">
+<span class="sig-name descname"><span class="pre">vm_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.vm_name" title="Link to this definition"></a></dt>
+<dd><p>Vm name</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="krkn_lib.models.telemetry.html" class="btn btn-neutral float-left" title="krkn_lib.models.telemetry package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="krkn_lib.ocp.html" class="btn btn-neutral float-right" title="krkn_lib.ocp package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Red Hat Chaos Team.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

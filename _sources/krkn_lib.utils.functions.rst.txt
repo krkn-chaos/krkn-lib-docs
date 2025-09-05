@@ -1,0 +1,7 @@
+krkn\_lib.utils.functions module
+================================
+
+.. automodule:: krkn_lib.utils.functions
+   :members:
+   :undoc-members:
+   :show-inheritance:

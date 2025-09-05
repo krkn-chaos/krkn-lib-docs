@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>krkn_lib.prometheus.krkn_prometheus module &mdash; Krkn Foundation Library</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/krkn-style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=1c1cfd6a"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="krkn_lib.telemetry package" href="krkn_lib.telemetry.html" />
+    <link rel="prev" title="krkn_lib.prometheus package" href="krkn_lib.prometheus.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="modules.html">
+            
+              <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v5.1.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="krkn_lib.html">krkn_lib package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="krkn_lib.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.aws_tests.html">krkn_lib.aws_tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.elastic.html">krkn_lib.elastic package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.html">krkn_lib.k8s package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.html">krkn_lib.models package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.ocp.html">krkn_lib.ocp package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="krkn_lib.prometheus.html">krkn_lib.prometheus package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="krkn_lib.prometheus.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="krkn_lib.prometheus.html#module-krkn_lib.prometheus">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.telemetry.html">krkn_lib.telemetry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.html">krkn_lib.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.utils.html">krkn_lib.utils package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.version.html">krkn_lib.version package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.html#module-krkn_lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="modules.html">Krkn Foundation Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="modules.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.html">krkn_lib package</a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.prometheus.html">krkn_lib.prometheus package</a></li>
+      <li class="breadcrumb-item active">krkn_lib.prometheus.krkn_prometheus module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-krkn_lib.prometheus.krkn_prometheus">
+<span id="krkn-lib-prometheus-krkn-prometheus-module"></span><h1>krkn_lib.prometheus.krkn_prometheus module<a class="headerlink" href="#module-krkn_lib.prometheus.krkn_prometheus" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.prometheus.krkn_prometheus.KrknPrometheus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.prometheus.krkn_prometheus.</span></span><span class="sig-name descname"><span class="pre">KrknPrometheus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prometheus_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prometheus_bearer_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.prometheus.krkn_prometheus.KrknPrometheus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prometheus_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prometheus_bearer_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.__init__" title="Link to this definition"></a></dt>
+<dd><p>Instantiates a KrknPrometheus class with the Prometheus API
+Endpoint url and the bearer token to access it (optional if
+the endpoint doesn’t need authentication).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prometheus_url</strong> – the prometheus API endpoint</p></li>
+<li><p><strong>prometheus_bearer_token</strong> – the bearer token to authenticate
+the query (optional).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.parse_metric">
+<span class="sig-name descname"><span class="pre">parse_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">description:</span> <span class="pre">str,</span> <span class="pre">record:</span> <span class="pre">dict[slice(&lt;class</span> <span class="pre">'str'&gt;,</span> <span class="pre">&lt;built-in</span> <span class="pre">function</span> <span class="pre">any&gt;,</span> <span class="pre">None)]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.parse_metric" title="Link to this definition"></a></dt>
+<dd><p>Parses the expression contained in the Krkn alert description replacing
+them with the respective values contained in the record
+previously returned by a PromQL query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>description</strong> – the description containing the expression
+in the Krkn alert format</p></li>
+<li><p><strong>record</strong> – the PromQL record from where the data will be extracted</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the description with the expressions replaced by the correct
+values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.process_alert">
+<span class="sig-name descname"><span class="pre">process_alert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alert</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.process_alert" title="Link to this definition"></a></dt>
+<dd><p>Processes Krkn alarm in the format</p>
+<p>expr: &lt;promQL query&gt;
+description: &lt;the message that will be logged in the console&gt;
+severity &lt;the log level that will be used&gt;</p>
+<p>Description:
+The description may contain two kind of expressions that will be
+properly replaced and valorized; the supported expression are:</p>
+<ul class="simple">
+<li><p><cite>{{$value}}</cite> the scalar value returned by the query (if the query</p></li>
+</ul>
+<p>is designed to return a scalar value</p>
+<ul class="simple">
+<li><p><cite>{{$label.&lt;label_name&gt;}}</cite> one of the metric properties</p></li>
+</ul>
+<p>returned by the query</p>
+<p>If a value is not found in the the description won’t be replaced.</p>
+<p>Severity:
+The severity represents the log level that will be used to print the
+description in the console. The supported levels are:
+- info
+- debug
+- warning
+- error
+- critical</p>
+<p>If a non existing value is set an error message will be print instead
+of the the description.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params alert<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a dictionary containing the following keys :
+expr, description, severity</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>start_time</strong> – start time of the result set (if None
+no time filter is applied to the query)</p></li>
+<li><p><strong>end_time</strong> – end time of the result set (if None
+no time filter is applied to the query)</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>returns the alert log line as a string to be uploaded
+as telemetry metadata, None if no alert has been selected</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.process_prom_query_in_range">
+<span class="sig-name descname"><span class="pre">process_prom_query_in_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">granularity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list[dict[slice(&lt;class</span> <span class="pre">'str'&gt;,</span> <span class="pre">&lt;built-in</span> <span class="pre">function</span> <span class="pre">any&gt;,</span> <span class="pre">None)]]</span></span></span><a class="headerlink" href="#krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.process_prom_query_in_range" title="Link to this definition"></a></dt>
+<dd><p>Executes a query to the Prometheus API in PromQL languag,
+between a start and end time</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – promQL query</p></li>
+<li><p><strong>start_time</strong> – start time of the result set (default now - 1 day)</p></li>
+<li><p><strong>end_time</strong> – end time of the result set (default min datetime)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a list of records in dictionary format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.process_query">
+<span class="sig-name descname"><span class="pre">process_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list[dict[slice(&lt;class</span> <span class="pre">'str'&gt;,</span> <span class="pre">&lt;built-in</span> <span class="pre">function</span> <span class="pre">any&gt;,</span> <span class="pre">None)]]</span></span></span><a class="headerlink" href="#krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.process_query" title="Link to this definition"></a></dt>
+<dd><p>Executes a query to the Prometheus API in PromQL language</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>query</strong> – promQL query</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a list of records in dictionary format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.prom_cli">
+<span class="sig-name descname"><span class="pre">prom_cli</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PrometheusConnect</span></em><a class="headerlink" href="#krkn_lib.prometheus.krkn_prometheus.KrknPrometheus.prom_cli" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="krkn_lib.prometheus.html" class="btn btn-neutral float-left" title="krkn_lib.prometheus package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="krkn_lib.telemetry.html" class="btn btn-neutral float-right" title="krkn_lib.telemetry package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Red Hat Chaos Team.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

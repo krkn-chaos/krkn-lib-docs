@@ -1,0 +1,7 @@
+krkn\_lib.tests.test\_version module
+====================================
+
+.. automodule:: krkn_lib.tests.test_version
+   :members:
+   :undoc-members:
+   :show-inheritance:

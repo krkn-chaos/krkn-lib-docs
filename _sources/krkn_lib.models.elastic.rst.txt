@@ -1,0 +1,18 @@
+krkn\_lib.models.elastic package
+================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.models.elastic.models
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.models.elastic
+   :members:
+   :undoc-members:
+   :show-inheritance:

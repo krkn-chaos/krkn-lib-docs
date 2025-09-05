@@ -1,0 +1,7 @@
+krkn\_lib.tests.test\_krkn\_kubernetes\_delete module
+=====================================================
+
+.. automodule:: krkn_lib.tests.test_krkn_kubernetes_delete
+   :members:
+   :undoc-members:
+   :show-inheritance:

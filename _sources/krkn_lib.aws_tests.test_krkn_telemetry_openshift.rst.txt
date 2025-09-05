@@ -1,0 +1,7 @@
+krkn\_lib.aws\_tests.test\_krkn\_telemetry\_openshift module
+============================================================
+
+.. automodule:: krkn_lib.aws_tests.test_krkn_telemetry_openshift
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,19 @@
+krkn\_lib.telemetry package
+===========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.telemetry.k8s
+   krkn_lib.telemetry.ocp
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.telemetry
+   :members:
+   :undoc-members:
+   :show-inheritance:

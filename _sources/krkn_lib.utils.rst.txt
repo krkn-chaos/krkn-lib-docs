@@ -1,0 +1,19 @@
+krkn\_lib.utils package
+=======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.utils.functions
+   krkn_lib.utils.safe_logger
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

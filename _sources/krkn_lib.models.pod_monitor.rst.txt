@@ -1,0 +1,18 @@
+krkn\_lib.models.pod\_monitor package
+=====================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.models.pod_monitor.models
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.models.pod_monitor
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,19 @@
+krkn\_lib.aws\_tests package
+============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.aws_tests.test_krkn_telemetry_kubernetes
+   krkn_lib.aws_tests.test_krkn_telemetry_openshift
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.aws_tests
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+krkn\_lib.version.version module
+================================
+
+.. automodule:: krkn_lib.version.version
+   :members:
+   :undoc-members:
+   :show-inheritance:

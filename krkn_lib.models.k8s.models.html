@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>krkn_lib.models.k8s.models module &mdash; Krkn Foundation Library</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/krkn-style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=1c1cfd6a"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="krkn_lib.models.krkn package" href="krkn_lib.models.krkn.html" />
+    <link rel="prev" title="krkn_lib.models.k8s package" href="krkn_lib.models.k8s.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="modules.html">
+            
+              <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v5.1.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="krkn_lib.html">krkn_lib package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="krkn_lib.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.aws_tests.html">krkn_lib.aws_tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.elastic.html">krkn_lib.elastic package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.html">krkn_lib.k8s package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="krkn_lib.models.html">krkn_lib.models package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="krkn_lib.models.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="krkn_lib.models.html#module-krkn_lib.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.ocp.html">krkn_lib.ocp package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.prometheus.html">krkn_lib.prometheus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.telemetry.html">krkn_lib.telemetry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.html">krkn_lib.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.utils.html">krkn_lib.utils package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.version.html">krkn_lib.version package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.html#module-krkn_lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="modules.html">Krkn Foundation Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="modules.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.html">krkn_lib package</a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.models.html">krkn_lib.models package</a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.models.k8s.html">krkn_lib.models.k8s package</a></li>
+      <li class="breadcrumb-item active">krkn_lib.models.k8s.models module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-krkn_lib.models.k8s.models">
+<span id="krkn-lib-models-k8s-models-module"></span><h1>krkn_lib.models.k8s.models module<a class="headerlink" href="#module-krkn_lib.models.k8s.models" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">AffectedNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">not_ready_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ready_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stopped_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">running_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminating_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_object</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A node affected by a chaos scenario</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">not_ready_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ready_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stopped_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">running_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminating_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_object</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.node_id">
+<span class="sig-name descname"><span class="pre">node_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.node_id" title="Link to this definition"></a></dt>
+<dd><p>Id of the node</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.node_name">
+<span class="sig-name descname"><span class="pre">node_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.node_name" title="Link to this definition"></a></dt>
+<dd><p>Name of the node</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.not_ready_time">
+<span class="sig-name descname"><span class="pre">not_ready_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.not_ready_time" title="Link to this definition"></a></dt>
+<dd><p>Amount of time the node took to get to a not ready state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.ready_time">
+<span class="sig-name descname"><span class="pre">ready_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.ready_time" title="Link to this definition"></a></dt>
+<dd><p>Amount of time the node took to get to a ready state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.running_time">
+<span class="sig-name descname"><span class="pre">running_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.running_time" title="Link to this definition"></a></dt>
+<dd><p>Amount of time the cloud provider took to get a node running</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.set_affected_node_status">
+<span class="sig-name descname"><span class="pre">set_affected_node_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.set_affected_node_status" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.set_cloud_running_time">
+<span class="sig-name descname"><span class="pre">set_cloud_running_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">running_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.set_cloud_running_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.set_cloud_stopping_time">
+<span class="sig-name descname"><span class="pre">set_cloud_stopping_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stopped_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.set_cloud_stopping_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.set_not_ready_time">
+<span class="sig-name descname"><span class="pre">set_not_ready_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">not_ready_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.set_not_ready_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.set_ready_time">
+<span class="sig-name descname"><span class="pre">set_ready_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ready_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.set_ready_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.set_terminating_time">
+<span class="sig-name descname"><span class="pre">set_terminating_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terminating_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.set_terminating_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.stopped_time">
+<span class="sig-name descname"><span class="pre">stopped_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.stopped_time" title="Link to this definition"></a></dt>
+<dd><p>Amount of time the cloud provider took to stop a node</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNode.terminating_time">
+<span class="sig-name descname"><span class="pre">terminating_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNode.terminating_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNodeStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">AffectedNodeStatus</span></span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNodeStatus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Return value of wait_for_pods_to_become_ready_by_label and
+wait_for_pods_to_become_ready_by_name_pattern containing the list
+of the pods that did recover (pod_name, namespace,
+time needed to become ready) and the list of pods that did
+not recover from the chaos</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNodeStatus.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNodeStatus.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNodeStatus.affected_nodes">
+<span class="sig-name descname"><span class="pre">affected_nodes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.AffectedNode" title="krkn_lib.models.k8s.models.AffectedNode"><span class="pre">AffectedNode</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNodeStatus.affected_nodes" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNodeStatus.get_affected_node_index">
+<span class="sig-name descname"><span class="pre">get_affected_node_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNodeStatus.get_affected_node_index" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedNodeStatus.merge_affected_nodes">
+<span class="sig-name descname"><span class="pre">merge_affected_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedNodeStatus.merge_affected_nodes" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedPod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">AffectedPod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_recovery_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pod_readiness_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pod_rescheduling_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedPod" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A pod affected by a chaos scenario</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedPod.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_recovery_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pod_readiness_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pod_rescheduling_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedPod.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedPod.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedPod.namespace" title="Link to this definition"></a></dt>
+<dd><p>Namespace of the pod</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedPod.pod_name">
+<span class="sig-name descname"><span class="pre">pod_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedPod.pod_name" title="Link to this definition"></a></dt>
+<dd><p>Name of the pod</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedPod.pod_readiness_time">
+<span class="sig-name descname"><span class="pre">pod_readiness_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedPod.pod_readiness_time" title="Link to this definition"></a></dt>
+<dd><p>The time the pod took to become ready after being scheduled</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedPod.pod_rescheduling_time">
+<span class="sig-name descname"><span class="pre">pod_rescheduling_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedPod.pod_rescheduling_time" title="Link to this definition"></a></dt>
+<dd><p>The time that the cluster took to reschedule
+the pod after the kill scenario</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedPod.total_recovery_time">
+<span class="sig-name descname"><span class="pre">total_recovery_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedPod.total_recovery_time" title="Link to this definition"></a></dt>
+<dd><p>Total amount of time the pod took to become ready</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.ApiRequestException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">ApiRequestException</span></span><a class="headerlink" href="#krkn_lib.models.k8s.models.ApiRequestException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Generic API Exception raised by k8s package
+Methods</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Container">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">Container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volumeMounts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.VolumeMount" title="krkn_lib.models.k8s.models.VolumeMount"><span class="pre">VolumeMount</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ready</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">containerId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.Container" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Data class to hold information regarding containers in a pod</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Container.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volumeMounts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.VolumeMount" title="krkn_lib.models.k8s.models.VolumeMount"><span class="pre">VolumeMount</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ready</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">containerId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.models.k8s.models.Container.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Container.containerId">
+<span class="sig-name descname"><span class="pre">containerId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Container.containerId" title="Link to this definition"></a></dt>
+<dd><p>Container Id</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Container.image">
+<span class="sig-name descname"><span class="pre">image</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Container.image" title="Link to this definition"></a></dt>
+<dd><p>Container images</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Container.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Container.name" title="Link to this definition"></a></dt>
+<dd><p>Container Name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Container.ready">
+<span class="sig-name descname"><span class="pre">ready</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Container.ready" title="Link to this definition"></a></dt>
+<dd><p>Container Ready status</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Container.volumeMounts">
+<span class="sig-name descname"><span class="pre">volumeMounts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.VolumeMount" title="krkn_lib.models.k8s.models.VolumeMount"><span class="pre">VolumeMount</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Container.volumeMounts" title="Link to this definition"></a></dt>
+<dd><p>List of volumes mounted in the Container</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.NodeResources">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">NodeResources</span></span><a class="headerlink" href="#krkn_lib.models.k8s.models.NodeResources" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.NodeResources.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.NodeResources.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.NodeResources.cpu">
+<span class="sig-name descname"><span class="pre">cpu</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.NodeResources.cpu" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.NodeResources.disk_space">
+<span class="sig-name descname"><span class="pre">disk_space</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.NodeResources.disk_space" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.NodeResources.memory">
+<span class="sig-name descname"><span class="pre">memory</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.NodeResources.memory" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PVC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">PVC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volumeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">podNames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.PVC" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Data class to hold information regarding persistent volume claims</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PVC.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volumeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">podNames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.models.k8s.models.PVC.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PVC.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.PVC.capacity" title="Link to this definition"></a></dt>
+<dd><p>PVC size</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PVC.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.PVC.name" title="Link to this definition"></a></dt>
+<dd><p>Persistent Volume Claim Name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PVC.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.PVC.namespace" title="Link to this definition"></a></dt>
+<dd><p>Namespace where the PVC is deployed</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PVC.podNames">
+<span class="sig-name descname"><span class="pre">podNames</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.PVC.podNames" title="Link to this definition"></a></dt>
+<dd><p>Pods Claiming the PVC</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PVC.volumeName">
+<span class="sig-name descname"><span class="pre">volumeName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.PVC.volumeName" title="Link to this definition"></a></dt>
+<dd><p>Name of the projected Volume</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Pod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">Pod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">creation_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">podIP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.Container" title="krkn_lib.models.k8s.models.Container"><span class="pre">Container</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volumes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.Volume" title="krkn_lib.models.k8s.models.Volume"><span class="pre">Volume</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.Pod" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Data class to hold
+information regarding a pod</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Pod.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">creation_timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">podIP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.Container" title="krkn_lib.models.k8s.models.Container"><span class="pre">Container</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volumes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.Volume" title="krkn_lib.models.k8s.models.Volume"><span class="pre">Volume</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.models.k8s.models.Pod.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Pod.containers">
+<span class="sig-name descname"><span class="pre">containers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.Container" title="krkn_lib.models.k8s.models.Container"><span class="pre">Container</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Pod.containers" title="Link to this definition"></a></dt>
+<dd><p>List of containers in the Pod</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Pod.creation_timestamp">
+<span class="sig-name descname"><span class="pre">creation_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Pod.creation_timestamp" title="Link to this definition"></a></dt>
+<dd><p>Creation timestamp of the Pod</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Pod.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Pod.name" title="Link to this definition"></a></dt>
+<dd><p>Pod Name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Pod.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Pod.namespace" title="Link to this definition"></a></dt>
+<dd><p>Pod Namespaces</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Pod.nodeName">
+<span class="sig-name descname"><span class="pre">nodeName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Pod.nodeName" title="Link to this definition"></a></dt>
+<dd><p>Node name where the Pod is deployed</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Pod.podIP">
+<span class="sig-name descname"><span class="pre">podIP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Pod.podIP" title="Link to this definition"></a></dt>
+<dd><p>Pod ip address</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Pod.status">
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Pod.status" title="Link to this definition"></a></dt>
+<dd><p>Status of the Pod</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Pod.volumes">
+<span class="sig-name descname"><span class="pre">volumes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.Volume" title="krkn_lib.models.k8s.models.Volume"><span class="pre">Volume</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Pod.volumes" title="Link to this definition"></a></dt>
+<dd><p>Volumes mounted in the Pod</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PodsStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">PodsStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_object</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.PodsStatus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Return value of wait_for_pods_to_become_ready_by_label and
+wait_for_pods_to_become_ready_by_name_pattern containing the list
+of the pods that did recover (pod_name, namespace,
+time needed to become ready) and the list of pods that did
+not recover from the chaos</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PodsStatus.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_object</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.PodsStatus.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PodsStatus.merge">
+<span class="sig-name descname"><span class="pre">merge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pods_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#krkn_lib.models.k8s.models.PodsStatus" title="krkn_lib.models.k8s.models.PodsStatus"><span class="pre">PodsStatus</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.PodsStatus.merge" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PodsStatus.recovered">
+<span class="sig-name descname"><span class="pre">recovered</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.AffectedPod" title="krkn_lib.models.k8s.models.AffectedPod"><span class="pre">AffectedPod</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.PodsStatus.recovered" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.PodsStatus.unrecovered">
+<span class="sig-name descname"><span class="pre">unrecovered</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.AffectedPod" title="krkn_lib.models.k8s.models.AffectedPod"><span class="pre">AffectedPod</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.PodsStatus.unrecovered" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.ServiceHijacking">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">ServiceHijacking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_map_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.ServiceHijacking" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.ServiceHijacking.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_map_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.ServiceHijacking.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.ServiceHijacking.config_map_name">
+<span class="sig-name descname"><span class="pre">config_map_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.ServiceHijacking.config_map_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.ServiceHijacking.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.ServiceHijacking.namespace" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.ServiceHijacking.pod_name">
+<span class="sig-name descname"><span class="pre">pod_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.ServiceHijacking.pod_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.ServiceHijacking.selector">
+<span class="sig-name descname"><span class="pre">selector</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.ServiceHijacking.selector" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Volume">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">Volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pvcName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.Volume" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Data class to hold information regarding volumes in a pod</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Volume.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pvcName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.models.k8s.models.Volume.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Volume.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Volume.name" title="Link to this definition"></a></dt>
+<dd><p>Volume Name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.Volume.pvcName">
+<span class="sig-name descname"><span class="pre">pvcName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.Volume.pvcName" title="Link to this definition"></a></dt>
+<dd><p>Persistent Volume Claim Name associated with the Volume</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.VolumeMount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">VolumeMount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mountPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.VolumeMount" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Data class to hold information regarding volume mounts</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.VolumeMount.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mountPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.models.k8s.models.VolumeMount.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.VolumeMount.mountPath">
+<span class="sig-name descname"><span class="pre">mountPath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.VolumeMount.mountPath" title="Link to this definition"></a></dt>
+<dd><p>Path where the molume is mounted in the POD</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.VolumeMount.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.VolumeMount.name" title="Link to this definition"></a></dt>
+<dd><p>VolumeMount Name</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="krkn_lib.models.k8s.html" class="btn btn-neutral float-left" title="krkn_lib.models.k8s package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="krkn_lib.models.krkn.html" class="btn btn-neutral float-right" title="krkn_lib.models.krkn package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Red Hat Chaos Team.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

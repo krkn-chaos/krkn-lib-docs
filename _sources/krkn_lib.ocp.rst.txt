@@ -1,0 +1,18 @@
+krkn\_lib.ocp package
+=====================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.ocp.krkn_openshift
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.ocp
+   :members:
+   :undoc-members:
+   :show-inheritance:

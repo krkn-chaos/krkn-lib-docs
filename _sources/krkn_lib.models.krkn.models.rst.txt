@@ -1,0 +1,7 @@
+krkn\_lib.models.krkn.models module
+===================================
+
+.. automodule:: krkn_lib.models.krkn.models
+   :members:
+   :undoc-members:
+   :show-inheritance:

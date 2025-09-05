@@ -1,0 +1,7 @@
+krkn\_lib.telemetry.ocp.krkn\_telemetry\_openshift module
+=========================================================
+
+.. automodule:: krkn_lib.telemetry.ocp.krkn_telemetry_openshift
+   :members:
+   :undoc-members:
+   :show-inheritance:

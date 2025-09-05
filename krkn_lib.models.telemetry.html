@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>krkn_lib.models.telemetry package &mdash; Krkn Foundation Library</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/krkn-style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=1c1cfd6a"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="krkn_lib.models.telemetry.models module" href="krkn_lib.models.telemetry.models.html" />
+    <link rel="prev" title="krkn_lib.models.pod_monitor.models module" href="krkn_lib.models.pod_monitor.models.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="modules.html">
+            
+              <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v5.1.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="krkn_lib.html">krkn_lib package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="krkn_lib.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.aws_tests.html">krkn_lib.aws_tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.elastic.html">krkn_lib.elastic package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.html">krkn_lib.k8s package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="krkn_lib.models.html">krkn_lib.models package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="krkn_lib.models.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="krkn_lib.models.html#module-krkn_lib.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.ocp.html">krkn_lib.ocp package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.prometheus.html">krkn_lib.prometheus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.telemetry.html">krkn_lib.telemetry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.html">krkn_lib.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.utils.html">krkn_lib.utils package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.version.html">krkn_lib.version package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.html#module-krkn_lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="modules.html">Krkn Foundation Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="modules.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.html">krkn_lib package</a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.models.html">krkn_lib.models package</a></li>
+      <li class="breadcrumb-item active">krkn_lib.models.telemetry package</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="krkn-lib-models-telemetry-package">
+<h1>krkn_lib.models.telemetry package<a class="headerlink" href="#krkn-lib-models-telemetry-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="krkn_lib.models.telemetry.models.html">krkn_lib.models.telemetry.models module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.__init__"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.build_url"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.build_url</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.cloud_infrastructure"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.cloud_infrastructure</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.cloud_type"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.cloud_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.cluster_version"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.cluster_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.health_checks"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.health_checks</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.job_status"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.job_status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.kubernetes_objects_count"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.kubernetes_objects_count</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.major_version"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.major_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.network_plugins"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.network_plugins</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.node_summary_infos"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.node_summary_infos</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.node_taints"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.node_taints</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.run_uuid"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.run_uuid</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.scenarios"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.scenarios</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.timestamp"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.to_json"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.total_node_count"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.total_node_count</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry.virt_checks"><code class="docutils literal notranslate"><span class="pre">ChaosRunTelemetry.virt_checks</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent"><code class="docutils literal notranslate"><span class="pre">ClusterEvent</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.__init__"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.creation"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.creation</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.involved_object_kind"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.involved_object_kind</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.involved_object_name"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.involved_object_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.involved_object_namespace"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.involved_object_namespace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.message"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.message</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.name"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.namespace"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.namespace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.reason"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.reason</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.source_component"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.source_component</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.to_json"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent.type"><code class="docutils literal notranslate"><span class="pre">ClusterEvent.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.HealthCheck"><code class="docutils literal notranslate"><span class="pre">HealthCheck</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.HealthCheck.__init__"><code class="docutils literal notranslate"><span class="pre">HealthCheck.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.HealthCheck.duration"><code class="docutils literal notranslate"><span class="pre">HealthCheck.duration</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.HealthCheck.end_timestamp"><code class="docutils literal notranslate"><span class="pre">HealthCheck.end_timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.HealthCheck.start_timestamp"><code class="docutils literal notranslate"><span class="pre">HealthCheck.start_timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.HealthCheck.status"><code class="docutils literal notranslate"><span class="pre">HealthCheck.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.HealthCheck.status_code"><code class="docutils literal notranslate"><span class="pre">HealthCheck.status_code</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.HealthCheck.url"><code class="docutils literal notranslate"><span class="pre">HealthCheck.url</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.NodeInfo"><code class="docutils literal notranslate"><span class="pre">NodeInfo</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.NodeInfo.__init__"><code class="docutils literal notranslate"><span class="pre">NodeInfo.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.NodeInfo.architecture"><code class="docutils literal notranslate"><span class="pre">NodeInfo.architecture</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.NodeInfo.count"><code class="docutils literal notranslate"><span class="pre">NodeInfo.count</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.NodeInfo.instance_type"><code class="docutils literal notranslate"><span class="pre">NodeInfo.instance_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.NodeInfo.kernel_version"><code class="docutils literal notranslate"><span class="pre">NodeInfo.kernel_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.NodeInfo.kubelet_version"><code class="docutils literal notranslate"><span class="pre">NodeInfo.kubelet_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.NodeInfo.nodes_type"><code class="docutils literal notranslate"><span class="pre">NodeInfo.nodes_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.NodeInfo.os_version"><code class="docutils literal notranslate"><span class="pre">NodeInfo.os_version</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.S3BucketObject"><code class="docutils literal notranslate"><span class="pre">S3BucketObject</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.S3BucketObject.__init__"><code class="docutils literal notranslate"><span class="pre">S3BucketObject.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.S3BucketObject.modified"><code class="docutils literal notranslate"><span class="pre">S3BucketObject.modified</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.S3BucketObject.path"><code class="docutils literal notranslate"><span class="pre">S3BucketObject.path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.S3BucketObject.size"><code class="docutils literal notranslate"><span class="pre">S3BucketObject.size</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.S3BucketObject.type"><code class="docutils literal notranslate"><span class="pre">S3BucketObject.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.__init__"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.affected_nodes"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.affected_nodes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.affected_pods"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.affected_pods</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.cluster_events"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.cluster_events</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.end_timestamp"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.end_timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.exit_status"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.exit_status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.parameters"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.parameters</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.parameters_base64"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.parameters_base64</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.scenario"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.scenario</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.scenario_type"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.scenario_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.set_cluster_events"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.set_cluster_events()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.start_timestamp"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.start_timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ScenarioTelemetry.to_json"><code class="docutils literal notranslate"><span class="pre">ScenarioTelemetry.to_json()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.Taint"><code class="docutils literal notranslate"><span class="pre">Taint</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.Taint.__init__"><code class="docutils literal notranslate"><span class="pre">Taint.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.Taint.effect"><code class="docutils literal notranslate"><span class="pre">Taint.effect</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.Taint.key"><code class="docutils literal notranslate"><span class="pre">Taint.key</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.Taint.node_name"><code class="docutils literal notranslate"><span class="pre">Taint.node_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.Taint.value"><code class="docutils literal notranslate"><span class="pre">Taint.value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.VirtCheck"><code class="docutils literal notranslate"><span class="pre">VirtCheck</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.VirtCheck.__init__"><code class="docutils literal notranslate"><span class="pre">VirtCheck.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.VirtCheck.duration"><code class="docutils literal notranslate"><span class="pre">VirtCheck.duration</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.VirtCheck.end_timestamp"><code class="docutils literal notranslate"><span class="pre">VirtCheck.end_timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.VirtCheck.ip_address"><code class="docutils literal notranslate"><span class="pre">VirtCheck.ip_address</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.VirtCheck.namespace"><code class="docutils literal notranslate"><span class="pre">VirtCheck.namespace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.VirtCheck.node_name"><code class="docutils literal notranslate"><span class="pre">VirtCheck.node_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.VirtCheck.start_timestamp"><code class="docutils literal notranslate"><span class="pre">VirtCheck.start_timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.VirtCheck.status"><code class="docutils literal notranslate"><span class="pre">VirtCheck.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.VirtCheck.vm_name"><code class="docutils literal notranslate"><span class="pre">VirtCheck.vm_name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="module-krkn_lib.models.telemetry">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-krkn_lib.models.telemetry" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="krkn_lib.models.pod_monitor.models.html" class="btn btn-neutral float-left" title="krkn_lib.models.pod_monitor.models module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="krkn_lib.models.telemetry.models.html" class="btn btn-neutral float-right" title="krkn_lib.models.telemetry.models module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Red Hat Chaos Team.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

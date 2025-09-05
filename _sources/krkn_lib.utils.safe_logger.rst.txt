@@ -1,0 +1,7 @@
+krkn\_lib.utils.safe\_logger module
+===================================
+
+.. automodule:: krkn_lib.utils.safe_logger
+   :members:
+   :undoc-members:
+   :show-inheritance:

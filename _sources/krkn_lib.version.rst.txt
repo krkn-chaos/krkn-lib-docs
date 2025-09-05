@@ -1,0 +1,18 @@
+krkn\_lib.version package
+=========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.version.version
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.version
+   :members:
+   :undoc-members:
+   :show-inheritance:

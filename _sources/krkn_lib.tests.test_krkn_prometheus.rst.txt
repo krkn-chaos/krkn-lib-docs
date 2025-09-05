@@ -1,0 +1,7 @@
+krkn\_lib.tests.test\_krkn\_prometheus module
+=============================================
+
+.. automodule:: krkn_lib.tests.test_krkn_prometheus
+   :members:
+   :undoc-members:
+   :show-inheritance:

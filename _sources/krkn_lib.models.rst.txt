@@ -1,0 +1,22 @@
+krkn\_lib.models package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.models.elastic
+   krkn_lib.models.k8s
+   krkn_lib.models.krkn
+   krkn_lib.models.pod_monitor
+   krkn_lib.models.telemetry
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.models
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+krkn\_lib.k8s.pod\_monitor.pod\_monitor module
+==============================================
+
+.. automodule:: krkn_lib.k8s.pod_monitor.pod_monitor
+   :members:
+   :undoc-members:
+   :show-inheritance:

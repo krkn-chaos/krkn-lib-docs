@@ -1,0 +1,26 @@
+krkn\_lib.k8s package
+=====================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.k8s.pod_monitor
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.k8s.krkn_kubernetes
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.k8s
+   :members:
+   :undoc-members:
+   :show-inheritance:

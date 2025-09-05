@@ -1,0 +1,18 @@
+krkn\_lib.telemetry.ocp package
+===============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   krkn_lib.telemetry.ocp.krkn_telemetry_openshift
+
+Module contents
+---------------
+
+.. automodule:: krkn_lib.telemetry.ocp
+   :members:
+   :undoc-members:
+   :show-inheritance:
