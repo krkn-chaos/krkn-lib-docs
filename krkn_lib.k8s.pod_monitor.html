@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=1c1cfd6a"></script>
+        <script src="_static/documentation_options.js?v=2be47700"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v5.1.5
+                v5.1.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -102,12 +102,113 @@
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="krkn_lib.k8s.pod_monitor.pod_monitor.html">krkn_lib.k8s.pod_monitor.pod_monitor module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="krkn_lib.k8s.pod_monitor.pod_monitor.html">krkn_lib.k8s.pod_monitor.pod_monitor module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.k8s.pod_monitor.pod_monitor.html#krkn_lib.k8s.pod_monitor.pod_monitor.select_and_monitor_by_label"><code class="docutils literal notranslate"><span class="pre">select_and_monitor_by_label()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.k8s.pod_monitor.pod_monitor.html#krkn_lib.k8s.pod_monitor.pod_monitor.select_and_monitor_by_name_pattern_and_namespace_pattern"><code class="docutils literal notranslate"><span class="pre">select_and_monitor_by_name_pattern_and_namespace_pattern()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.k8s.pod_monitor.pod_monitor.html#krkn_lib.k8s.pod_monitor.pod_monitor.select_and_monitor_by_namespace_pattern_and_label"><code class="docutils literal notranslate"><span class="pre">select_and_monitor_by_namespace_pattern_and_label()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-krkn_lib.k8s.pod_monitor">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-krkn_lib.k8s.pod_monitor" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="krkn_lib.k8s.pod_monitor.select_and_monitor_by_label">
+<span class="sig-prename descclassname"><span class="pre">krkn_lib.k8s.pod_monitor.</span></span><span class="sig-name descname"><span class="pre">select_and_monitor_by_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v1_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CoreV1Api</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Future</span></span></span><a class="headerlink" href="#krkn_lib.k8s.pod_monitor.select_and_monitor_by_label" title="Link to this definition"></a></dt>
+<dd><p>Monitors all the pods identified
+by a label selector and collects infos about the
+pods recovery after a kill scenario while the scenario is running.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label_selector</strong> – the label selector used
+to filter the pods to monitor (must be the
+same used in <cite>select_pods_by_label</cite>)</p></li>
+<li><p><strong>max_timeout</strong> – the expected time the pods should take
+to recover. If the killed pods are replaced in this time frame,
+but they didn’t reach the Ready State, they will be marked as
+unrecovered. If during the time frame the pods are not replaced
+at all the error field of the PodsStatus structure will be
+valorized with an exception.</p></li>
+<li><p><strong>v1_client</strong> – kubernetes V1Api client</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a future which result (PodsSnapshot) must be
+gathered to obtain the pod infos.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="krkn_lib.k8s.pod_monitor.select_and_monitor_by_name_pattern_and_namespace_pattern">
+<span class="sig-prename descclassname"><span class="pre">krkn_lib.k8s.pod_monitor.</span></span><span class="sig-name descname"><span class="pre">select_and_monitor_by_name_pattern_and_namespace_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pod_name_pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace_pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v1_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CoreV1Api</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.k8s.pod_monitor.select_and_monitor_by_name_pattern_and_namespace_pattern" title="Link to this definition"></a></dt>
+<dd><p>Monitors all the pods identified by a pod name regex pattern
+and a namespace regex pattern, that collects infos about the
+pods recovery after a kill scenario while the scenario is running.
+Raises an exception if the regex format is not correct.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pod_name_pattern</strong> – a regex representing the
+pod name pattern used to filter the pods to be monitored
+(must be the same used in
+<cite>select_pods_by_name_pattern_and_namespace_pattern</cite>)</p></li>
+<li><p><strong>namespace_pattern</strong> – a regex representing the namespace
+pattern used to filter the pods to be monitored
+(must be the same used in
+<cite>select_pods_by_name_pattern_and_namespace_pattern</cite>)</p></li>
+<li><p><strong>max_timeout</strong> – the expected time the pods should take to
+recover. If the killed pods are replaced in this time frame,
+but they didn’t reach the Ready State, they will be marked as
+unrecovered. If during the time frame the pods are not replaced
+at all the error field of the PodsStatus structure will be
+valorized with an exception.</p></li>
+<li><p><strong>v1_client</strong> – kubernetes V1Api client</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a future which result (PodsSnapshot) must be
+gathered to obtain the pod infos.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="krkn_lib.k8s.pod_monitor.select_and_monitor_by_namespace_pattern_and_label">
+<span class="sig-prename descclassname"><span class="pre">krkn_lib.k8s.pod_monitor.</span></span><span class="sig-name descname"><span class="pre">select_and_monitor_by_namespace_pattern_and_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v1_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CoreV1Api</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.k8s.pod_monitor.select_and_monitor_by_namespace_pattern_and_label" title="Link to this definition"></a></dt>
+<dd><p>Monitors all the pods identified
+by a namespace regex pattern
+and a pod label selector, that collects infos about the
+pods recovery after a kill scenario while the scenario is running.
+Raises an exception if the regex format is not correct.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label_selector</strong> – the label selector used to filter
+the pods to monitor (must be the same used in
+<cite>select_pods_by_label</cite>)</p></li>
+<li><p><strong>v1_client</strong> – kubernetes V1Api client</p></li>
+<li><p><strong>namespace_pattern</strong> – a regex representing the namespace
+pattern used to filter the pods to be monitored (must be
+the same used
+in <cite>select_pods_by_name_pattern_and_namespace_pattern</cite>)</p></li>
+<li><p><strong>max_timeout</strong> – the expected time the pods should take to recover.
+If the killed pods are replaced in this time frame, but they
+didn’t reach the Ready State, they will be marked as unrecovered.
+If during the time frame the pods are not replaced
+at all the error field of the PodsStatus structure will be
+valorized with an exception.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a future which result (PodsSnapshot) must be
+gathered to obtain the pod infos.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 

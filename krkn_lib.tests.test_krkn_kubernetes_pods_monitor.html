@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=1c1cfd6a"></script>
+        <script src="_static/documentation_options.js?v=2be47700"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v5.1.5
+                v5.1.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -95,8 +95,69 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="krkn-lib-tests-test-krkn-kubernetes-pods-monitor-module">
-<h1>krkn_lib.tests.test_krkn_kubernetes_pods_monitor module<a class="headerlink" href="#krkn-lib-tests-test-krkn-kubernetes-pods-monitor-module" title="Link to this heading"></a></h1>
+  <section id="module-krkn_lib.tests.test_krkn_kubernetes_pods_monitor">
+<span id="krkn-lib-tests-test-krkn-kubernetes-pods-monitor-module"></span><h1>krkn_lib.tests.test_krkn_kubernetes_pods_monitor module<a class="headerlink" href="#module-krkn_lib.tests.test_krkn_kubernetes_pods_monitor" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_kubernetes_pods_monitor.</span></span><span class="sig-name descname"><span class="pre">TestKrknKubernetesPodsMonitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="krkn_lib.tests.base_test.html#krkn_lib.tests.base_test.BaseTest" title="krkn_lib.tests.base_test.BaseTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTest</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_monitor_forced_to_wait_with_no_status_change">
+<span class="sig-name descname"><span class="pre">test_monitor_forced_to_wait_with_no_status_change</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_monitor_forced_to_wait_with_no_status_change" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_monitor_pods_by_label_no_pods_affected">
+<span class="sig-name descname"><span class="pre">test_monitor_pods_by_label_no_pods_affected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_monitor_pods_by_label_no_pods_affected" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_monitor_stopping_earlier">
+<span class="sig-name descname"><span class="pre">test_monitor_stopping_earlier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_monitor_stopping_earlier" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_becoming_not_ready">
+<span class="sig-name descname"><span class="pre">test_pods_becoming_not_ready</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_becoming_not_ready" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_label_multiple_respawn">
+<span class="sig-name descname"><span class="pre">test_pods_by_label_multiple_respawn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_label_multiple_respawn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_label_multiple_respawn_one_fails">
+<span class="sig-name descname"><span class="pre">test_pods_by_label_multiple_respawn_one_fails</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_label_multiple_respawn_one_fails" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_label_multiple_respawn_one_too_late">
+<span class="sig-name descname"><span class="pre">test_pods_by_label_multiple_respawn_one_too_late</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_label_multiple_respawn_one_too_late" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_label_never_respawn">
+<span class="sig-name descname"><span class="pre">test_pods_by_label_never_respawn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_label_never_respawn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_label_respawn_timeout">
+<span class="sig-name descname"><span class="pre">test_pods_by_label_respawn_timeout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_label_respawn_timeout" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_name_and_namespace_pattern_different_names_respawn">
+<span class="sig-name descname"><span class="pre">test_pods_by_name_and_namespace_pattern_different_names_respawn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_name_and_namespace_pattern_different_names_respawn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_namespace_pattern_and_label_same_name_respawn">
+<span class="sig-name descname"><span class="pre">test_pods_by_namespace_pattern_and_label_same_name_respawn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_pods_monitor.TestKrknKubernetesPodsMonitor.test_pods_by_namespace_pattern_and_label_same_name_respawn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
 
