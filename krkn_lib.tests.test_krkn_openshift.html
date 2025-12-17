@@ -14,13 +14,13 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=0d8b95c4"></script>
+        <script src="_static/documentation_options.js?v=a9f311dd"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="krkn_lib.tests.test_krkn_prometheus module" href="krkn_lib.tests.test_krkn_prometheus.html" />
-    <link rel="prev" title="krkn_lib.tests.test_krkn_kubernetes_pods_monitor_models module" href="krkn_lib.tests.test_krkn_kubernetes_pods_monitor_models.html" /> 
+    <link rel="prev" title="krkn_lib.tests.test_krkn_kubernetes_virt module" href="krkn_lib.tests.test_krkn_kubernetes_virt.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v5.1.12
+                v5.1.13
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -97,44 +97,309 @@
              
   <section id="module-krkn_lib.tests.test_krkn_openshift">
 <span id="krkn-lib-tests-test-krkn-openshift-module"></span><h1>krkn_lib.tests.test_krkn_openshift module<a class="headerlink" href="#module-krkn_lib.tests.test_krkn_openshift" title="Link to this heading"></a></h1>
+<p>Comprehensive tests for KrknOpenshift class.</p>
+<p>This test suite includes both unit tests (mocked) and integration tests
+(requiring actual testdata or clusters).</p>
+<p>Unit tests use mocks to test all methods without requiring
+actual OpenShift clusters or external services.</p>
+<p>Integration tests use BaseTest and require actual testdata files
+or cluster connections.</p>
+<p>Assisted By: Claude Code</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">KrknOpenshiftTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">KrknOpenshiftIntegrationTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="krkn_lib.tests.base_test.html#krkn_lib.tests.base_test.BaseTest" title="krkn_lib.tests.base_test.BaseTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTest</span></code></a></p>
+<p>Integration tests requiring actual cluster connections.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_filter_must_gather_ocp_log_folder">
-<span class="sig-name descname"><span class="pre">test_filter_must_gather_ocp_log_folder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_filter_must_gather_ocp_log_folder" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_filter_must_gather_ocp_log_folder">
+<span class="sig-name descname"><span class="pre">test_filter_must_gather_ocp_log_folder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_filter_must_gather_ocp_log_folder" title="Link to this definition"></a></dt>
+<dd><p>Test log filtering with actual testdata files.</p>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_get_cloud_infrastructure">
-<span class="sig-name descname"><span class="pre">test_get_cloud_infrastructure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_get_cloud_infrastructure" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_get_cloud_infrastructure">
+<span class="sig-name descname"><span class="pre">test_get_cloud_infrastructure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_get_cloud_infrastructure" title="Link to this definition"></a></dt>
+<dd><p>Test cloud infrastructure detection on real cluster.</p>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_get_cluster_network_plugins">
-<span class="sig-name descname"><span class="pre">test_get_cluster_network_plugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_get_cluster_network_plugins" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_get_cluster_network_plugins">
+<span class="sig-name descname"><span class="pre">test_get_cluster_network_plugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_get_cluster_network_plugins" title="Link to this definition"></a></dt>
+<dd><p>Test network plugin detection on real cluster.</p>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_get_cluster_type">
-<span class="sig-name descname"><span class="pre">test_get_cluster_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_get_cluster_type" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_get_cluster_type">
+<span class="sig-name descname"><span class="pre">test_get_cluster_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_get_cluster_type" title="Link to this definition"></a></dt>
+<dd><p>Test cluster type detection on real cluster.</p>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_get_cluster_version">
-<span class="sig-name descname"><span class="pre">test_get_cluster_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_get_cluster_version" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_get_cluster_version_string">
+<span class="sig-name descname"><span class="pre">test_get_cluster_version_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_get_cluster_version_string" title="Link to this definition"></a></dt>
+<dd><p>Test cluster version string retrieval on real cluster.</p>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_get_cluster_version_string">
-<span class="sig-name descname"><span class="pre">test_get_cluster_version_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_get_cluster_version_string" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_is_openshift">
+<span class="sig-name descname"><span class="pre">test_is_openshift</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_is_openshift" title="Link to this definition"></a></dt>
+<dd><p>Test OpenShift detection on real cluster.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestCollectFilterArchiveOcpLogs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestCollectFilterArchiveOcpLogs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestCollectFilterArchiveOcpLogs" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test collect_filter_archive_ocp_logs method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestCollectFilterArchiveOcpLogs.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestCollectFilterArchiveOcpLogs.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_is_openshift">
-<span class="sig-name descname"><span class="pre">test_is_openshift</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftTest.test_is_openshift" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestCollectFilterArchiveOcpLogs.test_collect_filter_archive_ocp_logs_expands_tilde">
+<span class="sig-name descname"><span class="pre">test_collect_filter_archive_ocp_logs_expands_tilde</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_which</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_exists</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_expanduser</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestCollectFilterArchiveOcpLogs.test_collect_filter_archive_ocp_logs_expands_tilde" title="Link to this definition"></a></dt>
+<dd><p>Test tilde expansion in paths.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestCollectFilterArchiveOcpLogs.test_collect_filter_archive_ocp_logs_invalid_kubeconfig">
+<span class="sig-name descname"><span class="pre">test_collect_filter_archive_ocp_logs_invalid_kubeconfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_which</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_exists</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestCollectFilterArchiveOcpLogs.test_collect_filter_archive_ocp_logs_invalid_kubeconfig" title="Link to this definition"></a></dt>
+<dd><p>Test with invalid kubeconfig path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestCollectFilterArchiveOcpLogs.test_collect_filter_archive_ocp_logs_oc_not_found">
+<span class="sig-name descname"><span class="pre">test_collect_filter_archive_ocp_logs_oc_not_found</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_which</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestCollectFilterArchiveOcpLogs.test_collect_filter_archive_ocp_logs_oc_not_found" title="Link to this definition"></a></dt>
+<dd><p>Test when oc command is not found.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestFilterMustGatherOcpLogFolder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestFilterMustGatherOcpLogFolder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestFilterMustGatherOcpLogFolder" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test filter_must_gather_ocp_log_folder method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestFilterMustGatherOcpLogFolder.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestFilterMustGatherOcpLogFolder.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestFilterMustGatherOcpLogFolder.test_filter_must_gather_ocp_log_folder_dst_not_exists">
+<span class="sig-name descname"><span class="pre">test_filter_must_gather_ocp_log_folder_dst_not_exists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestFilterMustGatherOcpLogFolder.test_filter_must_gather_ocp_log_folder_dst_not_exists" title="Link to this definition"></a></dt>
+<dd><p>Test when destination directory doesn’t exist.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetCloudInfrastructure">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetCloudInfrastructure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetCloudInfrastructure" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test get_cloud_infrastructure method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetCloudInfrastructure.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetCloudInfrastructure.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetCloudInfrastructure.test_get_cloud_infrastructure_aws">
+<span class="sig-name descname"><span class="pre">test_get_cloud_infrastructure_aws</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetCloudInfrastructure.test_get_cloud_infrastructure_aws" title="Link to this definition"></a></dt>
+<dd><p>Test getting AWS infrastructure.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetCloudInfrastructure.test_get_cloud_infrastructure_exception">
+<span class="sig-name descname"><span class="pre">test_get_cloud_infrastructure_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetCloudInfrastructure.test_get_cloud_infrastructure_exception" title="Link to this definition"></a></dt>
+<dd><p>Test exception handling returns Unknown.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetCloudInfrastructure.test_get_cloud_infrastructure_no_api_client">
+<span class="sig-name descname"><span class="pre">test_get_cloud_infrastructure_no_api_client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetCloudInfrastructure.test_get_cloud_infrastructure_no_api_client" title="Link to this definition"></a></dt>
+<dd><p>Test when api_client is None.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterNetworkPlugins">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetClusterNetworkPlugins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterNetworkPlugins" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test get_cluster_network_plugins method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterNetworkPlugins.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterNetworkPlugins.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterNetworkPlugins.test_get_cluster_network_plugins_exception">
+<span class="sig-name descname"><span class="pre">test_get_cluster_network_plugins_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterNetworkPlugins.test_get_cluster_network_plugins_exception" title="Link to this definition"></a></dt>
+<dd><p>Test exception handling returns Unknown.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterNetworkPlugins.test_get_cluster_network_plugins_no_api_client">
+<span class="sig-name descname"><span class="pre">test_get_cluster_network_plugins_no_api_client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterNetworkPlugins.test_get_cluster_network_plugins_no_api_client" title="Link to this definition"></a></dt>
+<dd><p>Test when api_client is None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterNetworkPlugins.test_get_cluster_network_plugins_ovn">
+<span class="sig-name descname"><span class="pre">test_get_cluster_network_plugins_ovn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterNetworkPlugins.test_get_cluster_network_plugins_ovn" title="Link to this definition"></a></dt>
+<dd><p>Test getting OVNKubernetes network plugin.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetClusterType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterType" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test get_cluster_type method with PropertyMock.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterType.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterType.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterType.test_get_cluster_type_exception">
+<span class="sig-name descname"><span class="pre">test_get_cluster_type_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterType.test_get_cluster_type_exception" title="Link to this definition"></a></dt>
+<dd><p>Test exception handling returns self-managed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterType.test_get_cluster_type_no_api_client">
+<span class="sig-name descname"><span class="pre">test_get_cluster_type_no_api_client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterType.test_get_cluster_type_no_api_client" title="Link to this definition"></a></dt>
+<dd><p>Test when api_client is None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterType.test_get_cluster_type_rosa">
+<span class="sig-name descname"><span class="pre">test_get_cluster_type_rosa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterType.test_get_cluster_type_rosa" title="Link to this definition"></a></dt>
+<dd><p>Test getting ROSA cluster type from resource tags.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterType.test_get_cluster_type_self_managed">
+<span class="sig-name descname"><span class="pre">test_get_cluster_type_self_managed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterType.test_get_cluster_type_self_managed" title="Link to this definition"></a></dt>
+<dd><p>Test getting self-managed cluster type (no resource tags).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterversionString">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetClusterversionString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionString" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test get_clusterversion_string method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterversionString.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionString.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterversionString.test_get_clusterversion_string_empty">
+<span class="sig-name descname"><span class="pre">test_get_clusterversion_string_empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_get_clusterversion_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionString.test_get_clusterversion_string_empty" title="Link to this definition"></a></dt>
+<dd><p>Test when clusterversion string is empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetClusterversionString.test_get_clusterversion_string_success">
+<span class="sig-name descname"><span class="pre">test_get_clusterversion_string_success</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_get_clusterversion_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionString.test_get_clusterversion_string_success" title="Link to this definition"></a></dt>
+<dd><p>Test successful retrieval of clusterversion string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetPrometheusApiConnectionData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test get_prometheus_api_connection_data method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.test_get_prometheus_api_connection_data_no_token">
+<span class="sig-name descname"><span class="pre">test_get_prometheus_api_connection_data_no_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_create_token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.test_get_prometheus_api_connection_data_no_token" title="Link to this definition"></a></dt>
+<dd><p>Test when token creation fails.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.test_get_prometheus_api_connection_data_route_not_found">
+<span class="sig-name descname"><span class="pre">test_get_prometheus_api_connection_data_route_not_found</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_create_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.test_get_prometheus_api_connection_data_route_not_found" title="Link to this definition"></a></dt>
+<dd><p>Test when prometheus route is not found.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.test_get_prometheus_api_connection_data_success">
+<span class="sig-name descname"><span class="pre">test_get_prometheus_api_connection_data_success</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_create_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.test_get_prometheus_api_connection_data_success" title="Link to this definition"></a></dt>
+<dd><p>Test successful retrieval of Prometheus connection data.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsOpenshift">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestIsOpenshift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsOpenshift" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test is_openshift method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsOpenshift.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsOpenshift.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsOpenshift.test_is_openshift_false_empty">
+<span class="sig-name descname"><span class="pre">test_is_openshift_false_empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_get_clusterversion_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsOpenshift.test_is_openshift_false_empty" title="Link to this definition"></a></dt>
+<dd><p>Test is_openshift returns False when version is empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsOpenshift.test_is_openshift_false_none">
+<span class="sig-name descname"><span class="pre">test_is_openshift_false_none</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_get_clusterversion_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsOpenshift.test_is_openshift_false_none" title="Link to this definition"></a></dt>
+<dd><p>Test is_openshift returns False when version is None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsOpenshift.test_is_openshift_true">
+<span class="sig-name descname"><span class="pre">test_is_openshift_true</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_get_clusterversion_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsOpenshift.test_is_openshift_true" title="Link to this definition"></a></dt>
+<dd><p>Test is_openshift returns True for OpenShift cluster.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestKrknOpenshiftInit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestKrknOpenshiftInit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestKrknOpenshiftInit" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test KrknOpenshift initialization.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestKrknOpenshiftInit.test_init_with_kubeconfig">
+<span class="sig-name descname"><span class="pre">test_init_with_kubeconfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestKrknOpenshiftInit.test_init_with_kubeconfig" title="Link to this definition"></a></dt>
+<dd><p>Test initialization with kubeconfig path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestKrknOpenshiftInit.test_init_without_kubeconfig">
+<span class="sig-name descname"><span class="pre">test_init_without_kubeconfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestKrknOpenshiftInit.test_init_without_kubeconfig" title="Link to this definition"></a></dt>
+<dd><p>Test initialization without kubeconfig path.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -144,7 +409,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="krkn_lib.tests.test_krkn_kubernetes_pods_monitor_models.html" class="btn btn-neutral float-left" title="krkn_lib.tests.test_krkn_kubernetes_pods_monitor_models module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="krkn_lib.tests.test_krkn_kubernetes_virt.html" class="btn btn-neutral float-left" title="krkn_lib.tests.test_krkn_kubernetes_virt module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="krkn_lib.tests.test_krkn_prometheus.html" class="btn btn-neutral float-right" title="krkn_lib.tests.test_krkn_prometheus module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

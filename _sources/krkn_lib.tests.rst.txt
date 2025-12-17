@@ -20,9 +20,12 @@ Submodules
    krkn_lib.tests.test_krkn_kubernetes_models
    krkn_lib.tests.test_krkn_kubernetes_pods_monitor
    krkn_lib.tests.test_krkn_kubernetes_pods_monitor_models
+   krkn_lib.tests.test_krkn_kubernetes_virt
    krkn_lib.tests.test_krkn_openshift
    krkn_lib.tests.test_krkn_prometheus
+   krkn_lib.tests.test_krkn_telemetry_kubernetes
    krkn_lib.tests.test_krkn_telemetry_models
+   krkn_lib.tests.test_safe_logger
    krkn_lib.tests.test_utils
    krkn_lib.tests.test_version
 

@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=0d8b95c4"></script>
+        <script src="_static/documentation_options.js?v=a9f311dd"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v5.1.12
+                v5.1.13
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -357,7 +357,7 @@ a valid manifestwork yaml manifest</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.create_obj">
-<span class="sig-name descname"><span class="pre">create_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_body:</span> <span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'/opt/hostedtoolcache/Python/3.9.24/x64/lib/python3.9/json/__init__.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.create_obj" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">create_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_body:</span> <span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'/opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/json/__init__.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.create_obj" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -371,6 +371,24 @@ a valid manifestwork yaml manifest</p></li>
 <li><p><strong>namespace</strong> – namespace where the pod is created</p></li>
 <li><p><strong>timeout</strong> – request timeout</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.create_snapshot">
+<span class="sig-name descname"><span class="pre">create_snapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vm_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.create_snapshot" title="Link to this definition"></a></dt>
+<dd><p>Create a Snapshot by name and namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the Snapshot to create</p></li>
+<li><p><strong>namespace</strong> – Namespace of the Snapshot</p></li>
+<li><p><strong>vm_name</strong> – Name of the Virtual Machine to create the Snapshot from</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Snapshot object if created, None otherwise</p>
 </dd>
 </dl>
 </dd></dl>
@@ -391,6 +409,24 @@ default 12h</p></li>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the token or None if something went wrong.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.create_vmi">
+<span class="sig-name descname"><span class="pre">create_vmi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vm_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmi_body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.create_vmi" title="Link to this definition"></a></dt>
+<dd><p>Create a Virtual Machine Instance by name and namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the VMI to create</p></li>
+<li><p><strong>namespace</strong> – Namespace of the VMI</p></li>
+<li><p><strong>vm_name</strong> – Name of the Virtual Machine to create the VMI from</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The VMI object if created, None otherwise</p>
 </dd>
 </dl>
 </dd></dl>
@@ -548,6 +584,12 @@ using k8s python client</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.delete_snapshot">
+<span class="sig-name descname"><span class="pre">delete_snapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">snapshot_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.delete_snapshot" title="Link to this definition"></a></dt>
+<dd><p>Helper method to delete any snapshot created by the scenario.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.delete_statefulset">
 <span class="sig-name descname"><span class="pre">delete_statefulset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.delete_statefulset" title="Link to this definition"></a></dt>
 <dd><p>Delete a statefulset given a certain name and namespace</p>
@@ -557,6 +599,40 @@ using k8s python client</p>
 <li><p><strong>name</strong> – name of statefulset</p></li>
 <li><p><strong>namespace</strong> – namespace statefulset is in</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.delete_vm">
+<span class="sig-name descname"><span class="pre">delete_vm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.delete_vm" title="Link to this definition"></a></dt>
+<dd><p>Delete a Virtual Machine by name and namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the VM to delete</p></li>
+<li><p><strong>namespace</strong> – Namespace of the VM</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The VM object if found, None otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.delete_vmi">
+<span class="sig-name descname"><span class="pre">delete_vmi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vm_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.delete_vmi" title="Link to this definition"></a></dt>
+<dd><p>Delete a Virtual Machine Instance to simulate a VM outage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vm_name</strong> – Name of the VMI to delete</p></li>
+<li><p><strong>namespace</strong> – Namespace of the VMI</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>0 for success, 1 for failure</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1182,9 +1258,94 @@ Returns None if the PVC doesn’t exist</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_snapshot">
+<span class="sig-name descname"><span class="pre">get_snapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_snapshot" title="Link to this definition"></a></dt>
+<dd><p>Get a Snapshot by name and namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the Snapshot to retrieve</p></li>
+<li><p><strong>namespace</strong> – Namespace of the Snapshot</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Snapshot object if found, None otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_version">
 <span class="sig-name descname"><span class="pre">get_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_version" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_vm">
+<span class="sig-name descname"><span class="pre">get_vm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_vm" title="Link to this definition"></a></dt>
+<dd><p>Get a Virtual Machine by name and namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the VM to retrieve</p></li>
+<li><p><strong>namespace</strong> – Namespace of the VM</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The VM object if found, None otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_vmi">
+<span class="sig-name descname"><span class="pre">get_vmi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_vmi" title="Link to this definition"></a></dt>
+<dd><p>Get a Virtual Machine Instance by name and namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the VMI to retrieve</p></li>
+<li><p><strong>namespace</strong> – Namespace of the VMI</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The VMI object if found, None otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_vmis">
+<span class="sig-name descname"><span class="pre">get_vmis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regex_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_vmis" title="Link to this definition"></a></dt>
+<dd><p>Get a Virtual Machine Instance by name and namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the VMI to retrieve</p></li>
+<li><p><strong>namespace</strong> – Namespace of the VMI</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The VMI object if found, None otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_vms">
+<span class="sig-name descname"><span class="pre">get_vms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regex_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_vms" title="Link to this definition"></a></dt>
+<dd><p>Get a Virtual Machine by name and namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the VM to retrieve</p></li>
+<li><p><strong>namespace</strong> – Namespace of the VM</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The VM object if found, None otherwise</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.is_kubernetes">
@@ -1452,6 +1613,42 @@ and set the status to true or false</p>
 <dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.parse_events_from_file">
 <span class="sig-name descname"><span class="pre">parse_events_from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ClusterEvent" title="krkn_lib.models.telemetry.models.ClusterEvent"><span class="pre">ClusterEvent</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.parse_events_from_file" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.patch_vm">
+<span class="sig-name descname"><span class="pre">patch_vm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vm_body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.patch_vm" title="Link to this definition"></a></dt>
+<dd><p>Patch a Virtual Machine by name and namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the VM to patch</p></li>
+<li><p><strong>namespace</strong> – Namespace of the VM</p></li>
+<li><p><strong>vm_body</strong> – Body of the VM to patch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The VM object if patched, None otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.patch_vmi">
+<span class="sig-name descname"><span class="pre">patch_vmi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmi_body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.patch_vmi" title="Link to this definition"></a></dt>
+<dd><p>Patch a Virtual Machine Instance by name and namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the VMI to patch</p></li>
+<li><p><strong>namespace</strong> – Namespace of the VMI</p></li>
+<li><p><strong>vmi_body</strong> – Body of the VMI to patch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The VMI object if patched, None otherwise</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.path_exists_in_pod">

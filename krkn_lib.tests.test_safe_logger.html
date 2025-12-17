@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>krkn_lib.tests.test_safe_logger module &mdash; Krkn Foundation Library</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/krkn-style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=a9f311dd"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="krkn_lib.tests.test_utils module" href="krkn_lib.tests.test_utils.html" />
+    <link rel="prev" title="krkn_lib.tests.test_krkn_telemetry_models module" href="krkn_lib.tests.test_krkn_telemetry_models.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="modules.html">
+            
+              <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v5.1.13
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="krkn_lib.html">krkn_lib package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="krkn_lib.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.aws_tests.html">krkn_lib.aws_tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.elastic.html">krkn_lib.elastic package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.html">krkn_lib.k8s package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.html">krkn_lib.models package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.ocp.html">krkn_lib.ocp package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.prometheus.html">krkn_lib.prometheus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.telemetry.html">krkn_lib.telemetry package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="krkn_lib.tests.html">krkn_lib.tests package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="krkn_lib.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="krkn_lib.tests.html#module-krkn_lib.tests">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.utils.html">krkn_lib.utils package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.version.html">krkn_lib.version package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.html#module-krkn_lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="modules.html">Krkn Foundation Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="modules.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.html">krkn_lib package</a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.tests.html">krkn_lib.tests package</a></li>
+      <li class="breadcrumb-item active">krkn_lib.tests.test_safe_logger module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-krkn_lib.tests.test_safe_logger">
+<span id="krkn-lib-tests-test-safe-logger-module"></span><h1>krkn_lib.tests.test_safe_logger module<a class="headerlink" href="#module-krkn_lib.tests.test_safe_logger" title="Link to this heading"></a></h1>
+<p>Comprehensive unit tests for SafeLogger class.</p>
+<p>This test suite covers both file-based logging mode (with worker thread)
+and standard logging mode (fallback).</p>
+<p>Assisted By: Claude Code</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_safe_logger.</span></span><span class="sig-name descname"><span class="pre">TestSafeLoggerAfterClose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test behavior after close() is called.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose.tearDown">
+<span class="sig-name descname"><span class="pre">tearDown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose.tearDown" title="Link to this definition"></a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose.test_error_uses_logging_after_close">
+<span class="sig-name descname"><span class="pre">test_error_uses_logging_after_close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_error</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose.test_error_uses_logging_after_close" title="Link to this definition"></a></dt>
+<dd><p>Test error() uses logging after close().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose.test_info_uses_logging_after_close">
+<span class="sig-name descname"><span class="pre">test_info_uses_logging_after_close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose.test_info_uses_logging_after_close" title="Link to this definition"></a></dt>
+<dd><p>Test info() uses logging after close().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose.test_warning_uses_logging_after_close">
+<span class="sig-name descname"><span class="pre">test_warning_uses_logging_after_close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_warning</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerAfterClose.test_warning_uses_logging_after_close" title="Link to this definition"></a></dt>
+<dd><p>Test warning() uses logging after close().</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_safe_logger.</span></span><span class="sig-name descname"><span class="pre">TestSafeLoggerEdgeCases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test edge cases and error conditions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.tearDown">
+<span class="sig-name descname"><span class="pre">tearDown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.tearDown" title="Link to this definition"></a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_empty_message">
+<span class="sig-name descname"><span class="pre">test_empty_message</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_empty_message" title="Link to this definition"></a></dt>
+<dd><p>Test logging empty string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_log_file_name_none_when_no_file">
+<span class="sig-name descname"><span class="pre">test_log_file_name_none_when_no_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_log_file_name_none_when_no_file" title="Link to this definition"></a></dt>
+<dd><p>Test log_file_name is None when using standard logging.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_multiline_message">
+<span class="sig-name descname"><span class="pre">test_multiline_message</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_multiline_message" title="Link to this definition"></a></dt>
+<dd><p>Test logging multiline message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_rapid_logging">
+<span class="sig-name descname"><span class="pre">test_rapid_logging</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_rapid_logging" title="Link to this definition"></a></dt>
+<dd><p>Test rapid successive logging.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_special_characters">
+<span class="sig-name descname"><span class="pre">test_special_characters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_special_characters" title="Link to this definition"></a></dt>
+<dd><p>Test logging messages with special characters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_very_long_message">
+<span class="sig-name descname"><span class="pre">test_very_long_message</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerEdgeCases.test_very_long_message" title="Link to this definition"></a></dt>
+<dd><p>Test logging very long message.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_safe_logger.</span></span><span class="sig-name descname"><span class="pre">TestSafeLoggerFileLogging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test file-based logging functionality.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.tearDown">
+<span class="sig-name descname"><span class="pre">tearDown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.tearDown" title="Link to this definition"></a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_append_mode">
+<span class="sig-name descname"><span class="pre">test_append_mode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_append_mode" title="Link to this definition"></a></dt>
+<dd><p>Test append mode preserves existing content.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_close_waits_for_queue">
+<span class="sig-name descname"><span class="pre">test_close_waits_for_queue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_close_waits_for_queue" title="Link to this definition"></a></dt>
+<dd><p>Test close() waits for all messages to be processed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_error_logs_to_file">
+<span class="sig-name descname"><span class="pre">test_error_logs_to_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_error_logs_to_file" title="Link to this definition"></a></dt>
+<dd><p>Test error() writes to file with [ERR] prefix.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_info_logs_to_file">
+<span class="sig-name descname"><span class="pre">test_info_logs_to_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_info_logs_to_file" title="Link to this definition"></a></dt>
+<dd><p>Test info() writes to file with [INF] prefix.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_log_file_name_property">
+<span class="sig-name descname"><span class="pre">test_log_file_name_property</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_log_file_name_property" title="Link to this definition"></a></dt>
+<dd><p>Test log_file_name property returns filename.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_multiple_logs_to_file">
+<span class="sig-name descname"><span class="pre">test_multiple_logs_to_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_multiple_logs_to_file" title="Link to this definition"></a></dt>
+<dd><p>Test multiple log messages are written in order.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_timestamp_in_logs">
+<span class="sig-name descname"><span class="pre">test_timestamp_in_logs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_timestamp_in_logs" title="Link to this definition"></a></dt>
+<dd><p>Test log messages include timestamp.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_warning_logs_to_file">
+<span class="sig-name descname"><span class="pre">test_warning_logs_to_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerFileLogging.test_warning_logs_to_file" title="Link to this definition"></a></dt>
+<dd><p>Test warning() writes to file with [WRN] prefix.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerInit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_safe_logger.</span></span><span class="sig-name descname"><span class="pre">TestSafeLoggerInit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerInit" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test SafeLogger initialization.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerInit.test_init_default_write_mode">
+<span class="sig-name descname"><span class="pre">test_init_default_write_mode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerInit.test_init_default_write_mode" title="Link to this definition"></a></dt>
+<dd><p>Test default write mode is w+.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerInit.test_init_with_filename">
+<span class="sig-name descname"><span class="pre">test_init_with_filename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerInit.test_init_with_filename" title="Link to this definition"></a></dt>
+<dd><p>Test initialization with filename creates file writer and thread.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerInit.test_init_with_filename_and_write_mode">
+<span class="sig-name descname"><span class="pre">test_init_with_filename_and_write_mode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerInit.test_init_with_filename_and_write_mode" title="Link to this definition"></a></dt>
+<dd><p>Test initialization with custom write mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerInit.test_init_without_filename">
+<span class="sig-name descname"><span class="pre">test_init_without_filename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerInit.test_init_without_filename" title="Link to this definition"></a></dt>
+<dd><p>Test initialization without filename uses standard logging.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerStandardLogging">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_safe_logger.</span></span><span class="sig-name descname"><span class="pre">TestSafeLoggerStandardLogging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerStandardLogging" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test standard logging fallback (no file).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerStandardLogging.test_error_uses_logging_when_no_file">
+<span class="sig-name descname"><span class="pre">test_error_uses_logging_when_no_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_error</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerStandardLogging.test_error_uses_logging_when_no_file" title="Link to this definition"></a></dt>
+<dd><p>Test error() uses logging.error when no file specified.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerStandardLogging.test_info_uses_logging_when_no_file">
+<span class="sig-name descname"><span class="pre">test_info_uses_logging_when_no_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerStandardLogging.test_info_uses_logging_when_no_file" title="Link to this definition"></a></dt>
+<dd><p>Test info() uses logging.info when no file specified.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerStandardLogging.test_multiple_logs_use_logging">
+<span class="sig-name descname"><span class="pre">test_multiple_logs_use_logging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_warning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_error</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerStandardLogging.test_multiple_logs_use_logging" title="Link to this definition"></a></dt>
+<dd><p>Test multiple calls use standard logging.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerStandardLogging.test_warning_uses_logging_when_no_file">
+<span class="sig-name descname"><span class="pre">test_warning_uses_logging_when_no_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_warning</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerStandardLogging.test_warning_uses_logging_when_no_file" title="Link to this definition"></a></dt>
+<dd><p>Test warning() uses logging.warning when no file specified.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_safe_logger.</span></span><span class="sig-name descname"><span class="pre">TestSafeLoggerWorkerThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test worker thread functionality.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread.tearDown">
+<span class="sig-name descname"><span class="pre">tearDown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread.tearDown" title="Link to this definition"></a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread.test_worker_stops_when_finished">
+<span class="sig-name descname"><span class="pre">test_worker_stops_when_finished</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread.test_worker_stops_when_finished" title="Link to this definition"></a></dt>
+<dd><p>Test worker thread stops when finished flag is set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread.test_worker_thread_is_daemon">
+<span class="sig-name descname"><span class="pre">test_worker_thread_is_daemon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread.test_worker_thread_is_daemon" title="Link to this definition"></a></dt>
+<dd><p>Test worker thread is created as daemon.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread.test_worker_thread_processes_queue">
+<span class="sig-name descname"><span class="pre">test_worker_thread_processes_queue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_safe_logger.TestSafeLoggerWorkerThread.test_worker_thread_processes_queue" title="Link to this definition"></a></dt>
+<dd><p>Test worker thread processes messages from queue.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="krkn_lib.tests.test_krkn_telemetry_models.html" class="btn btn-neutral float-left" title="krkn_lib.tests.test_krkn_telemetry_models module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="krkn_lib.tests.test_utils.html" class="btn btn-neutral float-right" title="krkn_lib.tests.test_utils module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Red Hat Chaos Team.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

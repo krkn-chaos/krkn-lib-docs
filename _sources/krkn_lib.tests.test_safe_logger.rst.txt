@@ -1,0 +1,7 @@
+krkn\_lib.tests.test\_safe\_logger module
+=========================================
+
+.. automodule:: krkn_lib.tests.test_safe_logger
+   :members:
+   :undoc-members:
+   :show-inheritance:
