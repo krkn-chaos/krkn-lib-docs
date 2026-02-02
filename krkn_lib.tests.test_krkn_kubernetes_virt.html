@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=a9f311dd"></script>
+        <script src="_static/documentation_options.js?v=e9216e06"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v5.1.13
+                v6.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -97,6 +97,26 @@
              
   <section id="module-krkn_lib.tests.test_krkn_kubernetes_virt">
 <span id="krkn-lib-tests-test-krkn-kubernetes-virt-module"></span><h1>krkn_lib.tests.test_krkn_kubernetes_virt module<a class="headerlink" href="#module-krkn_lib.tests.test_krkn_kubernetes_virt" title="Link to this heading"></a></h1>
+<p>Test suite for KubeVirt/virtualization-related functionality in KrknKubernetes</p>
+<p>This test suite covers KubeVirt-specific methods in the KrknKubernetes class,
+including operations on VirtualMachines (VMs), VirtualMachineInstances (VMIs),
+and VirtualMachineSnapshots.</p>
+<p>Tested functionality:
+- VM operations: get, list, delete, patch
+- VMI operations: get, list, create, delete, patch
+- Snapshot operations: get, create, delete</p>
+<dl>
+<dt>Usage:</dt><dd><p># Run all tests in this file
+python -m unittest src.krkn_lib.tests.test_krkn_kubernetes_virt -v</p>
+<p># Run a specific test class
+python -m unittest src.krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt -v</p>
+<p># Run a specific test method
+python -m unittest src.krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vm_success -v</p>
+<p># Run with coverage
+python -m coverage run -a -m unittest src.krkn_lib.tests.test_krkn_kubernetes_virt -v</p>
+</dd>
+</dl>
+<p>Assisted By: Claude Code</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_kubernetes_virt.</span></span><span class="sig-name descname"><span class="pre">TestKrknKubernetesVirt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt" title="Link to this definition"></a></dt>
