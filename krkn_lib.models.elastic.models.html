@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=4d59ea1f"></script>
+        <script src="_static/documentation_options.js?v=7aa16075"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.1
+                v6.0.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -119,6 +119,12 @@
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_uuid:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">severity:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alert:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_at:</span> <span class="pre">&lt;module</span> <span class="pre">'datetime'</span> <span class="pre">from</span> <span class="pre">'/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/datetime.py'&gt;</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.elastic.models.ElasticAlert.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.elastic.models.ElasticAlert.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.elastic.models.ElasticAlert.to_dict" title="Link to this definition"></a></dt>
+<dd><p>Override to_dict to ensure ISO 8601 datetime format</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -141,6 +147,12 @@
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chaos_run_telemetry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="krkn_lib.models.telemetry.models.html#krkn_lib.models.telemetry.models.ChaosRunTelemetry" title="krkn_lib.models.telemetry.models.ChaosRunTelemetry"><span class="pre">ChaosRunTelemetry</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.elastic.models.ElasticChaosRunTelemetry.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.elastic.models.ElasticChaosRunTelemetry.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.elastic.models.ElasticChaosRunTelemetry.to_dict" title="Link to this definition"></a></dt>
+<dd><p>Override to_dict to ensure ISO 8601 datetime format</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -157,6 +169,12 @@
 <dt class="sig sig-object py" id="krkn_lib.models.elastic.models.ElasticMetric.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_uuid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.elastic.models.ElasticMetric.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.elastic.models.ElasticMetric.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.elastic.models.ElasticMetric.to_dict" title="Link to this definition"></a></dt>
+<dd><p>Override to_dict to ensure ISO 8601 datetime format</p>
+</dd></dl>
 
 </dd></dl>
 

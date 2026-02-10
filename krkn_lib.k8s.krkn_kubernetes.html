@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=4d59ea1f"></script>
+        <script src="_static/documentation_options.js?v=7aa16075"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.1
+                v6.0.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -800,7 +800,7 @@ select only running pods by setting “status.phase=Running”</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_all_pods">
 <span class="sig-name descname"><span class="pre">get_all_pods</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list[[&lt;class</span> <span class="pre">'str'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'str'&gt;]]</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_all_pods" title="Link to this definition"></a></dt>
-<dd><p>Return a list of tuples containing pod name [0] and namespace [1]</p>
+<dd><p>Return a list of lists containing pod name [0] and namespace [1]</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -811,7 +811,7 @@ select only running pods by setting “status.phase=Running”</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>list of tuples pod,namespace</p>
+<dd class="field-even"><p>list of lists [pod, namespace]</p>
 </dd>
 </dl>
 </dd></dl>

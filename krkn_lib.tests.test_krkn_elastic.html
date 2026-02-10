@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=4d59ea1f"></script>
+        <script src="_static/documentation_options.js?v=7aa16075"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.1
+                v6.0.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -150,6 +150,134 @@
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_upload_no_index">
 <span class="sig-name descname"><span class="pre">test_upload_no_index</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_upload_no_index" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_elastic.</span></span><span class="sig-name descname"><span class="pre">TestKrknElasticOpenSearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="krkn_lib.tests.base_test.html#krkn_lib.tests.base_test.BaseTest" title="krkn_lib.tests.base_test.BaseTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTest</span></code></a></p>
+<p>Test suite for OpenSearch backend support using mocks</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_auto_detect_elasticsearch">
+<span class="sig-name descname"><span class="pre">test_auto_detect_elasticsearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_elasticsearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_auto_detect_elasticsearch" title="Link to this definition"></a></dt>
+<dd><p>Test auto-detection of Elasticsearch backend</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_auto_detect_fallback_to_elasticsearch">
+<span class="sig-name descname"><span class="pre">test_auto_detect_fallback_to_elasticsearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_elasticsearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_auto_detect_fallback_to_elasticsearch" title="Link to this definition"></a></dt>
+<dd><p>Test auto-detection falls back to Elasticsearch on error</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_auto_detect_opensearch">
+<span class="sig-name descname"><span class="pre">test_auto_detect_opensearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_auto_detect_opensearch" title="Link to this definition"></a></dt>
+<dd><p>Test auto-detection of OpenSearch backend</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_auto_detect_opensearch_by_cluster_name">
+<span class="sig-name descname"><span class="pre">test_auto_detect_opensearch_by_cluster_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_auto_detect_opensearch_by_cluster_name" title="Link to this definition"></a></dt>
+<dd><p>Test auto-detection of OpenSearch by cluster name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_auto_detect_opensearch_by_tagline">
+<span class="sig-name descname"><span class="pre">test_auto_detect_opensearch_by_tagline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_auto_detect_opensearch_by_tagline" title="Link to this definition"></a></dt>
+<dd><p>Test auto-detection of OpenSearch by tagline</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_elasticsearch_initialization">
+<span class="sig-name descname"><span class="pre">test_elasticsearch_initialization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_elasticsearch_initialization" title="Link to this definition"></a></dt>
+<dd><p>Test that Elasticsearch backend initializes correctly (default)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_is_not_found_error_elasticsearch">
+<span class="sig-name descname"><span class="pre">test_is_not_found_error_elasticsearch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_is_not_found_error_elasticsearch" title="Link to this definition"></a></dt>
+<dd><p>Test _is_not_found_error helper with Elasticsearch NotFoundError</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_is_not_found_error_opensearch">
+<span class="sig-name descname"><span class="pre">test_is_not_found_error_opensearch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_is_not_found_error_opensearch" title="Link to this definition"></a></dt>
+<dd><p>Test _is_not_found_error helper with OpenSearch NotFoundError</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_is_not_found_error_other_exception">
+<span class="sig-name descname"><span class="pre">test_is_not_found_error_other_exception</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_is_not_found_error_other_exception" title="Link to this definition"></a></dt>
+<dd><p>Test _is_not_found_error helper with other exceptions</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_http_url">
+<span class="sig-name descname"><span class="pre">test_opensearch_http_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_http_url" title="Link to this definition"></a></dt>
+<dd><p>Test that OpenSearch handles http URLs correctly</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_initialization">
+<span class="sig-name descname"><span class="pre">test_opensearch_initialization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_initialization" title="Link to this definition"></a></dt>
+<dd><p>Test that OpenSearch backend initializes correctly</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_not_installed">
+<span class="sig-name descname"><span class="pre">test_opensearch_not_installed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_not_installed" title="Link to this definition"></a></dt>
+<dd><p>Test auto-detecting OpenSearch when not installed raises
+exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_push_alert">
+<span class="sig-name descname"><span class="pre">test_opensearch_push_alert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_push_alert" title="Link to this definition"></a></dt>
+<dd><p>Test push alert with OpenSearch backend</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_push_metric">
+<span class="sig-name descname"><span class="pre">test_opensearch_push_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_push_metric" title="Link to this definition"></a></dt>
+<dd><p>Test push metric with OpenSearch backend</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_push_telemetry">
+<span class="sig-name descname"><span class="pre">test_opensearch_push_telemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_push_telemetry" title="Link to this definition"></a></dt>
+<dd><p>Test push telemetry with OpenSearch backend</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_search_not_existing">
+<span class="sig-name descname"><span class="pre">test_opensearch_search_not_existing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_search_not_existing" title="Link to this definition"></a></dt>
+<dd><p>Test searching for non-existing data in OpenSearch</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_search_with_results">
+<span class="sig-name descname"><span class="pre">test_opensearch_search_with_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_search_with_results" title="Link to this definition"></a></dt>
+<dd><p>Test searching returns results with OpenSearch</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_upload_data">
+<span class="sig-name descname"><span class="pre">test_opensearch_upload_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_upload_data" title="Link to this definition"></a></dt>
+<dd><p>Test upload_data_to_elasticsearch with OpenSearch backend</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_upload_metrics">
+<span class="sig-name descname"><span class="pre">test_opensearch_upload_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_upload_metrics" title="Link to this definition"></a></dt>
+<dd><p>Test upload metrics to OpenSearch</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_url_parsing">
+<span class="sig-name descname"><span class="pre">test_opensearch_url_parsing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_opensearch_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_requests_get</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElasticOpenSearch.test_opensearch_url_parsing" title="Link to this definition"></a></dt>
+<dd><p>Test that OpenSearch URL is correctly parsed</p>
+</dd></dl>
 
 </dd></dl>
 
