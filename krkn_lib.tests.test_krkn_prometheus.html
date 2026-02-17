@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=7aa16075"></script>
+        <script src="_static/documentation_options.js?v=ded9e46c"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.2
+                v6.0.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -101,25 +101,162 @@
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_prometheus.</span></span><span class="sig-name descname"><span class="pre">TestKrknPrometheus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="krkn_lib.tests.base_test.html#krkn_lib.tests.base_test.BaseTest" title="krkn_lib.tests.base_test.BaseTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTest</span></code></a></p>
+<p>Integration tests for KrknPrometheus class.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.process_query">
-<span class="sig-name descname"><span class="pre">process_query</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.process_query" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_flaky_tests">
-<span class="sig-name descname"><span class="pre">test_flaky_tests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_flaky_tests" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_constructor_exception_handling">
+<span class="sig-name descname"><span class="pre">test_constructor_exception_handling</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_constructor_exception_handling" title="Link to this definition"></a></dt>
+<dd><p>Test that constructor exits on initialization failure.</p>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric">
-<span class="sig-name descname"><span class="pre">test_parse_metric</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_constructor_success">
+<span class="sig-name descname"><span class="pre">test_constructor_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_constructor_success" title="Link to this definition"></a></dt>
+<dd><p>Test successful initialization of KrknPrometheus.</p>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_prom_query">
-<span class="sig-name descname"><span class="pre">test_process_prom_query</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_prom_query" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_constructor_with_bearer_token">
+<span class="sig-name descname"><span class="pre">test_constructor_with_bearer_token</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_constructor_with_bearer_token" title="Link to this definition"></a></dt>
+<dd><p>Test initialization with bearer token.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_missing_label">
+<span class="sig-name descname"><span class="pre">test_parse_metric_missing_label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_missing_label" title="Link to this definition"></a></dt>
+<dd><p>Test parse_metric when a label doesn’t exist in the metric.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_multiple_values">
+<span class="sig-name descname"><span class="pre">test_parse_metric_multiple_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_multiple_values" title="Link to this definition"></a></dt>
+<dd><p>Test parse_metric with multiple values in the series.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_no_placeholders">
+<span class="sig-name descname"><span class="pre">test_parse_metric_no_placeholders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_no_placeholders" title="Link to this definition"></a></dt>
+<dd><p>Test parse_metric with description containing no placeholders.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_no_value">
+<span class="sig-name descname"><span class="pre">test_parse_metric_no_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_no_value" title="Link to this definition"></a></dt>
+<dd><p>Test parse_metric with empty values array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_standard_replacement">
+<span class="sig-name descname"><span class="pre">test_parse_metric_standard_replacement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_standard_replacement" title="Link to this definition"></a></dt>
+<dd><p>Test parse_metric with standard label and value replacement.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_underscore_label">
+<span class="sig-name descname"><span class="pre">test_parse_metric_underscore_label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_underscore_label" title="Link to this definition"></a></dt>
+<dd><p>Test parse_metric with labels containing underscores.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_critical_severity">
+<span class="sig-name descname"><span class="pre">test_process_alert_critical_severity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_critical_severity" title="Link to this definition"></a></dt>
+<dd><p>Test process_alert with critical severity level.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_debug_severity">
+<span class="sig-name descname"><span class="pre">test_process_alert_debug_severity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_debug_severity" title="Link to this definition"></a></dt>
+<dd><p>Test process_alert with debug severity level.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_error_severity">
+<span class="sig-name descname"><span class="pre">test_process_alert_error_severity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_error_severity" title="Link to this definition"></a></dt>
+<dd><p>Test process_alert with error severity level.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_info_severity">
+<span class="sig-name descname"><span class="pre">test_process_alert_info_severity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_info_severity" title="Link to this definition"></a></dt>
+<dd><p>Test process_alert with info severity level.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_invalid_severity">
+<span class="sig-name descname"><span class="pre">test_process_alert_invalid_severity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_invalid_severity" title="Link to this definition"></a></dt>
+<dd><p>Test process_alert with invalid severity level.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_missing_description">
+<span class="sig-name descname"><span class="pre">test_process_alert_missing_description</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_missing_description" title="Link to this definition"></a></dt>
+<dd><p>Test process_alert with missing description field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_missing_expr">
+<span class="sig-name descname"><span class="pre">test_process_alert_missing_expr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_missing_expr" title="Link to this definition"></a></dt>
+<dd><p>Test process_alert with missing expr field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_missing_severity">
+<span class="sig-name descname"><span class="pre">test_process_alert_missing_severity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_missing_severity" title="Link to this definition"></a></dt>
+<dd><p>Test process_alert with missing severity field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_no_records">
+<span class="sig-name descname"><span class="pre">test_process_alert_no_records</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_no_records" title="Link to this definition"></a></dt>
+<dd><p>Test process_alert when query returns no records.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_warning_severity">
+<span class="sig-name descname"><span class="pre">test_process_alert_warning_severity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_alert_warning_severity" title="Link to this definition"></a></dt>
+<dd><p>Test process_alert with warning severity level.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_prom_query_in_range_custom_granularity">
+<span class="sig-name descname"><span class="pre">test_process_prom_query_in_range_custom_granularity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_prom_query_in_range_custom_granularity" title="Link to this definition"></a></dt>
+<dd><p>Test range query with custom granularity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_prom_query_in_range_default_times">
+<span class="sig-name descname"><span class="pre">test_process_prom_query_in_range_default_times</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_prom_query_in_range_default_times" title="Link to this definition"></a></dt>
+<dd><p>Test range query with default start/end times.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_prom_query_in_range_exception">
+<span class="sig-name descname"><span class="pre">test_process_prom_query_in_range_exception</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_prom_query_in_range_exception" title="Link to this definition"></a></dt>
+<dd><p>Test exception handling in range query.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_prom_query_in_range_success">
+<span class="sig-name descname"><span class="pre">test_process_prom_query_in_range_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_prom_query_in_range_success" title="Link to this definition"></a></dt>
+<dd><p>Test successful range query execution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_query_exception">
+<span class="sig-name descname"><span class="pre">test_process_query_exception</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_query_exception" title="Link to this definition"></a></dt>
+<dd><p>Test exception handling in instant query.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_query_success">
+<span class="sig-name descname"><span class="pre">test_process_query_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_process_query_success" title="Link to this definition"></a></dt>
+<dd><p>Test successful instant query execution.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.url">
