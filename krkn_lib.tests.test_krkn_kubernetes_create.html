@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=ded9e46c"></script>
+        <script src="_static/documentation_options.js?v=155074a1"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.3
+                v6.0.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -97,29 +97,51 @@
              
   <section id="module-krkn_lib.tests.test_krkn_kubernetes_create">
 <span id="krkn-lib-tests-test-krkn-kubernetes-create-module"></span><h1>krkn_lib.tests.test_krkn_kubernetes_create module<a class="headerlink" href="#module-krkn_lib.tests.test_krkn_kubernetes_create" title="Link to this heading"></a></h1>
+<p>Functional tests for KrknKubernetes create and deployment operations.</p>
+<p>These tests require an active Kubernetes cluster (kind, minikube, etc.)
+and will perform actual operations against the cluster.</p>
+<p>Run with: python -m unittest src.krkn_lib.tests.test_krkn_kubernetes_create</p>
+<p>Assisted By: Claude Code</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_kubernetes_create.</span></span><span class="sig-name descname"><span class="pre">KrknKubernetesTestsCreate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="krkn_lib.tests.base_test.html#krkn_lib.tests.base_test.BaseTest" title="krkn_lib.tests.base_test.BaseTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTest</span></code></a></p>
+<p>Test create operations on Kubernetes cluster.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_apply_yaml">
 <span class="sig-name descname"><span class="pre">test_apply_yaml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_apply_yaml" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Test applying YAML configuration from file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_create_configmap">
+<span class="sig-name descname"><span class="pre">test_create_configmap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_create_configmap" title="Link to this definition"></a></dt>
+<dd><p>Test creating a ConfigMap.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_create_job">
 <span class="sig-name descname"><span class="pre">test_create_job</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_create_job" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Test creating a Kubernetes job.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_create_pod">
 <span class="sig-name descname"><span class="pre">test_create_pod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_create_pod" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Test creating a pod and waiting for it to be running.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_create_token_for_namespace">
 <span class="sig-name descname"><span class="pre">test_create_token_for_namespace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_create_token_for_namespace" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Test creating service account token.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_pod_ready_status">
+<span class="sig-name descname"><span class="pre">test_pod_ready_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_create.KrknKubernetesTestsCreate.test_pod_ready_status" title="Link to this definition"></a></dt>
+<dd><p>Test checking pod Ready status.</p>
+</dd></dl>
 
 </dd></dl>
 
