@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=155074a1"></script>
+        <script src="_static/documentation_options.js?v=b128f0b8"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.4
+                v6.0.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -103,7 +103,8 @@
 <p>Unit tests use mocks to test all methods without requiring
 actual OpenShift clusters or external services.</p>
 <p>Integration tests use BaseTest and require actual testdata files
-or cluster connections.</p>
+or cluster connections.
+python -m pytest src/krkn_lib/tests/test_krkn_openshift.py</p>
 <p>Assisted By: Claude Code</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest">
@@ -138,6 +139,24 @@ or cluster connections.</p>
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_get_cluster_version_string">
 <span class="sig-name descname"><span class="pre">test_get_cluster_version_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_get_cluster_version_string" title="Link to this definition"></a></dt>
 <dd><p>Test cluster version string retrieval on real cluster.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_is_etcd_encryption_enabled">
+<span class="sig-name descname"><span class="pre">test_is_etcd_encryption_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_is_etcd_encryption_enabled" title="Link to this definition"></a></dt>
+<dd><p>Test etcd encryption detection on real cluster.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_is_fips_enabled">
+<span class="sig-name descname"><span class="pre">test_is_fips_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_is_fips_enabled" title="Link to this definition"></a></dt>
+<dd><p>Test FIPS detection on real cluster.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_is_ipsec_enabled">
+<span class="sig-name descname"><span class="pre">test_is_ipsec_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.KrknOpenshiftIntegrationTest.test_is_ipsec_enabled" title="Link to this definition"></a></dt>
+<dd><p>Test IPsec detection on real cluster.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -349,6 +368,129 @@ or cluster connections.</p>
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.test_get_prometheus_api_connection_data_success">
 <span class="sig-name descname"><span class="pre">test_get_prometheus_api_connection_data_success</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_create_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_api_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.test_get_prometheus_api_connection_data_success" title="Link to this definition"></a></dt>
 <dd><p>Test successful retrieval of Prometheus connection data.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestIsEtcdEncryptionEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test is_etcd_encryption_enabled method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.test_is_etcd_encryption_enabled_aescbc">
+<span class="sig-name descname"><span class="pre">test_is_etcd_encryption_enabled_aescbc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_custom_object_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.test_is_etcd_encryption_enabled_aescbc" title="Link to this definition"></a></dt>
+<dd><p>Test etcd encryption enabled with aescbc.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.test_is_etcd_encryption_enabled_aesgcm">
+<span class="sig-name descname"><span class="pre">test_is_etcd_encryption_enabled_aesgcm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_custom_object_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.test_is_etcd_encryption_enabled_aesgcm" title="Link to this definition"></a></dt>
+<dd><p>Test etcd encryption enabled with aesgcm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.test_is_etcd_encryption_enabled_exception">
+<span class="sig-name descname"><span class="pre">test_is_etcd_encryption_enabled_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_custom_object_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.test_is_etcd_encryption_enabled_exception" title="Link to this definition"></a></dt>
+<dd><p>Test exception handling returns False.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.test_is_etcd_encryption_enabled_false">
+<span class="sig-name descname"><span class="pre">test_is_etcd_encryption_enabled_false</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_custom_object_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.test_is_etcd_encryption_enabled_false" title="Link to this definition"></a></dt>
+<dd><p>Test etcd encryption not enabled.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.test_is_etcd_encryption_enabled_no_spec">
+<span class="sig-name descname"><span class="pre">test_is_etcd_encryption_enabled_no_spec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_custom_object_client_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsEtcdEncryptionEnabled.test_is_etcd_encryption_enabled_no_spec" title="Link to this definition"></a></dt>
+<dd><p>Test when APIServer has no spec.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestIsFipsEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test is_fips_enabled method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled.test_is_fips_enabled_exception">
+<span class="sig-name descname"><span class="pre">test_is_fips_enabled_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_cli_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled.test_is_fips_enabled_exception" title="Link to this definition"></a></dt>
+<dd><p>Test exception handling returns False.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled.test_is_fips_enabled_false">
+<span class="sig-name descname"><span class="pre">test_is_fips_enabled_false</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_cli_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled.test_is_fips_enabled_false" title="Link to this definition"></a></dt>
+<dd><p>Test FIPS not enabled.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled.test_is_fips_enabled_no_install_config">
+<span class="sig-name descname"><span class="pre">test_is_fips_enabled_no_install_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_cli_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled.test_is_fips_enabled_no_install_config" title="Link to this definition"></a></dt>
+<dd><p>Test when ConfigMap has no install-config field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled.test_is_fips_enabled_true">
+<span class="sig-name descname"><span class="pre">test_is_fips_enabled_true</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_cli_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsFipsEnabled.test_is_fips_enabled_true" title="Link to this definition"></a></dt>
+<dd><p>Test FIPS enabled detection.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_openshift.</span></span><span class="sig-name descname"><span class="pre">TestIsIpsecEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test is_ipsec_enabled method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.test_is_ipsec_enabled_exception">
+<span class="sig-name descname"><span class="pre">test_is_ipsec_enabled_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_apps_api_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.test_is_ipsec_enabled_exception" title="Link to this definition"></a></dt>
+<dd><p>Test exception handling returns False.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.test_is_ipsec_enabled_false_no_pods">
+<span class="sig-name descname"><span class="pre">test_is_ipsec_enabled_false_no_pods</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_apps_api_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.test_is_ipsec_enabled_false_no_pods" title="Link to this definition"></a></dt>
+<dd><p>Test IPsec daemonset exists but has no pods.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.test_is_ipsec_enabled_false_not_found">
+<span class="sig-name descname"><span class="pre">test_is_ipsec_enabled_false_not_found</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_apps_api_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.test_is_ipsec_enabled_false_not_found" title="Link to this definition"></a></dt>
+<dd><p>Test IPsec not enabled (daemonset not found).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.test_is_ipsec_enabled_no_status">
+<span class="sig-name descname"><span class="pre">test_is_ipsec_enabled_no_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_apps_api_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.test_is_ipsec_enabled_no_status" title="Link to this definition"></a></dt>
+<dd><p>Test when DaemonSet has no status.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.test_is_ipsec_enabled_true">
+<span class="sig-name descname"><span class="pre">test_is_ipsec_enabled_true</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_apps_api_prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_openshift.TestIsIpsecEnabled.test_is_ipsec_enabled_true" title="Link to this definition"></a></dt>
+<dd><p>Test IPsec enabled detection.</p>
 </dd></dl>
 
 </dd></dl>

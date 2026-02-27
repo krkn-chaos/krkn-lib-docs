@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=155074a1"></script>
+        <script src="_static/documentation_options.js?v=b128f0b8"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.4
+                v6.0.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -1343,6 +1343,47 @@ Returns None if the PVC doesn’t exist</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The VM object if found, None otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.is_etcd_encryption_enabled">
+<span class="sig-name descname"><span class="pre">is_etcd_encryption_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.is_etcd_encryption_enabled" title="Link to this definition"></a></dt>
+<dd><p>Check if etcd encryption is enabled in the cluster.</p>
+<p>For vanilla Kubernetes, this is difficult to detect without
+direct etcd access. This method returns False by default and
+should be overridden by OpenShift implementation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>False for vanilla Kubernetes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.is_fips_enabled">
+<span class="sig-name descname"><span class="pre">is_fips_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.is_fips_enabled" title="Link to this definition"></a></dt>
+<dd><p>Check if FIPS (Federal Information Processing Standards)
+is enabled in the cluster.</p>
+<p>For Kubernetes clusters, this checks node labels and
+annotations for FIPS indicators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if FIPS is enabled, False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.is_ipsec_enabled">
+<span class="sig-name descname"><span class="pre">is_ipsec_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.is_ipsec_enabled" title="Link to this definition"></a></dt>
+<dd><p>Check if IPsec is enabled in the cluster.</p>
+<p>This checks for common IPsec daemonsets in kube-system or
+other namespaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if IPsec is enabled, False otherwise</p>
 </dd>
 </dl>
 </dd></dl>

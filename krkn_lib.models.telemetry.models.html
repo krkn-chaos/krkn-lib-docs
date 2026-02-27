@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=155074a1"></script>
+        <script src="_static/documentation_options.js?v=b128f0b8"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.4
+                v6.0.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -139,9 +139,28 @@
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.etcd_encryption_enabled">
+<span class="sig-name descname"><span class="pre">etcd_encryption_enabled</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.etcd_encryption_enabled" title="Link to this definition"></a></dt>
+<dd><p>Whether etcd encryption is enabled in the cluster</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.fips_enabled">
+<span class="sig-name descname"><span class="pre">fips_enabled</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.fips_enabled" title="Link to this definition"></a></dt>
+<dd><p>Whether FIPS (Federal Information Processing Standards) is enabled
+in the cluster</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.health_checks">
 <span class="sig-name descname"><span class="pre">health_checks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.HealthCheck" title="krkn_lib.models.telemetry.models.HealthCheck"><span class="pre">HealthCheck</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.health_checks" title="Link to this definition"></a></dt>
 <dd><p>Health checks of application endpoint</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.ipsec_enabled">
+<span class="sig-name descname"><span class="pre">ipsec_enabled</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.ipsec_enabled" title="Link to this definition"></a></dt>
+<dd><p>Whether IPsec is enabled in the cluster</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -206,6 +225,12 @@ resources.</p>
 <dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.scenarios">
 <span class="sig-name descname"><span class="pre">scenarios</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.ScenarioTelemetry" title="krkn_lib.models.telemetry.models.ScenarioTelemetry"><span class="pre">ScenarioTelemetry</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.scenarios" title="Link to this definition"></a></dt>
 <dd><p>List of the scenarios performed during the chaos run</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.tag" title="Link to this definition"></a></dt>
+<dd><p>Tag to compare similar job</p>
 </dd></dl>
 
 <dl class="py attribute">
