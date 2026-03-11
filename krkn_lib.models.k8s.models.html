@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=b128f0b8"></script>
+        <script src="_static/documentation_options.js?v=86d07ad2"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.5
+                v6.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -251,6 +251,49 @@ the pod after the kill scenario</p>
 <dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedPod.total_recovery_time">
 <span class="sig-name descname"><span class="pre">total_recovery_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedPod.total_recovery_time" title="Link to this definition"></a></dt>
 <dd><p>Total amount of time the pod took to become ready</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedVMI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">AffectedVMI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vmi_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_recovery_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmi_readiness_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmi_rescheduling_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedVMI" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A VMI affected by a chaos scenario</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedVMI.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vmi_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_recovery_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmi_readiness_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmi_rescheduling_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedVMI.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedVMI.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedVMI.namespace" title="Link to this definition"></a></dt>
+<dd><p>Namespace of the VMI</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedVMI.total_recovery_time">
+<span class="sig-name descname"><span class="pre">total_recovery_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedVMI.total_recovery_time" title="Link to this definition"></a></dt>
+<dd><p>Total amount of time the VMI took to become ready</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedVMI.vmi_name">
+<span class="sig-name descname"><span class="pre">vmi_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedVMI.vmi_name" title="Link to this definition"></a></dt>
+<dd><p>Name of the VMI</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedVMI.vmi_readiness_time">
+<span class="sig-name descname"><span class="pre">vmi_readiness_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedVMI.vmi_readiness_time" title="Link to this definition"></a></dt>
+<dd><p>The time the VMI took to become ready after being scheduled</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.AffectedVMI.vmi_rescheduling_time">
+<span class="sig-name descname"><span class="pre">vmi_rescheduling_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.AffectedVMI.vmi_rescheduling_time" title="Link to this definition"></a></dt>
+<dd><p>The time that the cluster took to reschedule
+the VMI after the chaos scenario</p>
 </dd></dl>
 
 </dd></dl>
@@ -528,6 +571,36 @@ not recover from the chaos</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="krkn_lib.models.k8s.models.ServiceHijacking.selector">
 <span class="sig-name descname"><span class="pre">selector</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.ServiceHijacking.selector" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.VmisStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.k8s.models.</span></span><span class="sig-name descname"><span class="pre">VmisStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_object</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.VmisStatus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Return value of wait_for_vmis_to_become_ready containing the list
+of the VMIs that did recover (vmi_name, namespace,
+time needed to become ready) and the list of VMIs that did
+not recover from the chaos</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.VmisStatus.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_object</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.VmisStatus.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.VmisStatus.merge">
+<span class="sig-name descname"><span class="pre">merge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vmis_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#krkn_lib.models.k8s.models.VmisStatus" title="krkn_lib.models.k8s.models.VmisStatus"><span class="pre">VmisStatus</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.k8s.models.VmisStatus.merge" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.VmisStatus.recovered">
+<span class="sig-name descname"><span class="pre">recovered</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.AffectedVMI" title="krkn_lib.models.k8s.models.AffectedVMI"><span class="pre">AffectedVMI</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.VmisStatus.recovered" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.k8s.models.VmisStatus.unrecovered">
+<span class="sig-name descname"><span class="pre">unrecovered</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.k8s.models.AffectedVMI" title="krkn_lib.models.k8s.models.AffectedVMI"><span class="pre">AffectedVMI</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#krkn_lib.models.k8s.models.VmisStatus.unrecovered" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

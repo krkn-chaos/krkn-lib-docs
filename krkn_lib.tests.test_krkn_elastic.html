@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=b128f0b8"></script>
+        <script src="_static/documentation_options.js?v=86d07ad2"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.5
+                v6.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -102,6 +102,18 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_elastic.</span></span><span class="sig-name descname"><span class="pre">TestKrknElastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElastic" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="krkn_lib.tests.base_test.html#krkn_lib.tests.base_test.BaseTest" title="krkn_lib.tests.base_test.BaseTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTest</span></code></a></p>
 <dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_alert_no_es_client">
+<span class="sig-name descname"><span class="pre">test_push_alert_no_es_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_alert_no_es_client" title="Link to this definition"></a></dt>
+<dd><p>Test push_alert returns -1 when es client is not initialized</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_metric_no_es_client">
+<span class="sig-name descname"><span class="pre">test_push_metric_no_es_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_metric_no_es_client" title="Link to this definition"></a></dt>
+<dd><p>Test push_metric returns -1 when es client is not initialized</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_search_alert">
 <span class="sig-name descname"><span class="pre">test_push_search_alert</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_search_alert" title="Link to this definition"></a></dt>
 <dd></dd></dl>
@@ -117,14 +129,38 @@
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_telemetry_no_es_client">
+<span class="sig-name descname"><span class="pre">test_push_telemetry_no_es_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_telemetry_no_es_client" title="Link to this definition"></a></dt>
+<dd><p>Test push_telemetry returns -1 when es not initialized</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_alert_no_es_client">
+<span class="sig-name descname"><span class="pre">test_search_alert_no_es_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_alert_no_es_client" title="Link to this definition"></a></dt>
+<dd><p>Test search_alert returns [] when es client is not initialized</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_alert_not_existing">
 <span class="sig-name descname"><span class="pre">test_search_alert_not_existing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_alert_not_existing" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_metric_no_es_client">
+<span class="sig-name descname"><span class="pre">test_search_metric_no_es_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_metric_no_es_client" title="Link to this definition"></a></dt>
+<dd><p>Test search_metric returns [] when es client is not initialized</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_metric_not_existing">
 <span class="sig-name descname"><span class="pre">test_search_metric_not_existing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_metric_not_existing" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_telemetry_no_es_client">
+<span class="sig-name descname"><span class="pre">test_search_telemetry_no_es_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_telemetry_no_es_client" title="Link to this definition"></a></dt>
+<dd><p>Test search_telemetry returns [] when es not initialized</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_telemetry_not_existing">
