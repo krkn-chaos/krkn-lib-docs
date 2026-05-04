@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=86d07ad2"></script>
+        <script src="_static/documentation_options.js?v=22a8fecb"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.6
+                v6.0.7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -260,9 +260,45 @@ python -m coverage run -a -m unittest src.krkn_lib.tests.test_krkn_kubernetes_vi
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_api_error_raises">
+<span class="sig-name descname"><span class="pre">test_get_vmis_api_error_raises</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_api_error_raises" title="Link to this definition"></a></dt>
+<dd><p>Test get_vmis raises on non-404 API errors</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_by_label_multiple_namespaces">
+<span class="sig-name descname"><span class="pre">test_get_vmis_by_label_multiple_namespaces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_by_label_multiple_namespaces" title="Link to this definition"></a></dt>
+<dd><p>Test get_vmis with label_selector searches across multiple namespaces</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_by_label_not_found">
+<span class="sig-name descname"><span class="pre">test_get_vmis_by_label_not_found</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_by_label_not_found" title="Link to this definition"></a></dt>
+<dd><p>Test get_vmis with label_selector handles 404 gracefully</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_by_label_success">
+<span class="sig-name descname"><span class="pre">test_get_vmis_by_label_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_by_label_success" title="Link to this definition"></a></dt>
+<dd><p>Test get_vmis with label_selector passes it to the API</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_combined_regex_and_label">
+<span class="sig-name descname"><span class="pre">test_get_vmis_combined_regex_and_label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_combined_regex_and_label" title="Link to this definition"></a></dt>
+<dd><p>Test get_vmis applies regex name filter on top of server-side label filtering</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_multiple_namespaces">
 <span class="sig-name descname"><span class="pre">test_get_vmis_multiple_namespaces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_multiple_namespaces" title="Link to this definition"></a></dt>
 <dd><p>Test get_vmis searches across multiple namespaces</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_no_regex_returns_all">
+<span class="sig-name descname"><span class="pre">test_get_vmis_no_regex_returns_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_no_regex_returns_all" title="Link to this definition"></a></dt>
+<dd><p>Test get_vmis with regex_name=None returns all VMIs</p>
 </dd></dl>
 
 <dl class="py method">
@@ -274,13 +310,49 @@ python -m coverage run -a -m unittest src.krkn_lib.tests.test_krkn_kubernetes_vi
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_success">
 <span class="sig-name descname"><span class="pre">test_get_vmis_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vmis_success" title="Link to this definition"></a></dt>
-<dd><p>Test get_vmis returns matching VMIs</p>
+<dd><p>Test get_vmis returns matching VMIs by regex</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_api_error_raises">
+<span class="sig-name descname"><span class="pre">test_get_vms_api_error_raises</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_api_error_raises" title="Link to this definition"></a></dt>
+<dd><p>Test get_vms raises on non-404 API errors</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_by_label_multiple_namespaces">
+<span class="sig-name descname"><span class="pre">test_get_vms_by_label_multiple_namespaces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_by_label_multiple_namespaces" title="Link to this definition"></a></dt>
+<dd><p>Test get_vms with label_selector searches across multiple namespaces</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_by_label_not_found">
+<span class="sig-name descname"><span class="pre">test_get_vms_by_label_not_found</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_by_label_not_found" title="Link to this definition"></a></dt>
+<dd><p>Test get_vms with label_selector handles 404 gracefully</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_by_label_success">
+<span class="sig-name descname"><span class="pre">test_get_vms_by_label_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_by_label_success" title="Link to this definition"></a></dt>
+<dd><p>Test get_vms with label_selector passes it to the API</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_combined_regex_and_label">
+<span class="sig-name descname"><span class="pre">test_get_vms_combined_regex_and_label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_combined_regex_and_label" title="Link to this definition"></a></dt>
+<dd><p>Test get_vms applies regex name filter on top of server-side label filtering</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_multiple_namespaces">
 <span class="sig-name descname"><span class="pre">test_get_vms_multiple_namespaces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_multiple_namespaces" title="Link to this definition"></a></dt>
 <dd><p>Test get_vms searches across multiple namespaces</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_no_regex_returns_all">
+<span class="sig-name descname"><span class="pre">test_get_vms_no_regex_returns_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_no_regex_returns_all" title="Link to this definition"></a></dt>
+<dd><p>Test get_vms with regex_name=None returns all VMs</p>
 </dd></dl>
 
 <dl class="py method">
@@ -292,7 +364,7 @@ python -m coverage run -a -m unittest src.krkn_lib.tests.test_krkn_kubernetes_vi
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_success">
 <span class="sig-name descname"><span class="pre">test_get_vms_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_virt.TestKrknKubernetesVirt.test_get_vms_success" title="Link to this definition"></a></dt>
-<dd><p>Test get_vms returns matching VMs</p>
+<dd><p>Test get_vms returns matching VMs by regex</p>
 </dd></dl>
 
 <dl class="py method">

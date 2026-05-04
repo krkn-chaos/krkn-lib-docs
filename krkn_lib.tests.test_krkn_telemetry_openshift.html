@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>krkn_lib.tests.test_krkn_elastic_models module &mdash; Krkn Foundation Library</title>
+  <title>krkn_lib.tests.test_krkn_telemetry_openshift module &mdash; Krkn Foundation Library</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/krkn-style.css" type="text/css" />
@@ -19,8 +19,8 @@
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="krkn_lib.tests.test_krkn_kubernetes_check module" href="krkn_lib.tests.test_krkn_kubernetes_check.html" />
-    <link rel="prev" title="krkn_lib.tests.test_krkn_elastic module" href="krkn_lib.tests.test_krkn_elastic.html" /> 
+    <link rel="next" title="krkn_lib.tests.test_safe_logger module" href="krkn_lib.tests.test_safe_logger.html" />
+    <link rel="prev" title="krkn_lib.tests.test_krkn_telemetry_models module" href="krkn_lib.tests.test_krkn_telemetry_models.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -86,7 +86,7 @@
       <li><a href="modules.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="krkn_lib.html">krkn_lib package</a></li>
           <li class="breadcrumb-item"><a href="krkn_lib.tests.html">krkn_lib.tests package</a></li>
-      <li class="breadcrumb-item active">krkn_lib.tests.test_krkn_elastic_models module</li>
+      <li class="breadcrumb-item active">krkn_lib.tests.test_krkn_telemetry_openshift module</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -95,32 +95,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-krkn_lib.tests.test_krkn_elastic_models">
-<span id="krkn-lib-tests-test-krkn-elastic-models-module"></span><h1>krkn_lib.tests.test_krkn_elastic_models module<a class="headerlink" href="#module-krkn_lib.tests.test_krkn_elastic_models" title="Link to this heading"></a></h1>
+  <section id="module-krkn_lib.tests.test_krkn_telemetry_openshift">
+<span id="krkn-lib-tests-test-krkn-telemetry-openshift-module"></span><h1>krkn_lib.tests.test_krkn_telemetry_openshift module<a class="headerlink" href="#module-krkn_lib.tests.test_krkn_telemetry_openshift" title="Link to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic_models.TestKrknElasticModels">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_elastic_models.</span></span><span class="sig-name descname"><span class="pre">TestKrknElasticModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic_models.TestKrknElasticModels" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="krkn_lib.tests.base_test.html#krkn_lib.tests.base_test.BaseTest" title="krkn_lib.tests.base_test.BaseTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTest</span></code></a></p>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_telemetry_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetVmNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic_models.TestKrknElasticModels.check_test_ElasticChaosRunTelemetry">
-<span class="sig-name descname"><span class="pre">check_test_ElasticChaosRunTelemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elastic_telemetry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="krkn_lib.models.elastic.models.html#krkn_lib.models.elastic.models.ElasticChaosRunTelemetry" title="krkn_lib.models.elastic.models.ElasticChaosRunTelemetry"><span class="pre">ElasticChaosRunTelemetry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_uuid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic_models.TestKrknElasticModels.check_test_ElasticChaosRunTelemetry" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic_models.TestKrknElasticModels.test_ElasticChaosRunTelemetry">
-<span class="sig-name descname"><span class="pre">test_ElasticChaosRunTelemetry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic_models.TestKrknElasticModels.test_ElasticChaosRunTelemetry" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic_models.TestKrknElasticModels.test_elastic_error_logs_conversion_from_empty_list">
-<span class="sig-name descname"><span class="pre">test_elastic_error_logs_conversion_from_empty_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic_models.TestKrknElasticModels.test_elastic_error_logs_conversion_from_empty_list" title="Link to this definition"></a></dt>
-<dd><p>Test empty list handling in conversion</p>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_empty_vmi_list_returns_zero">
+<span class="sig-name descname"><span class="pre">test_empty_vmi_list_returns_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_empty_vmi_list_returns_zero" title="Link to this definition"></a></dt>
+<dd><p>Empty cluster returns 0.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_elastic_models.TestKrknElasticModels.test_elastic_error_logs_conversion_from_none">
-<span class="sig-name descname"><span class="pre">test_elastic_error_logs_conversion_from_none</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_elastic_models.TestKrknElasticModels.test_elastic_error_logs_conversion_from_none" title="Link to this definition"></a></dt>
-<dd><p>Test that conversion handles None error_logs gracefully</p>
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_exception_returns_zero_and_logs">
+<span class="sig-name descname"><span class="pre">test_exception_returns_zero_and_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_logging</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_exception_returns_zero_and_logs" title="Link to this definition"></a></dt>
+<dd><p>Exception returns 0 and logs the error message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_paginates_across_pages">
+<span class="sig-name descname"><span class="pre">test_paginates_across_pages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_paginates_across_pages" title="Link to this definition"></a></dt>
+<dd><p>Follows continue token and sums items across pages.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_returns_correct_count">
+<span class="sig-name descname"><span class="pre">test_returns_correct_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_returns_correct_count" title="Link to this definition"></a></dt>
+<dd><p>Returns count from a single-page cluster-wide response.</p>
 </dd></dl>
 
 </dd></dl>
@@ -131,8 +133,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="krkn_lib.tests.test_krkn_elastic.html" class="btn btn-neutral float-left" title="krkn_lib.tests.test_krkn_elastic module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="krkn_lib.tests.test_krkn_kubernetes_check.html" class="btn btn-neutral float-right" title="krkn_lib.tests.test_krkn_kubernetes_check module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="krkn_lib.tests.test_krkn_telemetry_models.html" class="btn btn-neutral float-left" title="krkn_lib.tests.test_krkn_telemetry_models module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="krkn_lib.tests.test_safe_logger.html" class="btn btn-neutral float-right" title="krkn_lib.tests.test_safe_logger module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
