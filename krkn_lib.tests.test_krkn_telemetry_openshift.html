@@ -98,6 +98,66 @@
   <section id="module-krkn_lib.tests.test_krkn_telemetry_openshift">
 <span id="krkn-lib-tests-test-krkn-telemetry-openshift-module"></span><h1>krkn_lib.tests.test_krkn_telemetry_openshift module<a class="headerlink" href="#module-krkn_lib.tests.test_krkn_telemetry_openshift" title="Link to this heading"></a></h1>
 <dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_telemetry_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetBuildCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount.test_empty_build_list_returns_zero">
+<span class="sig-name descname"><span class="pre">test_empty_build_list_returns_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount.test_empty_build_list_returns_zero" title="Link to this definition"></a></dt>
+<dd><p>Empty cluster returns 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount.test_exception_returns_zero_and_logs">
+<span class="sig-name descname"><span class="pre">test_exception_returns_zero_and_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_logging</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount.test_exception_returns_zero_and_logs" title="Link to this definition"></a></dt>
+<dd><p>Exception returns 0 and logs the error message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount.test_paginates_across_pages">
+<span class="sig-name descname"><span class="pre">test_paginates_across_pages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount.test_paginates_across_pages" title="Link to this definition"></a></dt>
+<dd><p>Follows continue token and sums items across pages.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount.test_returns_correct_count">
+<span class="sig-name descname"><span class="pre">test_returns_correct_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount.test_returns_correct_count" title="Link to this definition"></a></dt>
+<dd><p>Returns count from a single-page cluster-wide response.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetRouteCount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_telemetry_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetRouteCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetRouteCount" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetRouteCount.test_empty_route_list_returns_zero">
+<span class="sig-name descname"><span class="pre">test_empty_route_list_returns_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetRouteCount.test_empty_route_list_returns_zero" title="Link to this definition"></a></dt>
+<dd><p>Empty cluster returns 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetRouteCount.test_exception_returns_zero_and_logs">
+<span class="sig-name descname"><span class="pre">test_exception_returns_zero_and_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_logging</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetRouteCount.test_exception_returns_zero_and_logs" title="Link to this definition"></a></dt>
+<dd><p>Exception returns 0 and logs the error message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetRouteCount.test_paginates_across_pages">
+<span class="sig-name descname"><span class="pre">test_paginates_across_pages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetRouteCount.test_paginates_across_pages" title="Link to this definition"></a></dt>
+<dd><p>Follows continue token and sums items across pages.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetRouteCount.test_returns_correct_count">
+<span class="sig-name descname"><span class="pre">test_returns_correct_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetRouteCount.test_returns_correct_count" title="Link to this definition"></a></dt>
+<dd><p>Returns count from a single-page cluster-wide response.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_telemetry_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetVmNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
