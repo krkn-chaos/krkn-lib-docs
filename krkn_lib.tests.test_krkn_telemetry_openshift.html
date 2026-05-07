@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=cab25d09"></script>
+        <script src="_static/documentation_options.js?v=6ecad910"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.0.8
+                v6.0.9
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -183,6 +183,102 @@
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_returns_correct_count">
 <span class="sig-name descname"><span class="pre">test_returns_correct_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_returns_correct_count" title="Link to this definition"></a></dt>
 <dd><p>Returns count from a single-page cluster-wide response.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_telemetry_openshift.</span></span><span class="sig-name descname"><span class="pre">TestPutOcpLogs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_api_url_has_invalid_scheme">
+<span class="sig-name descname"><span class="pre">test_raises_when_api_url_has_invalid_scheme</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_api_url_has_invalid_scheme" title="Link to this definition"></a></dt>
+<dd><p>Raises Exception when api_url does not start with http/https.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_api_url_has_no_scheme">
+<span class="sig-name descname"><span class="pre">test_raises_when_api_url_has_no_scheme</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_api_url_has_no_scheme" title="Link to this definition"></a></dt>
+<dd><p>Raises Exception when api_url is a bare hostname with no scheme.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_archive_path_missing">
+<span class="sig-name descname"><span class="pre">test_raises_when_archive_path_missing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_archive_path_missing" title="Link to this definition"></a></dt>
+<dd><p>Raises Exception when archive_path is absent from config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_backup_threads_is_string">
+<span class="sig-name descname"><span class="pre">test_raises_when_backup_threads_is_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_backup_threads_is_string" title="Link to this definition"></a></dt>
+<dd><p>Raises Exception when backup_threads is a string, not an int.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_backup_threads_missing">
+<span class="sig-name descname"><span class="pre">test_raises_when_backup_threads_missing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_backup_threads_missing" title="Link to this definition"></a></dt>
+<dd><p>Raises Exception when backup_threads is absent, not also a type error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_logs_backup_missing">
+<span class="sig-name descname"><span class="pre">test_raises_when_logs_backup_missing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_logs_backup_missing" title="Link to this definition"></a></dt>
+<dd><p>Raises Exception when logs_backup is absent from config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_logs_filter_patterns_missing">
+<span class="sig-name descname"><span class="pre">test_raises_when_logs_filter_patterns_missing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_logs_filter_patterns_missing" title="Link to this definition"></a></dt>
+<dd><p>Raises Exception when logs_filter_patterns is absent, not also a type error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_logs_filter_patterns_not_a_list">
+<span class="sig-name descname"><span class="pre">test_raises_when_logs_filter_patterns_not_a_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_logs_filter_patterns_not_a_list" title="Link to this definition"></a></dt>
+<dd><p>Raises Exception when logs_filter_patterns is a string, not a list.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_max_retries_missing">
+<span class="sig-name descname"><span class="pre">test_raises_when_max_retries_missing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_max_retries_missing" title="Link to this definition"></a></dt>
+<dd><p>Raises Exception when max_retries is absent from config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_password_missing">
+<span class="sig-name descname"><span class="pre">test_raises_when_password_missing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_password_missing" title="Link to this definition"></a></dt>
+<dd><p>Raises Exception when password is absent from config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_username_missing">
+<span class="sig-name descname"><span class="pre">test_raises_when_username_missing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_when_username_missing" title="Link to this definition"></a></dt>
+<dd><p>Raises Exception when username is absent from config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_with_all_missing_fields_joined">
+<span class="sig-name descname"><span class="pre">test_raises_with_all_missing_fields_joined</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_raises_with_all_missing_fields_joined" title="Link to this definition"></a></dt>
+<dd><p>Single exception message contains all missing field names joined.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_skips_when_api_url_is_empty_string">
+<span class="sig-name descname"><span class="pre">test_skips_when_api_url_is_empty_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_skips_when_api_url_is_empty_string" title="Link to this definition"></a></dt>
+<dd><p>Returns early and logs info when api_url is an empty string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_skips_when_api_url_is_none">
+<span class="sig-name descname"><span class="pre">test_skips_when_api_url_is_none</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_skips_when_api_url_is_none" title="Link to this definition"></a></dt>
+<dd><p>Returns early and logs info when api_url is None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_skips_when_logs_backup_is_false">
+<span class="sig-name descname"><span class="pre">test_skips_when_logs_backup_is_false</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs.test_skips_when_logs_backup_is_false" title="Link to this definition"></a></dt>
+<dd><p>Returns early and logs info when logs_backup is False.</p>
 </dd></dl>
 
 </dd></dl>
