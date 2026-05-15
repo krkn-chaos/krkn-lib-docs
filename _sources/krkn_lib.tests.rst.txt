@@ -8,6 +8,8 @@ Submodules
    :maxdepth: 4
 
    krkn_lib.tests.base_test
+   krkn_lib.tests.test_deploy_io_throttle_pod
+   krkn_lib.tests.test_io_throttle_pod_template
    krkn_lib.tests.test_krkn_elastic
    krkn_lib.tests.test_krkn_elastic_models
    krkn_lib.tests.test_krkn_kubernetes_check

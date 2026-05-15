@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>krkn_lib.telemetry package &mdash; Krkn Foundation Library</title>
+  <title>krkn_lib.tests.test_io_throttle_pod_template module &mdash; Krkn Foundation Library</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/krkn-style.css" type="text/css" />
@@ -19,8 +19,8 @@
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="krkn_lib.telemetry.k8s package" href="krkn_lib.telemetry.k8s.html" />
-    <link rel="prev" title="krkn_lib.prometheus.krkn_prometheus module" href="krkn_lib.prometheus.krkn_prometheus.html" /> 
+    <link rel="next" title="krkn_lib.tests.test_krkn_elastic module" href="krkn_lib.tests.test_krkn_elastic.html" />
+    <link rel="prev" title="krkn_lib.tests.test_deploy_io_throttle_pod module" href="krkn_lib.tests.test_deploy_io_throttle_pod.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,12 +55,12 @@
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.html">krkn_lib.models package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.ocp.html">krkn_lib.ocp package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.prometheus.html">krkn_lib.prometheus package</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">krkn_lib.telemetry package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-krkn_lib.telemetry">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.telemetry.html">krkn_lib.telemetry package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="krkn_lib.tests.html">krkn_lib.tests package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="krkn_lib.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="krkn_lib.tests.html#module-krkn_lib.tests">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.html">krkn_lib.tests package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.utils.html">krkn_lib.utils package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.version.html">krkn_lib.version package</a></li>
 </ul>
@@ -85,7 +85,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="modules.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="krkn_lib.html">krkn_lib package</a></li>
-      <li class="breadcrumb-item active">krkn_lib.telemetry package</li>
+          <li class="breadcrumb-item"><a href="krkn_lib.tests.html">krkn_lib.tests package</a></li>
+      <li class="breadcrumb-item active">krkn_lib.tests.test_io_throttle_pod_template module</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -94,48 +95,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="krkn-lib-telemetry-package">
-<h1>krkn_lib.telemetry package<a class="headerlink" href="#krkn-lib-telemetry-package" title="Link to this heading"></a></h1>
-<section id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="krkn_lib.telemetry.k8s.html">krkn_lib.telemetry.k8s package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="krkn_lib.telemetry.k8s.html#submodules">Submodules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="krkn_lib.telemetry.k8s.krkn_telemetry_kubernetes.html">krkn_lib.telemetry.k8s.krkn_telemetry_kubernetes module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="krkn_lib.telemetry.k8s.krkn_telemetry_kubernetes.html#krkn_lib.telemetry.k8s.krkn_telemetry_kubernetes.KrknTelemetryKubernetes"><code class="docutils literal notranslate"><span class="pre">KrknTelemetryKubernetes</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="krkn_lib.telemetry.k8s.html#module-krkn_lib.telemetry.k8s">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="krkn_lib.telemetry.ocp.html">krkn_lib.telemetry.ocp package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="krkn_lib.telemetry.ocp.html#submodules">Submodules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="krkn_lib.telemetry.ocp.krkn_telemetry_openshift.html">krkn_lib.telemetry.ocp.krkn_telemetry_openshift module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="krkn_lib.telemetry.ocp.krkn_telemetry_openshift.html#krkn_lib.telemetry.ocp.krkn_telemetry_openshift.KrknTelemetryOpenshift"><code class="docutils literal notranslate"><span class="pre">KrknTelemetryOpenshift</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="krkn_lib.telemetry.ocp.html#module-krkn_lib.telemetry.ocp">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</section>
-<section id="module-krkn_lib.telemetry">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-krkn_lib.telemetry" title="Link to this heading"></a></h2>
-</section>
+  <section id="module-krkn_lib.tests.test_io_throttle_pod_template">
+<span id="krkn-lib-tests-test-io-throttle-pod-template-module"></span><h1>krkn_lib.tests.test_io_throttle_pod_template module<a class="headerlink" href="#module-krkn_lib.tests.test_io_throttle_pod_template" title="Link to this heading"></a></h1>
+<p>Unit tests for io_throttle_pod Jinja template (no cluster required).</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_io_throttle_pod_template.TestIoThrottlePodTemplate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_io_throttle_pod_template.</span></span><span class="sig-name descname"><span class="pre">TestIoThrottlePodTemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_io_throttle_pod_template.TestIoThrottlePodTemplate" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_io_throttle_pod_template.TestIoThrottlePodTemplate.test_template_renders_valid_pod_manifest">
+<span class="sig-name descname"><span class="pre">test_template_renders_valid_pod_manifest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_io_throttle_pod_template.TestIoThrottlePodTemplate.test_template_renders_valid_pod_manifest" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="krkn_lib.prometheus.krkn_prometheus.html" class="btn btn-neutral float-left" title="krkn_lib.prometheus.krkn_prometheus module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="krkn_lib.telemetry.k8s.html" class="btn btn-neutral float-right" title="krkn_lib.telemetry.k8s package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="krkn_lib.tests.test_deploy_io_throttle_pod.html" class="btn btn-neutral float-left" title="krkn_lib.tests.test_deploy_io_throttle_pod module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="krkn_lib.tests.test_krkn_elastic.html" class="btn btn-neutral float-right" title="krkn_lib.tests.test_krkn_elastic module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
