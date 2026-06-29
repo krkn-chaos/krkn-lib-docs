@@ -1,0 +1,7 @@
+krkn\_lib.tests.test\_krkn\_kubernetes\_ocm module
+==================================================
+
+.. automodule:: krkn_lib.tests.test_krkn_kubernetes_ocm
+   :members:
+   :undoc-members:
+   :show-inheritance:

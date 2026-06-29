@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=98f4245f"></script>
+        <script src="_static/documentation_options.js?v=3c8ca046"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.1.0
+                v6.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -617,6 +617,12 @@ reasons</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.check_type">
+<span class="sig-name descname"><span class="pre">check_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.check_type" title="Link to this definition"></a></dt>
+<dd><p>Which check(s) are failing: ‘ssh_access’, ‘vmi_ready’, ‘both’, or ‘healthy’</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.duration">
 <span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.duration" title="Link to this definition"></a></dt>
 <dd><p>Denotes the time between start time and end time</p>
@@ -653,6 +659,12 @@ reasons</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.ssh_status">
+<span class="sig-name descname"><span class="pre">ssh_status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.ssh_status" title="Link to this definition"></a></dt>
+<dd><p>SSH access check result</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.start_timestamp">
 <span class="sig-name descname"><span class="pre">start_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.start_timestamp" title="Link to this definition"></a></dt>
 <dd><p>start time stamp of virt check</p>
@@ -661,13 +673,19 @@ reasons</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.status">
 <span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.status" title="Link to this definition"></a></dt>
-<dd><p>Status of VMI ssh connection</p>
+<dd><p>Overall health: True only when both ssh_status and vmi_ready are True</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.vm_name">
 <span class="sig-name descname"><span class="pre">vm_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.vm_name" title="Link to this definition"></a></dt>
 <dd><p>Vm name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.vmi_ready">
+<span class="sig-name descname"><span class="pre">vmi_ready</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.vmi_ready" title="Link to this definition"></a></dt>
+<dd><p>VMI readiness check result (Running phase with Ready=True condition)</p>
 </dd></dl>
 
 </dd></dl>

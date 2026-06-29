@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=98f4245f"></script>
+        <script src="_static/documentation_options.js?v=3c8ca046"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.1.0
+                v6.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -98,6 +98,30 @@
   <section id="module-krkn_lib.tests.test_krkn_telemetry_openshift">
 <span id="krkn-lib-tests-test-krkn-telemetry-openshift-module"></span><h1>krkn_lib.tests.test_krkn_telemetry_openshift module<a class="headerlink" href="#module-krkn_lib.tests.test_krkn_telemetry_openshift" title="Link to this heading"></a></h1>
 <dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestCollectClusterMetadata">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_telemetry_openshift.</span></span><span class="sig-name descname"><span class="pre">TestCollectClusterMetadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestCollectClusterMetadata" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestCollectClusterMetadata.test_collects_metadata_successfully">
+<span class="sig-name descname"><span class="pre">test_collects_metadata_successfully</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_get_vm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_get_build</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_get_route</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestCollectClusterMetadata.test_collects_metadata_successfully" title="Link to this definition"></a></dt>
+<dd><p>Populates chaos_telemetry with metadata successfully.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestCollectClusterMetadata.test_does_not_add_vmi_count_when_zero">
+<span class="sig-name descname"><span class="pre">test_does_not_add_vmi_count_when_zero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_get_vm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_get_build</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_get_route</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestCollectClusterMetadata.test_does_not_add_vmi_count_when_zero" title="Link to this definition"></a></dt>
+<dd><p>VirtualMachineInstance key is absent when vm_number returns 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestCollectClusterMetadata.test_handles_exceptions_gracefully">
+<span class="sig-name descname"><span class="pre">test_handles_exceptions_gracefully</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_get_vm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_get_build</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_get_route</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestCollectClusterMetadata.test_handles_exceptions_gracefully" title="Link to this definition"></a></dt>
+<dd><p>Exceptions in timed methods do not crash and leave fields as None.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_telemetry_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetBuildCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
@@ -123,6 +147,30 @@
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount.test_returns_correct_count">
 <span class="sig-name descname"><span class="pre">test_returns_correct_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetBuildCount.test_returns_correct_count" title="Link to this definition"></a></dt>
 <dd><p>Returns count from a single-page cluster-wide response.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetLibOcp">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_telemetry_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetLibOcp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetLibOcp" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetLibOcp.test_returns_ocpcli">
+<span class="sig-name descname"><span class="pre">test_returns_ocpcli</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetLibOcp.test_returns_ocpcli" title="Link to this definition"></a></dt>
+<dd><p>Returns the internal __ocpcli assigned during initialization.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetOcpPrometheusData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_telemetry_openshift.</span></span><span class="sig-name descname"><span class="pre">TestGetOcpPrometheusData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetOcpPrometheusData" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_openshift.TestGetOcpPrometheusData.test_delegates_to_kubernetes_prometheus_with_ocp_defaults">
+<span class="sig-name descname"><span class="pre">test_delegates_to_kubernetes_prometheus_with_ocp_defaults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_get_pod_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetOcpPrometheusData.test_delegates_to_kubernetes_prometheus_with_ocp_defaults" title="Link to this definition"></a></dt>
+<dd><p>Invokes get_prometheus_pod_data with specific OpenShift strings.</p>
 </dd></dl>
 
 </dd></dl>
