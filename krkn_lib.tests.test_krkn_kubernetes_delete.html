@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=0b742a2c"></script>
+        <script src="_static/documentation_options.js?v=af0cae35"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.1.2
+                v6.1.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -145,6 +145,30 @@
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_delete.KrknKubernetesTestsDelete.test_delete_pod">
 <span class="sig-name descname"><span class="pre">test_delete_pod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_delete.KrknKubernetesTestsDelete.test_delete_pod" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_delete.KrknKubernetesTestsDelete.test_delete_pod_custom_grace_period">
+<span class="sig-name descname"><span class="pre">test_delete_pod_custom_grace_period</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_delete.KrknKubernetesTestsDelete.test_delete_pod_custom_grace_period" title="Link to this definition"></a></dt>
+<dd><p>Verify a custom grace_period_seconds value is passed correctly</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_delete.KrknKubernetesTestsDelete.test_delete_pod_force_already_deleted">
+<span class="sig-name descname"><span class="pre">test_delete_pod_force_already_deleted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_delete.KrknKubernetesTestsDelete.test_delete_pod_force_already_deleted" title="Link to this definition"></a></dt>
+<dd><p>Verify force delete handles 404 (already deleted) gracefully</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_delete.KrknKubernetesTestsDelete.test_delete_pod_force_passes_grace_period_zero">
+<span class="sig-name descname"><span class="pre">test_delete_pod_force_passes_grace_period_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_delete.KrknKubernetesTestsDelete.test_delete_pod_force_passes_grace_period_zero" title="Link to this definition"></a></dt>
+<dd><p>Verify force delete passes V1DeleteOptions with grace_period_seconds=0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_delete.KrknKubernetesTestsDelete.test_delete_pod_graceful_no_delete_options">
+<span class="sig-name descname"><span class="pre">test_delete_pod_graceful_no_delete_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_kubernetes_delete.KrknKubernetesTestsDelete.test_delete_pod_graceful_no_delete_options" title="Link to this definition"></a></dt>
+<dd><p>Verify graceful delete (default) does not pass V1DeleteOptions body</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_kubernetes_delete.KrknKubernetesTestsDelete.test_delete_replicaset">
