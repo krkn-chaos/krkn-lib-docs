@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=af0cae35"></script>
+        <script src="_static/documentation_options.js?v=64853ef8"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.1.3
+                v6.1.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -175,10 +175,12 @@
 <li class="toctree-l1"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html">krkn_lib.tests.test_krkn_elastic module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html#krkn_lib.tests.test_krkn_elastic.TestKrknElastic"><code class="docutils literal notranslate"><span class="pre">TestKrknElastic</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_alert_no_es_client"><code class="docutils literal notranslate"><span class="pre">TestKrknElastic.test_push_alert_no_es_client()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_metric_exception_logs_error_not_print"><code class="docutils literal notranslate"><span class="pre">TestKrknElastic.test_push_metric_exception_logs_error_not_print()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_metric_no_es_client"><code class="docutils literal notranslate"><span class="pre">TestKrknElastic.test_push_metric_no_es_client()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_search_alert"><code class="docutils literal notranslate"><span class="pre">TestKrknElastic.test_push_search_alert()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_search_metric"><code class="docutils literal notranslate"><span class="pre">TestKrknElastic.test_push_search_metric()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_search_telemetry"><code class="docutils literal notranslate"><span class="pre">TestKrknElastic.test_push_search_telemetry()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_telemetry_exception_logs_error_not_info"><code class="docutils literal notranslate"><span class="pre">TestKrknElastic.test_push_telemetry_exception_logs_error_not_info()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_push_telemetry_no_es_client"><code class="docutils literal notranslate"><span class="pre">TestKrknElastic.test_push_telemetry_no_es_client()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_alert_no_es_client"><code class="docutils literal notranslate"><span class="pre">TestKrknElastic.test_search_alert_no_es_client()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_elastic.html#krkn_lib.tests.test_krkn_elastic.TestKrknElastic.test_search_alert_not_existing"><code class="docutils literal notranslate"><span class="pre">TestKrknElastic.test_search_alert_not_existing()</span></code></a></li>
@@ -535,6 +537,15 @@
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionString.test_get_clusterversion_string_success"><code class="docutils literal notranslate"><span class="pre">TestGetClusterversionString.test_get_clusterversion_string_success()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionStringApiErrors"><code class="docutils literal notranslate"><span class="pre">TestGetClusterversionStringApiErrors</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionStringApiErrors.setUp"><code class="docutils literal notranslate"><span class="pre">TestGetClusterversionStringApiErrors.setUp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionStringApiErrors.test_404_returns_empty_string"><code class="docutils literal notranslate"><span class="pre">TestGetClusterversionStringApiErrors.test_404_returns_empty_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionStringApiErrors.test_504_gateway_timeout_returns_empty_string_and_warns"><code class="docutils literal notranslate"><span class="pre">TestGetClusterversionStringApiErrors.test_504_gateway_timeout_returns_empty_string_and_warns()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionStringApiErrors.test_5xx_errors_return_empty_string"><code class="docutils literal notranslate"><span class="pre">TestGetClusterversionStringApiErrors.test_5xx_errors_return_empty_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionStringApiErrors.test_non_transient_api_error_reraises"><code class="docutils literal notranslate"><span class="pre">TestGetClusterversionStringApiErrors.test_non_transient_api_error_reraises()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestGetClusterversionStringApiErrors.test_request_timeout_kwarg_is_passed"><code class="docutils literal notranslate"><span class="pre">TestGetClusterversionStringApiErrors.test_request_timeout_kwarg_is_passed()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData"><code class="docutils literal notranslate"><span class="pre">TestGetPrometheusApiConnectionData</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.setUp"><code class="docutils literal notranslate"><span class="pre">TestGetPrometheusApiConnectionData.setUp()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestGetPrometheusApiConnectionData.test_get_prometheus_api_connection_data_no_token"><code class="docutils literal notranslate"><span class="pre">TestGetPrometheusApiConnectionData.test_get_prometheus_api_connection_data_no_token()</span></code></a></li>
@@ -589,6 +600,7 @@
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_prometheus.html#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_constructor_exception_handling"><code class="docutils literal notranslate"><span class="pre">TestKrknPrometheus.test_constructor_exception_handling()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_prometheus.html#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_constructor_success"><code class="docutils literal notranslate"><span class="pre">TestKrknPrometheus.test_constructor_success()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_prometheus.html#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_constructor_with_bearer_token"><code class="docutils literal notranslate"><span class="pre">TestKrknPrometheus.test_constructor_with_bearer_token()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_prometheus.html#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_constructor_with_timeout"><code class="docutils literal notranslate"><span class="pre">TestKrknPrometheus.test_constructor_with_timeout()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_prometheus.html#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_missing_label"><code class="docutils literal notranslate"><span class="pre">TestKrknPrometheus.test_parse_metric_missing_label()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_prometheus.html#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_multiple_values"><code class="docutils literal notranslate"><span class="pre">TestKrknPrometheus.test_parse_metric_multiple_values()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_prometheus.html#krkn_lib.tests.test_krkn_prometheus.TestKrknPrometheus.test_parse_metric_no_placeholders"><code class="docutils literal notranslate"><span class="pre">TestKrknPrometheus.test_parse_metric_no_placeholders()</span></code></a></li>
@@ -754,10 +766,12 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="krkn_lib.tests.test_krkn_telemetry_openshift.html#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber"><code class="docutils literal notranslate"><span class="pre">TestGetVmNumber</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_telemetry_openshift.html#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_404_api_exception_returns_zero_and_logs_info"><code class="docutils literal notranslate"><span class="pre">TestGetVmNumber.test_404_api_exception_returns_zero_and_logs_info()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_telemetry_openshift.html#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_empty_vmi_list_returns_zero"><code class="docutils literal notranslate"><span class="pre">TestGetVmNumber.test_empty_vmi_list_returns_zero()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_telemetry_openshift.html#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_exception_returns_zero_and_logs"><code class="docutils literal notranslate"><span class="pre">TestGetVmNumber.test_exception_returns_zero_and_logs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_telemetry_openshift.html#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_non_404_api_exception_returns_zero_and_logs_error"><code class="docutils literal notranslate"><span class="pre">TestGetVmNumber.test_non_404_api_exception_returns_zero_and_logs_error()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_telemetry_openshift.html#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_paginates_across_pages"><code class="docutils literal notranslate"><span class="pre">TestGetVmNumber.test_paginates_across_pages()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_telemetry_openshift.html#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_returns_correct_count"><code class="docutils literal notranslate"><span class="pre">TestGetVmNumber.test_returns_correct_count()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_telemetry_openshift.html#krkn_lib.tests.test_krkn_telemetry_openshift.TestGetVmNumber.test_unexpected_exception_returns_zero_and_logs_error"><code class="docutils literal notranslate"><span class="pre">TestGetVmNumber.test_unexpected_exception_returns_zero_and_logs_error()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="krkn_lib.tests.test_krkn_telemetry_openshift.html#krkn_lib.tests.test_krkn_telemetry_openshift.TestPutOcpLogs"><code class="docutils literal notranslate"><span class="pre">TestPutOcpLogs</span></code></a><ul>
