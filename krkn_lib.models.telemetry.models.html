@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=64853ef8"></script>
+        <script src="_static/documentation_options.js?v=c0fdbae1"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.1.4
+                v6.1.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -210,15 +210,15 @@ resources.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.overall_resiliency_report">
-<span class="sig-name descname"><span class="pre">overall_resiliency_report</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="krkn_lib.models.k8s.models.html#krkn_lib.models.k8s.models.ResiliencyReport" title="krkn_lib.models.k8s.models.ResiliencyReport"><span class="pre">ResiliencyReport</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.overall_resiliency_report" title="Link to this definition"></a></dt>
-<dd><p>Overall resiliency report for the chaos run</p>
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.object_state_checks">
+<span class="sig-name descname"><span class="pre">object_state_checks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.ObjectStateCheck" title="krkn_lib.models.telemetry.models.ObjectStateCheck"><span class="pre">ObjectStateCheck</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.object_state_checks" title="Link to this definition"></a></dt>
+<dd><p>Object state health checks for Kubernetes resources</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.post_virt_checks">
-<span class="sig-name descname"><span class="pre">post_virt_checks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.VirtCheck" title="krkn_lib.models.telemetry.models.VirtCheck"><span class="pre">VirtCheck</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.post_virt_checks" title="Link to this definition"></a></dt>
-<dd><p>Post Scenario Virt checks of VMIs</p>
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.overall_resiliency_report">
+<span class="sig-name descname"><span class="pre">overall_resiliency_report</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="krkn_lib.models.k8s.models.html#krkn_lib.models.k8s.models.ResiliencyReport" title="krkn_lib.models.k8s.models.ResiliencyReport"><span class="pre">ResiliencyReport</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.overall_resiliency_report" title="Link to this definition"></a></dt>
+<dd><p>Overall resiliency report for the chaos run</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -259,7 +259,7 @@ resources.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ChaosRunTelemetry.virt_checks">
 <span class="sig-name descname"><span class="pre">virt_checks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#krkn_lib.models.telemetry.models.VirtCheck" title="krkn_lib.models.telemetry.models.VirtCheck"><span class="pre">VirtCheck</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ChaosRunTelemetry.virt_checks" title="Link to this definition"></a></dt>
-<dd><p>Virt checks of VMIs</p>
+<dd><p>Virt checks of VMIs (includes pre, during, and post phases differentiated by phase field)</p>
 </dd></dl>
 
 </dd></dl>
@@ -364,12 +364,6 @@ resources.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.FailedAlert.namespace">
-<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.FailedAlert.namespace" title="Link to this definition"></a></dt>
-<dd><p>Namespace associated with the alert (if any)</p>
-</dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.FailedAlert.severity">
 <span class="sig-name descname"><span class="pre">severity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.FailedAlert.severity" title="Link to this definition"></a></dt>
 <dd><p>Alert severity (critical, warning, info)</p>
@@ -408,6 +402,12 @@ resources.</p>
 <dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.HealthCheck.end_timestamp">
 <span class="sig-name descname"><span class="pre">end_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.HealthCheck.end_timestamp" title="Link to this definition"></a></dt>
 <dd><p>end time stamp of health check</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.HealthCheck.phase">
+<span class="sig-name descname"><span class="pre">phase</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.HealthCheck.phase" title="Link to this definition"></a></dt>
+<dd><p>Chaos phase when this check was performed: ‘pre’, ‘during’, or ‘post’</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -487,6 +487,107 @@ resources.</p>
 <span class="sig-name descname"><span class="pre">os_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.NodeInfo.os_version" title="Link to this definition"></a></dt>
 <dd><p>Operating system version</p>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.models.telemetry.models.</span></span><span class="sig-name descname"><span class="pre">ObjectStateCheck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Object state health checks for Kubernetes resources</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.check_name">
+<span class="sig-name descname"><span class="pre">check_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.check_name" title="Link to this definition"></a></dt>
+<dd><p>Descriptive name of the check (e.g., “etcd-pods-ready”)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.condition_status">
+<span class="sig-name descname"><span class="pre">condition_status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.condition_status" title="Link to this definition"></a></dt>
+<dd><p>Expected condition status (True, False, Unknown)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.condition_type">
+<span class="sig-name descname"><span class="pre">condition_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.condition_type" title="Link to this definition"></a></dt>
+<dd><p>Condition type checked (Ready, Available, Progressing, etc.)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.duration">
+<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.duration" title="Link to this definition"></a></dt>
+<dd><p>Duration of the check period in seconds</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.end_timestamp">
+<span class="sig-name descname"><span class="pre">end_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.end_timestamp" title="Link to this definition"></a></dt>
+<dd><p>End timestamp of the check period</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.kind">
+<span class="sig-name descname"><span class="pre">kind</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.kind" title="Link to this definition"></a></dt>
+<dd><p>Kubernetes resource kind (Pod, Deployment, StatefulSet, etc.)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.message" title="Link to this definition"></a></dt>
+<dd><p>Detailed message about the check results</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.namespace" title="Link to this definition"></a></dt>
+<dd><p>Namespace of the checked object(s)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.object_name">
+<span class="sig-name descname"><span class="pre">object_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.object_name" title="Link to this definition"></a></dt>
+<dd><p>Name or regex pattern of object(s) checked</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.objects_checked">
+<span class="sig-name descname"><span class="pre">objects_checked</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.objects_checked" title="Link to this definition"></a></dt>
+<dd><p>Number of objects that matched the criteria and were checked</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.objects_failed">
+<span class="sig-name descname"><span class="pre">objects_failed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.objects_failed" title="Link to this definition"></a></dt>
+<dd><p>Number of objects that failed the condition check</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.passed">
+<span class="sig-name descname"><span class="pre">passed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.passed" title="Link to this definition"></a></dt>
+<dd><p>Whether all checked objects passed the condition check</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.phase">
+<span class="sig-name descname"><span class="pre">phase</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.phase" title="Link to this definition"></a></dt>
+<dd><p>Chaos phase when this check was performed: ‘pre’, ‘during’, or ‘post’</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.start_timestamp">
+<span class="sig-name descname"><span class="pre">start_timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.start_timestamp" title="Link to this definition"></a></dt>
+<dd><p>Start timestamp of the check period</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.ObjectStateCheck.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#krkn_lib.models.telemetry.models.ObjectStateCheck.to_json" title="Link to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -709,6 +810,12 @@ reasons</p>
 <dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.node_name">
 <span class="sig-name descname"><span class="pre">node_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.node_name" title="Link to this definition"></a></dt>
 <dd><p>Node Name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.models.telemetry.models.VirtCheck.phase">
+<span class="sig-name descname"><span class="pre">phase</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#krkn_lib.models.telemetry.models.VirtCheck.phase" title="Link to this definition"></a></dt>
+<dd><p>Chaos phase when this check was performed: ‘pre’, ‘during’, or ‘post’</p>
 </dd></dl>
 
 <dl class="py attribute">

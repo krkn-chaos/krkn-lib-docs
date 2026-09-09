@@ -16,6 +16,7 @@ Submodules
    :maxdepth: 4
 
    krkn_lib.k8s.krkn_kubernetes
+   krkn_lib.k8s.kubernetes_object_helpers
 
 Module contents
 ---------------

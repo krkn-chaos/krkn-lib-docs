@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=64853ef8"></script>
+        <script src="_static/documentation_options.js?v=c0fdbae1"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.1.4
+                v6.1.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -105,6 +105,18 @@
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.KrknTelemetryModelsTests.test_chaos_run_telemetry">
 <span class="sig-name descname"><span class="pre">test_chaos_run_telemetry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.KrknTelemetryModelsTests.test_chaos_run_telemetry" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.KrknTelemetryModelsTests.test_chaos_run_telemetry_backward_compat_only_post_virt_checks">
+<span class="sig-name descname"><span class="pre">test_chaos_run_telemetry_backward_compat_only_post_virt_checks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.KrknTelemetryModelsTests.test_chaos_run_telemetry_backward_compat_only_post_virt_checks" title="Link to this definition"></a></dt>
+<dd><p>Test backward compatibility with only post_virt_checks (no virt_checks)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.KrknTelemetryModelsTests.test_chaos_run_telemetry_backward_compat_post_virt_checks">
+<span class="sig-name descname"><span class="pre">test_chaos_run_telemetry_backward_compat_post_virt_checks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.KrknTelemetryModelsTests.test_chaos_run_telemetry_backward_compat_post_virt_checks" title="Link to this definition"></a></dt>
+<dd><p>Test backward compatibility with old post_virt_checks field</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.KrknTelemetryModelsTests.test_chaos_run_telemetry_empty_constructor_has_error_logs">
@@ -187,6 +199,78 @@ properly parsed from JSON and serialized</p>
 <dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.KrknTelemetryModelsTests.test_scenario_telemetry">
 <span class="sig-name descname"><span class="pre">test_scenario_telemetry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.KrknTelemetryModelsTests.test_scenario_telemetry" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.tests.test_krkn_telemetry_models.</span></span><span class="sig-name descname"><span class="pre">ObjectStateCheckModelTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_all_objects_healthy">
+<span class="sig-name descname"><span class="pre">test_all_objects_healthy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_all_objects_healthy" title="Link to this definition"></a></dt>
+<dd><p>Test object state check when all objects pass</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_backward_compatibility_no_phase">
+<span class="sig-name descname"><span class="pre">test_backward_compatibility_no_phase</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_backward_compatibility_no_phase" title="Link to this definition"></a></dt>
+<dd><p>Test backward compatibility with telemetry missing phase field</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_deployment_check">
+<span class="sig-name descname"><span class="pre">test_deployment_check</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_deployment_check" title="Link to this definition"></a></dt>
+<dd><p>Test object state check for Deployment</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_empty_initialization">
+<span class="sig-name descname"><span class="pre">test_empty_initialization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_empty_initialization" title="Link to this definition"></a></dt>
+<dd><p>Test ObjectStateCheck with no data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_json_serialization">
+<span class="sig-name descname"><span class="pre">test_json_serialization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_json_serialization" title="Link to this definition"></a></dt>
+<dd><p>Test that ObjectStateCheck can be serialized to JSON</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_phase_field_default">
+<span class="sig-name descname"><span class="pre">test_phase_field_default</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_phase_field_default" title="Link to this definition"></a></dt>
+<dd><p>Test ObjectStateCheck defaults to ‘during’ when phase not provided</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_phase_field_during">
+<span class="sig-name descname"><span class="pre">test_phase_field_during</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_phase_field_during" title="Link to this definition"></a></dt>
+<dd><p>Test ObjectStateCheck with during-chaos phase</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_phase_field_post">
+<span class="sig-name descname"><span class="pre">test_phase_field_post</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_phase_field_post" title="Link to this definition"></a></dt>
+<dd><p>Test ObjectStateCheck with post-chaos phase</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_phase_field_pre">
+<span class="sig-name descname"><span class="pre">test_phase_field_pre</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_phase_field_pre" title="Link to this definition"></a></dt>
+<dd><p>Test ObjectStateCheck with pre-chaos phase</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_phase_in_json_serialization">
+<span class="sig-name descname"><span class="pre">test_phase_in_json_serialization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_phase_in_json_serialization" title="Link to this definition"></a></dt>
+<dd><p>Test that phase field is included in JSON serialization</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_some_objects_unhealthy">
+<span class="sig-name descname"><span class="pre">test_some_objects_unhealthy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.tests.test_krkn_telemetry_models.ObjectStateCheckModelTests.test_some_objects_unhealthy" title="Link to this definition"></a></dt>
+<dd><p>Test object state check when some objects fail</p>
+</dd></dl>
 
 </dd></dl>
 

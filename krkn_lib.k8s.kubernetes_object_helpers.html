@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>krkn_lib.k8s.kubernetes_object_helpers module &mdash; Krkn Foundation Library</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/krkn-style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=c0fdbae1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="krkn_lib.models package" href="krkn_lib.models.html" />
+    <link rel="prev" title="krkn_lib.k8s.krkn_kubernetes module" href="krkn_lib.k8s.krkn_kubernetes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="modules.html">
+            
+              <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v6.1.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="krkn_lib.html">krkn_lib package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="krkn_lib.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.aws_tests.html">krkn_lib.aws_tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.elastic.html">krkn_lib.elastic package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="krkn_lib.k8s.html">krkn_lib.k8s package</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="krkn_lib.k8s.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="krkn_lib.k8s.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="krkn_lib.k8s.html#module-krkn_lib.k8s">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.models.html">krkn_lib.models package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.ocp.html">krkn_lib.ocp package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.prometheus.html">krkn_lib.prometheus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.telemetry.html">krkn_lib.telemetry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.html">krkn_lib.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.utils.html">krkn_lib.utils package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.version.html">krkn_lib.version package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.html#module-krkn_lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="modules.html">Krkn Foundation Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="modules.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.html">krkn_lib package</a></li>
+          <li class="breadcrumb-item"><a href="krkn_lib.k8s.html">krkn_lib.k8s package</a></li>
+      <li class="breadcrumb-item active">krkn_lib.k8s.kubernetes_object_helpers module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-krkn_lib.k8s.kubernetes_object_helpers">
+<span id="krkn-lib-k8s-kubernetes-object-helpers-module"></span><h1>krkn_lib.k8s.kubernetes_object_helpers module<a class="headerlink" href="#module-krkn_lib.k8s.kubernetes_object_helpers" title="Link to this heading"></a></h1>
+<p>Kubernetes object helper for unified resource retrieval.</p>
+<p>Provides a central place for API mappings and shared logic for fetching Kubernetes objects,
+with pagination support for large-scale deployments via the continue token mechanism.
+Supports watching CRD objects for real-time event monitoring.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">krkn_lib.k8s.kubernetes_object_helpers.</span></span><span class="sig-name descname"><span class="pre">KubernetesObjectHelpers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">krkn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Helper class for retrieving Kubernetes objects of specific types.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.CLUSTER_SCOPED_API_MAP">
+<span class="sig-name descname"><span class="pre">CLUSTER_SCOPED_API_MAP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'node':</span> <span class="pre">('cli',</span> <span class="pre">'read_node'),</span> <span class="pre">'persistentvolume':</span> <span class="pre">('cli',</span> <span class="pre">'read_persistent_volume')}</span></em><a class="headerlink" href="#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.CLUSTER_SCOPED_API_MAP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.CLUSTER_SCOPED_LIST_API_MAP">
+<span class="sig-name descname"><span class="pre">CLUSTER_SCOPED_LIST_API_MAP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'node':</span> <span class="pre">('cli',</span> <span class="pre">'list_node'),</span> <span class="pre">'persistentvolume':</span> <span class="pre">('cli',</span> <span class="pre">'list_persistent_volume')}</span></em><a class="headerlink" href="#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.CLUSTER_SCOPED_LIST_API_MAP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.NAMESPACED_API_MAP">
+<span class="sig-name descname"><span class="pre">NAMESPACED_API_MAP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cronjob':</span> <span class="pre">('batch_cli',</span> <span class="pre">'read_namespaced_cron_job'),</span> <span class="pre">'daemonset':</span> <span class="pre">('apps_api',</span> <span class="pre">'read_namespaced_daemon_set'),</span> <span class="pre">'deployment':</span> <span class="pre">('apps_api',</span> <span class="pre">'read_namespaced_deployment'),</span> <span class="pre">'job':</span> <span class="pre">('batch_cli',</span> <span class="pre">'read_namespaced_job'),</span> <span class="pre">'persistentvolumeclaim':</span> <span class="pre">('cli',</span> <span class="pre">'read_namespaced_persistent_volume_claim'),</span> <span class="pre">'pod':</span> <span class="pre">('cli',</span> <span class="pre">'read_namespaced_pod'),</span> <span class="pre">'replicaset':</span> <span class="pre">('apps_api',</span> <span class="pre">'read_namespaced_replica_set'),</span> <span class="pre">'service':</span> <span class="pre">('cli',</span> <span class="pre">'read_namespaced_service'),</span> <span class="pre">'statefulset':</span> <span class="pre">('apps_api',</span> <span class="pre">'read_namespaced_stateful_set')}</span></em><a class="headerlink" href="#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.NAMESPACED_API_MAP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.NAMESPACED_LIST_API_MAP">
+<span class="sig-name descname"><span class="pre">NAMESPACED_LIST_API_MAP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cronjob':</span> <span class="pre">('batch_cli',</span> <span class="pre">'list_namespaced_cron_job'),</span> <span class="pre">'daemonset':</span> <span class="pre">('apps_api',</span> <span class="pre">'list_namespaced_daemon_set'),</span> <span class="pre">'deployment':</span> <span class="pre">('apps_api',</span> <span class="pre">'list_namespaced_deployment'),</span> <span class="pre">'job':</span> <span class="pre">('batch_cli',</span> <span class="pre">'list_namespaced_job'),</span> <span class="pre">'persistentvolumeclaim':</span> <span class="pre">('cli',</span> <span class="pre">'list_namespaced_persistent_volume_claim'),</span> <span class="pre">'pod':</span> <span class="pre">('cli',</span> <span class="pre">'list_namespaced_pod'),</span> <span class="pre">'replicaset':</span> <span class="pre">('apps_api',</span> <span class="pre">'list_namespaced_replica_set'),</span> <span class="pre">'service':</span> <span class="pre">('cli',</span> <span class="pre">'list_namespaced_service'),</span> <span class="pre">'statefulset':</span> <span class="pre">('apps_api',</span> <span class="pre">'list_namespaced_stateful_set')}</span></em><a class="headerlink" href="#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.NAMESPACED_LIST_API_MAP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">krkn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize with a KrknKubernetes instance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.get_object_by_name">
+<span class="sig-name descname"><span class="pre">get_object_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.get_object_by_name" title="Link to this definition"></a></dt>
+<dd><p>Get a Kubernetes object by kind and name, returning it as a dictionary.</p>
+<p>This is a universal helper that works with any supported Kubernetes resource type,
+handling both namespaced and cluster-scoped resources automatically.</p>
+<p>Supported resource kinds:
+- Namespaced: Pod, Deployment, StatefulSet, DaemonSet, ReplicaSet, Service,</p>
+<blockquote>
+<div><p>PersistentVolumeClaim, Job, CronJob</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Cluster-scoped: Node, PersistentVolume</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – Kubernetes resource kind (e.g., “Pod”, “Deployment”, “Node”)</p></li>
+<li><p><strong>name</strong> – Name of the object</p></li>
+<li><p><strong>namespace</strong> – Namespace (required for namespaced resources, ignored for cluster-scoped)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Object as a dictionary, or None if not found or unsupported kind</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ApiException</strong> – If the API call fails (e.g., object not found)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.list_objects_by_kind">
+<span class="sig-name descname"><span class="pre">list_objects_by_kind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.list_objects_by_kind" title="Link to this definition"></a></dt>
+<dd><p>List all Kubernetes objects of a specific kind with pagination support.</p>
+<p>Handles large-scale deployments by using the continue token mechanism to
+paginate through results when they exceed the limit. Uses krkn’s list_continue_helper
+for consistent pagination behavior.</p>
+<p>Supported resource kinds:
+- Namespaced: Pod, Deployment, StatefulSet, DaemonSet, ReplicaSet, Service,</p>
+<blockquote>
+<div><p>PersistentVolumeClaim, Job, CronJob</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Cluster-scoped: Node, PersistentVolume</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – Kubernetes resource kind (e.g., “Pod”, “Deployment”, “Node”)</p></li>
+<li><p><strong>namespace</strong> – Namespace (required for namespaced resources)</p></li>
+<li><p><strong>label_selector</strong> – Label selector for filtering (optional)</p></li>
+<li><p><strong>limit</strong> – Max items per API request (optional, uses krkn default if not set)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of objects as dictionaries</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If namespace required but not provided</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.watch_crd_objects">
+<span class="sig-name descname"><span class="pre">watch_crd_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plural</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_seconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.watch_crd_objects" title="Link to this definition"></a></dt>
+<dd><p>Watch CRD objects for real-time events (added, modified, deleted).</p>
+<p>Can be used to monitor custom resources as they change. Yields events
+until timeout or explicitly stopped.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group</strong> – API group of the CRD (e.g., “example.com”)</p></li>
+<li><p><strong>version</strong> – API version (e.g., “v1”, “v1alpha1”)</p></li>
+<li><p><strong>plural</strong> – Plural name of the custom resource (e.g., “widgets”)</p></li>
+<li><p><strong>namespace</strong> – Namespace for namespaced CRDs (optional)</p></li>
+<li><p><strong>name</strong> – Watch specific resource by name (optional)</p></li>
+<li><p><strong>label_selector</strong> – Watch resources matching labels (optional)</p></li>
+<li><p><strong>field_selector</strong> – Watch resources matching fields (optional)</p></li>
+<li><p><strong>timeout_seconds</strong> – Watch timeout in seconds (optional)</p></li>
+<li><p><strong>event_handler</strong> – Callback function(event_type, object) for each event (optional)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of all objects seen during watch (or None if handler is provided)</p>
+</dd>
+</dl>
+<dl>
+<dt>Example:</dt><dd><dl class="simple">
+<dt>def handle_event(event_type, obj):</dt><dd><p>print(f”{event_type}: {obj[‘metadata’][‘name’]}”)</p>
+</dd>
+<dt>helpers.watch_crd_objects(</dt><dd><p>“example.com”, “v1”, “widgets”,
+namespace=”default”,
+event_handler=handle_event,
+timeout_seconds=60</p>
+</dd>
+</dl>
+<p>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="krkn_lib.k8s.krkn_kubernetes.html" class="btn btn-neutral float-left" title="krkn_lib.k8s.krkn_kubernetes module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="krkn_lib.models.html" class="btn btn-neutral float-right" title="krkn_lib.models package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Red Hat Chaos Team.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

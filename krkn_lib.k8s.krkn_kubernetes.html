@@ -14,12 +14,12 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=64853ef8"></script>
+        <script src="_static/documentation_options.js?v=c0fdbae1"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="krkn_lib.models package" href="krkn_lib.models.html" />
+    <link rel="next" title="krkn_lib.k8s.kubernetes_object_helpers module" href="krkn_lib.k8s.kubernetes_object_helpers.html" />
     <link rel="prev" title="krkn_lib.k8s.pod_monitor.pod_monitor module" href="krkn_lib.k8s.pod_monitor.pod_monitor.html" /> 
 </head>
 
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.1.4
+                v6.1.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -357,7 +357,7 @@ a valid manifestwork yaml manifest</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.create_obj">
-<span class="sig-name descname"><span class="pre">create_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_body:</span> <span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/json/__init__.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.create_obj" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">create_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_body:</span> <span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/json/__init__.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.create_obj" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1174,6 +1174,48 @@ path returned.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_object_by_name">
+<span class="sig-name descname"><span class="pre">get_object_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_object_by_name" title="Link to this definition"></a></dt>
+<dd><p>Get a Kubernetes object by kind and name, returning it as a dictionary.</p>
+<p>This is a universal helper that works with any supported Kubernetes resource type,
+handling both namespaced and cluster-scoped resources automatically.</p>
+<p>Supported resource kinds:
+- Namespaced: Pod, Deployment, StatefulSet, DaemonSet, ReplicaSet, Service,</p>
+<blockquote>
+<div><p>PersistentVolumeClaim, Job, CronJob</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Cluster-scoped: Node, PersistentVolume</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – Kubernetes resource kind (e.g., “Pod”, “Deployment”, “Node”)</p></li>
+<li><p><strong>name</strong> – Name of the object</p></li>
+<li><p><strong>namespace</strong> – Namespace (required for namespaced resources, ignored for cluster-scoped)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Object as a dictionary, or None if not found or unsupported kind</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ApiException</strong> – If the API call fails (e.g., object not found)</p>
+</dd>
+</dl>
+<dl>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">krkn_lib</span><span class="o">.</span><span class="n">get_object_by_name</span><span class="p">(</span><span class="s2">&quot;Pod&quot;</span><span class="p">,</span> <span class="s2">&quot;my-pod&quot;</span><span class="p">,</span> <span class="s2">&quot;default&quot;</span><span class="p">)</span>
+<span class="go">{&#39;metadata&#39;: {&#39;name&#39;: &#39;my-pod&#39;, ...}, &#39;status&#39;: {...}, ...}</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">krkn_lib</span><span class="o">.</span><span class="n">get_object_by_name</span><span class="p">(</span><span class="s2">&quot;Node&quot;</span><span class="p">,</span> <span class="s2">&quot;worker-1&quot;</span><span class="p">)</span>
+<span class="go">{&#39;metadata&#39;: {&#39;name&#39;: &#39;worker-1&#39;, ...}, &#39;status&#39;: {...}, ...}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_pod_info">
 <span class="sig-name descname"><span class="pre">get_pod_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_expected</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="krkn_lib.models.k8s.models.html#krkn_lib.models.k8s.models.Pod" title="krkn_lib.models.k8s.models.Pod"><span class="pre">Pod</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_pod_info" title="Link to this definition"></a></dt>
 <dd><p>Retrieve information about a specific pod</p>
@@ -1913,7 +1955,7 @@ deploy_service_hijacking method</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="krkn_lib.k8s.pod_monitor.pod_monitor.html" class="btn btn-neutral float-left" title="krkn_lib.k8s.pod_monitor.pod_monitor module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="krkn_lib.models.html" class="btn btn-neutral float-right" title="krkn_lib.models package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="krkn_lib.k8s.kubernetes_object_helpers.html" class="btn btn-neutral float-right" title="krkn_lib.k8s.kubernetes_object_helpers module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

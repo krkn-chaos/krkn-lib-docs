@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=64853ef8"></script>
+        <script src="_static/documentation_options.js?v=c0fdbae1"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.1.4
+                v6.1.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -196,6 +196,7 @@
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.krkn_kubernetes.html#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_node_resource_version"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_node_resource_version()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.krkn_kubernetes.html#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_node_resources_info"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_node_resources_info()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.krkn_kubernetes.html#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_nodes_infos"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_nodes_infos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.krkn_kubernetes.html#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_object_by_name"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_object_by_name()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.krkn_kubernetes.html#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_pod_info"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_pod_info()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.krkn_kubernetes.html#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_pod_log"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_pod_log()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.krkn_kubernetes.html#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.get_pod_pids"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.get_pod_pids()</span></code></a></li>
@@ -245,6 +246,20 @@
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.krkn_kubernetes.html#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.watch_managedcluster_status"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.watch_managedcluster_status()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.krkn_kubernetes.html#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.watch_node_status"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.watch_node_status()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.krkn_kubernetes.html#krkn_lib.k8s.krkn_kubernetes.KrknKubernetes.watch_resource"><code class="docutils literal notranslate"><span class="pre">KrknKubernetes.watch_resource</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="krkn_lib.k8s.kubernetes_object_helpers.html">krkn_lib.k8s.kubernetes_object_helpers module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.k8s.kubernetes_object_helpers.html#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers"><code class="docutils literal notranslate"><span class="pre">KubernetesObjectHelpers</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.kubernetes_object_helpers.html#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.CLUSTER_SCOPED_API_MAP"><code class="docutils literal notranslate"><span class="pre">KubernetesObjectHelpers.CLUSTER_SCOPED_API_MAP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.kubernetes_object_helpers.html#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.CLUSTER_SCOPED_LIST_API_MAP"><code class="docutils literal notranslate"><span class="pre">KubernetesObjectHelpers.CLUSTER_SCOPED_LIST_API_MAP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.kubernetes_object_helpers.html#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.NAMESPACED_API_MAP"><code class="docutils literal notranslate"><span class="pre">KubernetesObjectHelpers.NAMESPACED_API_MAP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.kubernetes_object_helpers.html#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.NAMESPACED_LIST_API_MAP"><code class="docutils literal notranslate"><span class="pre">KubernetesObjectHelpers.NAMESPACED_LIST_API_MAP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.kubernetes_object_helpers.html#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.__init__"><code class="docutils literal notranslate"><span class="pre">KubernetesObjectHelpers.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.kubernetes_object_helpers.html#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.get_object_by_name"><code class="docutils literal notranslate"><span class="pre">KubernetesObjectHelpers.get_object_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.kubernetes_object_helpers.html#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.list_objects_by_kind"><code class="docutils literal notranslate"><span class="pre">KubernetesObjectHelpers.list_objects_by_kind()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.k8s.kubernetes_object_helpers.html#krkn_lib.k8s.kubernetes_object_helpers.KubernetesObjectHelpers.watch_crd_objects"><code class="docutils literal notranslate"><span class="pre">KubernetesObjectHelpers.watch_crd_objects()</span></code></a></li>
 </ul>
 </li>
 </ul>
