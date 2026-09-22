@@ -14,7 +14,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=c0fdbae1"></script>
+        <script src="_static/documentation_options.js?v=14515140"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="_static/redhat-chaos.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v6.1.5
+                v7.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -161,6 +161,21 @@
 <li class="toctree-l2"><a class="reference internal" href="krkn_lib.tests.test_deploy_io_throttle_pod.html#krkn_lib.tests.test_deploy_io_throttle_pod.TestDeployIoThrottlePod"><code class="docutils literal notranslate"><span class="pre">TestDeployIoThrottlePod</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_deploy_io_throttle_pod.html#krkn_lib.tests.test_deploy_io_throttle_pod.TestDeployIoThrottlePod.setUp"><code class="docutils literal notranslate"><span class="pre">TestDeployIoThrottlePod.setUp()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_deploy_io_throttle_pod.html#krkn_lib.tests.test_deploy_io_throttle_pod.TestDeployIoThrottlePod.test_deploy_uses_uuid_suffix"><code class="docutils literal notranslate"><span class="pre">TestDeployIoThrottlePod.test_deploy_uses_uuid_suffix()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="krkn_lib.tests.test_image_verification.html">krkn_lib.tests.test_image_verification module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="krkn_lib.tests.test_image_verification.html#krkn_lib.tests.test_image_verification.ImageVerificationTests"><code class="docutils literal notranslate"><span class="pre">ImageVerificationTests</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_image_verification.html#krkn_lib.tests.test_image_verification.ImageVerificationTests.setUp"><code class="docutils literal notranslate"><span class="pre">ImageVerificationTests.setUp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_image_verification.html#krkn_lib.tests.test_image_verification.ImageVerificationTests.test_extracts_unique_images_from_nested_manifest"><code class="docutils literal notranslate"><span class="pre">ImageVerificationTests.test_extracts_unique_images_from_nested_manifest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_image_verification.html#krkn_lib.tests.test_image_verification.ImageVerificationTests.test_kubernetes_method_rejects_invalid_key"><code class="docutils literal notranslate"><span class="pre">ImageVerificationTests.test_kubernetes_method_rejects_invalid_key()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_image_verification.html#krkn_lib.tests.test_image_verification.ImageVerificationTests.test_kubernetes_method_returns_boolean"><code class="docutils literal notranslate"><span class="pre">ImageVerificationTests.test_kubernetes_method_returns_boolean()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_image_verification.html#krkn_lib.tests.test_image_verification.ImageVerificationTests.test_loads_production_public_key_fixture"><code class="docutils literal notranslate"><span class="pre">ImageVerificationTests.test_loads_production_public_key_fixture()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_image_verification.html#krkn_lib.tests.test_image_verification.ImageVerificationTests.test_manifest_verification_fails_before_deploy"><code class="docutils literal notranslate"><span class="pre">ImageVerificationTests.test_manifest_verification_fails_before_deploy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_image_verification.html#krkn_lib.tests.test_image_verification.ImageVerificationTests.test_rejects_tampered_payload"><code class="docutils literal notranslate"><span class="pre">ImageVerificationTests.test_rejects_tampered_payload()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_image_verification.html#krkn_lib.tests.test_image_verification.ImageVerificationTests.test_verifies_cosign_dsse_bundle"><code class="docutils literal notranslate"><span class="pre">ImageVerificationTests.test_verifies_cosign_dsse_bundle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_image_verification.html#krkn_lib.tests.test_image_verification.ImageVerificationTests.test_verifies_ecdsa_signature"><code class="docutils literal notranslate"><span class="pre">ImageVerificationTests.test_verifies_ecdsa_signature()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -600,6 +615,7 @@
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestKrknOpenshiftInit.test_init_with_kubeconfig"><code class="docutils literal notranslate"><span class="pre">TestKrknOpenshiftInit.test_init_with_kubeconfig()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestKrknOpenshiftInit.test_init_with_kubeconfig_string"><code class="docutils literal notranslate"><span class="pre">TestKrknOpenshiftInit.test_init_with_kubeconfig_string()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestKrknOpenshiftInit.test_init_without_kubeconfig"><code class="docutils literal notranslate"><span class="pre">TestKrknOpenshiftInit.test_init_without_kubeconfig()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="krkn_lib.tests.test_krkn_openshift.html#krkn_lib.tests.test_krkn_openshift.TestKrknOpenshiftInit.test_passes_image_signature_settings_to_parent"><code class="docutils literal notranslate"><span class="pre">TestKrknOpenshiftInit.test_passes_image_signature_settings_to_parent()</span></code></a></li>
 </ul>
 </li>
 </ul>
